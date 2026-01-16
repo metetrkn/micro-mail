@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+    <contextName>HitractMailService</contextName>
+
+    <property name="MAIL_LOG_DIR" value="./log-mail" />
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="MAIL_ALL_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${MAIL_LOG_DIR}/mail-activity.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${MAIL_LOG_DIR}/archived/mail-activity-%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
+            <maxFileSize>10MB</maxFileSize>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="MAIL_ERROR_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${MAIL_LOG_DIR}/mail-failures.log</file>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${MAIL_LOG_DIR}/archived/mail-failures-%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
+            <maxFileSize>10MB</maxFileSize>
+            <maxHistory>60</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} - %msg%n%ex{0}</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="se.hitract" level="INFO" additivity="false">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="MAIL_ALL_FILE" />
+        <appender-ref ref="MAIL_ERROR_FILE" />
+    </logger>
+
+    <logger name="com.github.sonus21.rqueue" level="ERROR" additivity="false">
+        <appender-ref ref="MAIL_ERROR_FILE" />
+        <appender-ref ref="STDOUT" />
+    </logger>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
