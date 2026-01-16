@@ -1,0 +1,30 @@
+2026-01-26 12:56:04.735 - Failed to send mail: I/O error on POST request for "http://localhost:9090/sandbox.hitract.se/messages": EOF reached while reading
+2026-01-26 12:56:05.061 - Failed to send mail: I/O error on POST request for "http://localhost:9090/sandbox.hitract.se/messages": Received RST_STREAM: Stream cancelled
+2026-01-26 12:56:05.087 - Failed to send mail: I/O error on POST request for "http://localhost:9090/sandbox.hitract.se/messages": Received RST_STREAM: Stream cancelled
+2026-01-26 13:38:51.311 - Failed to send mail: I/O error on POST request for "http://localhost:9090/sandbox.hitract.se/messages": EOF reached while reading
+2026-01-26 13:38:51.473 - Failed to send mail: I/O error on POST request for "http://localhost:9090/sandbox.hitract.se/messages": Received RST_STREAM: Stream cancelled
+2026-01-26 13:38:51.492 - Failed to send mail: I/O error on POST request for "http://localhost:9090/sandbox.hitract.se/messages": Received RST_STREAM: Stream cancelled
+2026-01-26 13:39:30.829 - Failed to send mail: I/O error on POST request for "http://localhost:9090/sandbox.hitract.se/messages": Received RST_STREAM: Stream cancelled
+2026-01-26 13:39:30.848 - Failed to send mail: I/O error on POST request for "http://localhost:9090/sandbox.hitract.se/messages": Received RST_STREAM: Stream cancelled
+2026-01-26 13:39:30.867 - Failed to send mail: I/O error on POST request for "http://localhost:9090/sandbox.hitract.se/messages": Received RST_STREAM: Stream cancelled
+2026-01-26 13:40:14.310 - Failed to send mail: I/O error on POST request for "http://localhost:9090/sandbox.hitract.se/messages": EOF reached while reading
+2026-01-26 13:40:14.415 - Failed to send mail: I/O error on POST request for "http://localhost:9090/sandbox.hitract.se/messages": Received RST_STREAM: Stream cancelled
+2026-01-26 13:40:14.431 - Failed to send mail: I/O error on POST request for "http://localhost:9090/sandbox.hitract.se/messages": Received RST_STREAM: Stream cancelled
+2026-01-26 13:46:09.057 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
+2026-01-26 13:46:09.274 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
+2026-01-26 13:46:09.297 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
+2026-01-26 13:48:49.932 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
+2026-01-26 13:48:50.123 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
+2026-01-26 13:48:50.145 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
+2026-01-26 13:57:00.368 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
+2026-01-26 13:57:00.633 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
+2026-01-26 13:57:00.707 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
+2026-01-26 14:00:07.402 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
+2026-01-26 14:00:07.549 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
+2026-01-26 14:00:07.571 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
+2026-01-26 14:04:48.970 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
+2026-01-26 14:04:49.231 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
+2026-01-26 14:04:49.270 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
+2026-01-26 14:11:12.780 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
+2026-01-26 14:11:12.957 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
+2026-01-26 14:11:12.978 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND

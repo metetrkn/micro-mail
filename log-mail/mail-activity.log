@@ -1,0 +1,133 @@
+2026-01-26 11:18:40.313 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 12088 (C:\Users\metet\Desktop\micro-mail\target\classes started by metet in C:\Users\metet\Desktop\micro-mail)
+2026-01-26 11:18:40.318 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-26 11:18:56.343 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 16.628 seconds (process running for 18.505)
+2026-01-26 11:25:56.024 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 2744 (C:\Users\metet\Desktop\micro-mail\target\classes started by metet in C:\Users\metet\Desktop\micro-mail)
+2026-01-26 11:25:56.027 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-26 11:26:02.713 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 7.117 seconds (process running for 8.3)
+2026-01-26 11:26:23.253 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: [123, 12, 24]
+2026-01-26 11:26:23.464 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: [123, 12, 24]
+2026-01-26 11:46:01.249 [mailEventsListener-2] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: [123, 12, 24]
+2026-01-26 11:46:01.256 [mailEventsListener-2] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: [123, 12, 24]
+2026-01-26 12:24:22.633 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 5892 (C:\Users\metet\Desktop\micro-mail\target\classes started by metet in C:\Users\metet\Desktop\micro-mail)
+2026-01-26 12:24:22.634 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-26 12:24:29.879 [mailEventsListener-2] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: [123, 12, 24]
+2026-01-26 12:24:29.880 [mailEventsListener-3] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: [123, 12, 24]
+2026-01-26 12:24:29.880 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: [123, 12, 24]
+2026-01-26 12:24:29.919 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 7.856 seconds (process running for 9.109)
+2026-01-26 12:24:30.038 [mailEventsListener-2] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: [123, 12, 24]
+2026-01-26 12:24:30.038 [mailEventsListener-3] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: [123, 12, 24]
+2026-01-26 12:24:30.038 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: [123, 12, 24]
+2026-01-26 12:30:14.002 [mailEventsListener-4] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: [123, 12, 24]
+2026-01-26 12:30:14.006 [mailEventsListener-4] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: [123, 12, 24]
+2026-01-26 12:43:17.824 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 13436 (C:\Users\metet\Desktop\micro-mail\target\classes started by metet in C:\Users\metet\Desktop\micro-mail)
+2026-01-26 12:43:17.825 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-26 12:43:24.474 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 7.217 seconds (process running for 8.415)
+2026-01-26 12:43:28.802 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: [123, 12, 24]
+2026-01-26 12:43:28.959 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: [123, 12, 24]
+2026-01-26 12:44:10.440 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 2692 (C:\Users\metet\Desktop\micro-mail\target\classes started by metet in C:\Users\metet\Desktop\micro-mail)
+2026-01-26 12:44:10.441 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-26 12:44:18.086 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 8.137 seconds (process running for 9.367)
+2026-01-26 12:44:26.416 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: [123, 12, 24]
+2026-01-26 12:44:26.579 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: [123, 12, 24]
+2026-01-26 12:48:32.170 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 12948 (C:\Users\metet\Desktop\micro-mail\target\classes started by metet in C:\Users\metet\Desktop\micro-mail)
+2026-01-26 12:48:32.172 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-26 12:48:39.289 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 7.55 seconds (process running for 8.846)
+2026-01-26 12:48:43.018 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: [123, 12, 24]
+2026-01-26 12:48:43.187 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: [123, 12, 24]
+2026-01-26 12:52:20.029 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 21108 (C:\Users\metet\Desktop\micro-mail\target\classes started by metet in C:\Users\metet\Desktop\micro-mail)
+2026-01-26 12:52:20.031 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-26 12:52:27.141 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 7.617 seconds (process running for 8.895)
+2026-01-26 12:52:41.963 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: [123, 12, 24]
+2026-01-26 12:52:42.123 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: [123, 12, 24]
+2026-01-26 12:54:12.151 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 20884 (C:\Users\metet\Desktop\micro-mail\target\classes started by metet in C:\Users\metet\Desktop\micro-mail)
+2026-01-26 12:54:12.152 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-26 12:54:19.351 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 7.685 seconds (process running for 8.98)
+2026-01-26 12:54:23.929 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: [123, 12, 24]
+2026-01-26 12:54:24.084 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: [123, 12, 24]
+2026-01-26 12:55:56.397 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 20872 (C:\Users\metet\Desktop\micro-mail\target\classes started by metet in C:\Users\metet\Desktop\micro-mail)
+2026-01-26 12:55:56.398 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-26 12:56:04.245 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: [123, 12, 24]
+2026-01-26 12:56:04.271 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 8.617 seconds (process running for 9.742)
+2026-01-26 12:56:04.735 [mailEventsListener-1] ERROR s.hitract.service.MailgunHttpService - Failed to send mail: I/O error on POST request for "http://localhost:9090/sandbox.hitract.se/messages": EOF reached while reading
+2026-01-26 12:56:05.061 [mailEventsListener-1] ERROR s.hitract.service.MailgunHttpService - Failed to send mail: I/O error on POST request for "http://localhost:9090/sandbox.hitract.se/messages": Received RST_STREAM: Stream cancelled
+2026-01-26 12:56:05.087 [mailEventsListener-1] ERROR s.hitract.service.MailgunHttpService - Failed to send mail: I/O error on POST request for "http://localhost:9090/sandbox.hitract.se/messages": Received RST_STREAM: Stream cancelled
+2026-01-26 12:56:05.097 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: [123, 12, 24]
+2026-01-26 13:38:41.801 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 17600 (C:\Users\metet\Desktop\micro-mail\target\classes started by metet in C:\Users\metet\Desktop\micro-mail)
+2026-01-26 13:38:41.802 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-26 13:38:48.849 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 7.62 seconds (process running for 9.287)
+2026-01-26 13:38:50.970 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: [123, 12, 24]
+2026-01-26 13:38:51.311 [mailEventsListener-1] ERROR s.hitract.service.MailgunHttpService - Failed to send mail: I/O error on POST request for "http://localhost:9090/sandbox.hitract.se/messages": EOF reached while reading
+2026-01-26 13:38:51.473 [mailEventsListener-1] ERROR s.hitract.service.MailgunHttpService - Failed to send mail: I/O error on POST request for "http://localhost:9090/sandbox.hitract.se/messages": Received RST_STREAM: Stream cancelled
+2026-01-26 13:38:51.492 [mailEventsListener-1] ERROR s.hitract.service.MailgunHttpService - Failed to send mail: I/O error on POST request for "http://localhost:9090/sandbox.hitract.se/messages": Received RST_STREAM: Stream cancelled
+2026-01-26 13:38:51.502 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: [123, 12, 24]
+2026-01-26 13:39:30.821 [mailEventsListener-2] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: [123, 12, 24]
+2026-01-26 13:39:30.829 [mailEventsListener-2] ERROR s.hitract.service.MailgunHttpService - Failed to send mail: I/O error on POST request for "http://localhost:9090/sandbox.hitract.se/messages": Received RST_STREAM: Stream cancelled
+2026-01-26 13:39:30.848 [mailEventsListener-2] ERROR s.hitract.service.MailgunHttpService - Failed to send mail: I/O error on POST request for "http://localhost:9090/sandbox.hitract.se/messages": Received RST_STREAM: Stream cancelled
+2026-01-26 13:39:30.867 [mailEventsListener-2] ERROR s.hitract.service.MailgunHttpService - Failed to send mail: I/O error on POST request for "http://localhost:9090/sandbox.hitract.se/messages": Received RST_STREAM: Stream cancelled
+2026-01-26 13:39:30.877 [mailEventsListener-2] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: [123, 12, 24]
+2026-01-26 13:40:06.629 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 18328 (C:\Users\metet\Desktop\micro-mail\target\classes started by metet in C:\Users\metet\Desktop\micro-mail)
+2026-01-26 13:40:06.630 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-26 13:40:14.047 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: [123, 12, 24]
+2026-01-26 13:40:14.083 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 7.922 seconds (process running for 9.046)
+2026-01-26 13:40:14.310 [mailEventsListener-1] ERROR s.hitract.service.MailgunHttpService - Failed to send mail: I/O error on POST request for "http://localhost:9090/sandbox.hitract.se/messages": EOF reached while reading
+2026-01-26 13:40:14.415 [mailEventsListener-1] ERROR s.hitract.service.MailgunHttpService - Failed to send mail: I/O error on POST request for "http://localhost:9090/sandbox.hitract.se/messages": Received RST_STREAM: Stream cancelled
+2026-01-26 13:40:14.431 [mailEventsListener-1] ERROR s.hitract.service.MailgunHttpService - Failed to send mail: I/O error on POST request for "http://localhost:9090/sandbox.hitract.se/messages": Received RST_STREAM: Stream cancelled
+2026-01-26 13:40:14.441 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: [123, 12, 24]
+2026-01-26 13:46:00.975 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 22428 (C:\Users\metet\Desktop\micro-mail\target\classes started by metet in C:\Users\metet\Desktop\micro-mail)
+2026-01-26 13:46:00.976 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-26 13:46:08.755 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: [123, 12, 24]
+2026-01-26 13:46:08.801 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 8.36 seconds (process running for 9.632)
+2026-01-26 13:46:09.057 [mailEventsListener-1] ERROR s.hitract.service.MailgunHttpService - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
+2026-01-26 13:46:09.274 [mailEventsListener-1] ERROR s.hitract.service.MailgunHttpService - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
+2026-01-26 13:46:09.297 [mailEventsListener-1] ERROR s.hitract.service.MailgunHttpService - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
+2026-01-26 13:46:09.306 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: [123, 12, 24]
+2026-01-26 13:48:33.490 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 5404 (C:\Users\metet\Desktop\micro-mail\target\classes started by metet in C:\Users\metet\Desktop\micro-mail)
+2026-01-26 13:48:33.491 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-26 13:48:42.314 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 9.34 seconds (process running for 10.591)
+2026-01-26 13:48:49.617 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: [123, 12, 24]
+2026-01-26 13:48:49.932 [mailEventsListener-1] ERROR s.hitract.service.MailgunHttpService - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
+2026-01-26 13:48:50.123 [mailEventsListener-1] ERROR s.hitract.service.MailgunHttpService - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
+2026-01-26 13:48:50.145 [mailEventsListener-1] ERROR s.hitract.service.MailgunHttpService - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
+2026-01-26 13:48:50.154 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: [123, 12, 24]
+2026-01-26 13:56:49.386 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 10408 (C:\Users\metet\Desktop\micro-mail\target\classes started by metet in C:\Users\metet\Desktop\micro-mail)
+2026-01-26 13:56:49.387 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-26 13:56:56.708 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 7.906 seconds (process running for 9.099)
+2026-01-26 13:56:59.799 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: [123, 12, 24]
+2026-01-26 13:57:00.368 [mailEventsListener-1] ERROR s.hitract.service.MailgunHttpService - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
+2026-01-26 13:57:00.633 [mailEventsListener-1] ERROR s.hitract.service.MailgunHttpService - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
+2026-01-26 13:57:00.707 [mailEventsListener-1] ERROR s.hitract.service.MailgunHttpService - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
+2026-01-26 13:57:00.723 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: [123, 12, 24]
+2026-01-26 13:59:57.320 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 5336 (C:\Users\metet\Desktop\micro-mail\target\classes started by metet in C:\Users\metet\Desktop\micro-mail)
+2026-01-26 13:59:57.321 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-26 14:00:05.305 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 8.509 seconds (process running for 9.691)
+2026-01-26 14:00:06.990 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: [123, 12, 24]
+2026-01-26 14:00:07.402 [mailEventsListener-1] ERROR s.hitract.service.MailgunHttpService - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
+2026-01-26 14:00:07.549 [mailEventsListener-1] ERROR s.hitract.service.MailgunHttpService - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
+2026-01-26 14:00:07.571 [mailEventsListener-1] ERROR s.hitract.service.MailgunHttpService - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
+2026-01-26 14:00:07.581 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: [123, 12, 24]
+2026-01-26 14:04:40.497 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 7532 (C:\Users\metet\Desktop\micro-mail\target\classes started by metet in C:\Users\metet\Desktop\micro-mail)
+2026-01-26 14:04:40.498 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-26 14:04:48.601 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: [123, 12, 24]
+2026-01-26 14:04:48.640 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 8.708 seconds (process running for 10.162)
+2026-01-26 14:04:48.970 [mailEventsListener-1] ERROR s.hitract.service.MailgunHttpService - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
+2026-01-26 14:04:49.231 [mailEventsListener-1] ERROR s.hitract.service.MailgunHttpService - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
+2026-01-26 14:04:49.270 [mailEventsListener-1] ERROR s.hitract.service.MailgunHttpService - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
+2026-01-26 14:04:49.279 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: [123, 12, 24]
+2026-01-26 14:11:01.332 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 9076 (C:\Users\metet\Desktop\micro-mail\target\classes started by metet in C:\Users\metet\Desktop\micro-mail)
+2026-01-26 14:11:01.334 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-26 14:11:08.882 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 7.973 seconds (process running for 9.833)
+2026-01-26 14:11:12.447 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: [123, 12, 24]
+2026-01-26 14:11:12.780 [mailEventsListener-1] ERROR s.hitract.service.MailgunHttpService - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
+2026-01-26 14:11:12.957 [mailEventsListener-1] ERROR s.hitract.service.MailgunHttpService - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
+2026-01-26 14:11:12.978 [mailEventsListener-1] ERROR s.hitract.service.MailgunHttpService - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
+2026-01-26 14:11:12.986 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: [123, 12, 24]
+2026-01-26 14:14:03.778 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 22716 (C:\Users\metet\Desktop\micro-mail\target\classes started by metet in C:\Users\metet\Desktop\micro-mail)
+2026-01-26 14:14:03.780 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-26 14:14:12.875 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 9.763 seconds (process running for 11.58)
+2026-01-26 14:15:42.386 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: [123, 12, 24]
+2026-01-26 14:15:42.880 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: [123, 12, 24]
+2026-01-26 14:17:08.670 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 22256 (C:\Users\metet\Desktop\micro-mail\target\classes started by metet in C:\Users\metet\Desktop\micro-mail)
+2026-01-26 14:17:08.672 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-26 14:17:16.488 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 8.32 seconds (process running for 10.292)
+2026-01-26 14:17:23.189 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: [123, 12, 24]
+2026-01-26 14:17:23.996 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: [123, 12, 24]
