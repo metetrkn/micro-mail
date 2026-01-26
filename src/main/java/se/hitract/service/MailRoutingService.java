@@ -14,7 +14,7 @@ public class MailRoutingService {
 
     public void routeEmail(@org.checkerframework.checker.nullness.qual.MonotonicNonNull MailRequestDTO emailDto) {
         switch (emailDto.getMailType()) {
-            case SPECIAL_M1 -> mailSenderService.sendM1(emailDto.getToMailList());
+            case SPECIAL_M1 -> mailSenderService.sendM1(emailDto);
             default -> log.error("No logic implemented for MAIL_TYPE: {}", emailDto.toString());
 //            case COMPANY_SIGNIN -> handleCompanySignIn(email);
 //            case COMPANY_SIGNUP -> handleCompanySignUp(email);

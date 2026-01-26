@@ -28,3 +28,23 @@
 2026-01-26 14:11:12.780 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
 2026-01-26 14:11:12.957 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
 2026-01-26 14:11:12.978 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
+2026-01-26 19:07:47.360 - Failed to send mail: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=mailType, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-26 19:07:47.360 - Failed to send mail: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=mailType, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-26 19:07:47.363 - FAILED to construct mail for romeo@hitract.se: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=mailType, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-26 19:07:47.363 - FAILED to construct mail for zander.n.do@gmail.com: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=mailType, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]

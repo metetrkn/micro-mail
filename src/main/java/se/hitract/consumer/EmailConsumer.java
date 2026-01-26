@@ -26,13 +26,12 @@ public class EmailConsumer {
 
     public void processEmail(MailRequestDTO emailDto) {
         try {
-            log.info("START: Processing email for: {}", emailDto.getToMailList());
+            log.info("START: Processing email for: {}", emailDto.getEmail());
             mailRoutingService.routeEmail(emailDto);
-            log.info("SUCCESS: Sent to: {}", emailDto.getToMailList());
+            log.info("SUCCESS: Sent to: {}", emailDto.getEmail());
         } catch (Exception e) {
-            // Log this as DEBUG or WARN so it doesn't clutter your failure file
-            log.warn("Attempt failed for {}. Rqueue will retry.", emailDto.getToMail());
-            throw e; // This tells Rqueue to retry
+            log.warn("Attempt failed for {}. Rqueue will retry.", emailDto.getEmail());
+            throw e;
         }
     }
 
@@ -40,8 +39,6 @@ public class EmailConsumer {
     public void logDeadLetterMessages(Object emailDto) {
         try {
             String jsonFailure = objectMapper.writeValueAsString(emailDto);
-            // THIS is where you log the FATAL error.
-            // It only runs ONCE, after all 3 retries have failed.
             log.error("FINAL_FAILURE_JSON: {}", jsonFailure);
         } catch (Exception e) {
             log.error("FATAL: Could not serialize failed mail.");

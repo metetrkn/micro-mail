@@ -131,3 +131,55 @@
 2026-01-26 14:17:16.488 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 8.32 seconds (process running for 10.292)
 2026-01-26 14:17:23.189 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: [123, 12, 24]
 2026-01-26 14:17:23.996 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: [123, 12, 24]
+2026-01-26 18:06:31.462 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 21616 (C:\Users\metet\Desktop\micro-mail\target\classes started by metet in C:\Users\metet\Desktop\micro-mail)
+2026-01-26 18:06:31.463 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-26 18:07:20.524 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 27576 (C:\Users\metet\Desktop\micro-mail\target\classes started by metet in C:\Users\metet\Desktop\micro-mail)
+2026-01-26 18:07:20.526 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-26 18:07:36.153 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 16.648 seconds (process running for 19.151)
+2026-01-26 18:11:49.960 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: [123, 12, 24]
+2026-01-26 18:11:50.620 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: [123, 12, 24]
+2026-01-26 18:22:43.637 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 11352 (C:\Users\metet\Desktop\micro-mail\target\classes started by metet in C:\Users\metet\Desktop\micro-mail)
+2026-01-26 18:22:43.639 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-26 18:22:50.210 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 7.0 seconds (process running for 8.606)
+2026-01-26 18:36:55.746 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 25764 (C:\Users\metet\Desktop\micro-mail\target\classes started by metet in C:\Users\metet\Desktop\micro-mail)
+2026-01-26 18:36:55.747 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-26 18:37:02.906 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 7.612 seconds (process running for 9.165)
+2026-01-26 18:46:45.040 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 11532 (C:\Users\metet\Desktop\micro-mail\target\classes started by metet in C:\Users\metet\Desktop\micro-mail)
+2026-01-26 18:46:45.041 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-26 18:46:51.861 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 7.248 seconds (process running for 8.811)
+2026-01-26 19:05:35.576 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 16388 (C:\Users\metet\Desktop\micro-mail\target\classes started by metet in C:\Users\metet\Desktop\micro-mail)
+2026-01-26 19:05:35.578 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-26 19:05:41.760 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 6.615 seconds (process running for 8.196)
+2026-01-26 19:07:46.953 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: zander.n.do@gmail.com
+2026-01-26 19:07:47.331 [mailEventsListener-2] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: romeo@hitract.se
+2026-01-26 19:07:47.360 [mailEventsListener-2] ERROR s.hitract.service.MailgunHttpService - Failed to send mail: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=mailType, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-26 19:07:47.360 [mailEventsListener-1] ERROR s.hitract.service.MailgunHttpService - Failed to send mail: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=mailType, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-26 19:07:47.363 [mailEventsListener-2] ERROR s.hitract.service.MailSenderService - FAILED to construct mail for romeo@hitract.se: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=mailType, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-26 19:07:47.363 [mailEventsListener-1] ERROR s.hitract.service.MailSenderService - FAILED to construct mail for zander.n.do@gmail.com: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=mailType, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-26 19:07:47.364 [mailEventsListener-2] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: romeo@hitract.se
+2026-01-26 19:07:47.364 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: zander.n.do@gmail.com
+2026-01-26 19:21:58.470 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 12376 (C:\Users\metet\Desktop\micro-mail\target\classes started by metet in C:\Users\metet\Desktop\micro-mail)
+2026-01-26 19:21:58.491 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-26 19:22:11.040 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 13.999 seconds (process running for 16.48)
+2026-01-26 19:23:51.233 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: zander.n.do@gmail.com
+2026-01-26 19:23:51.601 [mailEventsListener-2] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: romeo@hitract.se
+2026-01-26 19:23:51.788 [mailEventsListener-2] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: romeo@hitract.se
+2026-01-26 19:23:51.788 [mailEventsListener-2] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: romeo@hitract.se
+2026-01-26 19:23:51.788 [mailEventsListener-1] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: zander.n.do@gmail.com
+2026-01-26 19:23:51.788 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: zander.n.do@gmail.com
