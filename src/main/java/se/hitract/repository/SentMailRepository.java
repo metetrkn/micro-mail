@@ -1,12 +1,10 @@
 package se.hitract.repository;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import se.hitract.model.enums.EntityType;
 import se.hitract.model.SentMail;
-import se.hitract.model.enums.MAIL_TYPE;
 
 @Repository
-public interface SentMailRepository extends CommonRepository<SentMail> {
+public interface SentMailRepository extends JpaRepository<SentMail, Long> {
 
-    boolean existsByMailTypeAndEntityTypeAndEntityId(MAIL_TYPE mailType, EntityType entityType, Long entityId);
 }

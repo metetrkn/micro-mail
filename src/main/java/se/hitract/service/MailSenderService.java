@@ -1,23 +1,14 @@
 package se.hitract.service;
 
-import java.util.Arrays;
 import java.util.List;
 
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.ByteArrayResource;
-import org.springframework.mail.javamail.MimeMessageHelper;
-import org.springframework.mail.javamail.MimeMessagePreparator;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
-import se.hitract.model.enums.EntityType;
-import se.hitract.model.enums.MAIL_TYPE;
-import se.hitract.model.enums.SENT_MAIL_STATUS;
-import se.hitract.model.SentMail;
-import se.hitract.repository.SendMailRepository;
-import se.hitract.repository.SentMailRepository;
+import se.hitract.model.domains.MAIL_TYPE;
 import se.hitract.service.mail.dto.MailRequestDTO;
 
 @Slf4j
@@ -26,12 +17,7 @@ public class MailSenderService {
 
 	@Autowired private MailgunHttpService mailgunHttpService;
 	@Autowired private MailContentBuilderService mailContentBuilderService;
-	@Autowired private PropertiesService propertiesService;
-	@Autowired private SentMailRepository sentMailRepository;
-	@Autowired private SendMailRepository sendMailRepository;
-//	@Autowired private ChatGroupParticipantRepository chatGroupParticipantRepository;
-//	@Autowired private StudentService studentService;
-//	@Autowired private HitEventService hitEventService;
+
 
 	private static final Logger logger = LoggerFactory.getLogger(MailSenderService.class);
 
@@ -132,32 +118,26 @@ public class MailSenderService {
 //			logger.error("Could not send chat group not read mail: " + e);
 //			sentMailRepository.save(new SentMail(SENT_MAIL_STATUS.ERROR, mails, null, mailType, e.toString(), entityType, entityId));
 //		}
-//	}
+	//	}
+	public void sendM1(MailRequestDTO request) {
+		try {
+			String content = mailContentBuilderService.sendM1();
 
-	@Async
-	public void sendM1(List<String> toMailList) {
-		for (String email : toMailList) {
-			try {
-				String content = mailContentBuilderService.sendM1();
+			request.setFromMail("noreply@hitract.se");
+			request.setSubject("Uppdatering av våra Användarvillkor");
+			request.setContent(content);
 
-				// Construct the DTO using Lombok @Builder
-				MailRequestDTO request = MailRequestDTO.builder()
-						.toMail(email)
-						.fromMail("noreply@hitract.se")
-						.subject("Uppdatering av våra Användarvillkor")
-						.content(content)
-						.mailType(MAIL_TYPE.SPECIAL_M1)
-						.build();
+			// This call should throw an exception if it fails
+			mailgunHttpService.send(request);
 
-				// Pass the object to your new HTTP service
-				mailgunHttpService.send(request);
-
-				log.debug("Mail queued for API send: {}", email);
-			} catch (Exception e) {
-				log.error("FAILED to construct mail for {}: {}", email, e.getMessage());
-			}
+			log.info("Mail successfully processed for: {}", request.getEmail());
+		} catch (Exception e) {
+			log.error("FAILED to process mail for {}: {}", request.getEmail(), e.getMessage());
+			// THROW the exception so Rqueue knows to retry!
+			throw new RuntimeException("Email delivery failed", e);
 		}
 	}
+
 //
 //	//@Scheduled(fixedRate=30000)
 //	//@RqueueListener(value = "sendChatGroupNotReadMails", numRetries = "0")

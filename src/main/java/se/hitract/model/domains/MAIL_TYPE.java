@@ -1,4 +1,4 @@
-package se.hitract.model.enums;
+package se.hitract.model.domains;
 
 public enum MAIL_TYPE {
 

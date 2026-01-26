@@ -56,11 +56,9 @@ public class MailgunHttpService {
 
     @Async
     public void send(MailRequestDTO request) {
-//        if (!shouldSend(request)) return;
-
         MultiValueMap<String, Object> body = new LinkedMultiValueMap<>();
         body.add("from", "Hitract <" + request.getFromMail() + ">");
-        body.add("to", request.getToMail());
+        body.add("to", request.getEmail());
         body.add("subject", request.getSubject());
         body.add("html", request.getContent());
 
@@ -75,7 +73,7 @@ public class MailgunHttpService {
 
             if (response != null) {
                 System.out.printf("WireMock/Mailgun Success: ID=%s Message=%s%n", response.id(), response.message());
-                logSentMail(request, SENT_MAIL_STATUS.SUCCESS, "Mailgun ID: " + response.id());
+                logSentMail(request, SENT_MAIL_STATUS.SUCCESS, "");
             }
 
          } catch (Exception e) {
@@ -84,40 +82,22 @@ public class MailgunHttpService {
         }
     }
 
-//    private boolean shouldSend(MailRequestDTO request) {
-//        // Use getToMail() instead of getTo()
-//        String recipient = request.getToMail();
-//        if (recipient == null) return false;
-//
-//        boolean isWhitelisted = recipient.contains("hitract.se")
-//                || recipient.contains("hitract.com")
-//                || recipient.contains("nordstrom.robert@gmail.com");
-//
-//        return "PROD".equals(propertiesService.getEnvironment()) || isWhitelisted;
-//    }
-
     private void logSentMail(MailRequestDTO req, SENT_MAIL_STATUS status, String error) {
-        // 1. Check if entityType string is present
-        EntityType typeEnum = null;
-        try {
-            if (req.getEntityType() != null && !req.getEntityType().isEmpty()) {
-                // 2. Convert the String from DTO to the Enum expected by SentMail
-                typeEnum = EntityType.valueOf(req.getEntityType());
-            }
-        } catch (IllegalArgumentException e) {
-            log.warn("Invalid EntityType string received: {}", req.getEntityType());
+        SentMail mail = new SentMail();
+
+        mail.setEmail(req.getEmail());
+        mail.setStudentId(req.getStudentId());
+        mail.setEntityId(req.getEntityId());
+
+        // Handle Enum conversion safely
+        if (req.getEntityType() != null) {
+            mail.setEntityType(EntityType.valueOf(req.getEntityType()));
         }
 
-        // 3. Pass the converted Enum (typeEnum) instead of the String
-        sentMailRepository.save(new SentMail(
-                status,
-                req.getToMail(),
-                null,
-                req.getMailType(),
-                error,
-                typeEnum,
-                req.getEntityId()
-        ));
-    }
+        mail.setMailType(req.getMailType());
+        mail.setSentMailStatus(status);
+        mail.setError(error);
 
+        sentMailRepository.save(mail);
+    }
 }

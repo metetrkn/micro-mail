@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import org.hibernate.search.engine.backend.types.Sortable;
 import org.hibernate.search.mapper.pojo.mapping.definition.annotation.GenericField;
 import se.hitract.model.enums.EntityType;
-import se.hitract.service.mail.dto.CommonDTO;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -13,8 +12,6 @@ import java.util.Objects;
 @SuppressWarnings("serial")
 @MappedSuperclass
 public abstract class CommonEntity implements java.io.Serializable {
-
-	public abstract Long getId();
 
 	@GenericField(sortable = Sortable.YES, name = "created_sort")
 	protected Date created;
@@ -64,27 +61,12 @@ public abstract class CommonEntity implements java.io.Serializable {
 		return getClass().getSimpleName();
 	}
 
-	@Override
-	public String toString() {
-		return "[ " + getType() + "(" + getId() + ")" + getAttributesData() + " ]";
-	}
-
 	//Override in subclasses
 	@Transient
 	protected String getAttributesData() {
 		return "";
 	}
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-		if(o instanceof CommonDTO) {
-			throw new RuntimeException("Do not compare DTO with model");
-		}
-        if (!(o instanceof CommonEntity)) return false;
-        CommonEntity ent = (CommonEntity) o;
-        return getId() != null && Objects.equals(getId(), ent.getId());
-    }
 
     @Override
     public int hashCode() {
@@ -95,5 +77,7 @@ public abstract class CommonEntity implements java.io.Serializable {
     public EntityType getTargetEntityType() {
     	return null;
     }
+
+	public abstract Long getId();
 }
 
