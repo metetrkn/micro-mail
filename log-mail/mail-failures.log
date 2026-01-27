@@ -1,50 +1,168 @@
-2026-01-26 12:56:04.735 - Failed to send mail: I/O error on POST request for "http://localhost:9090/sandbox.hitract.se/messages": EOF reached while reading
-2026-01-26 12:56:05.061 - Failed to send mail: I/O error on POST request for "http://localhost:9090/sandbox.hitract.se/messages": Received RST_STREAM: Stream cancelled
-2026-01-26 12:56:05.087 - Failed to send mail: I/O error on POST request for "http://localhost:9090/sandbox.hitract.se/messages": Received RST_STREAM: Stream cancelled
-2026-01-26 13:38:51.311 - Failed to send mail: I/O error on POST request for "http://localhost:9090/sandbox.hitract.se/messages": EOF reached while reading
-2026-01-26 13:38:51.473 - Failed to send mail: I/O error on POST request for "http://localhost:9090/sandbox.hitract.se/messages": Received RST_STREAM: Stream cancelled
-2026-01-26 13:38:51.492 - Failed to send mail: I/O error on POST request for "http://localhost:9090/sandbox.hitract.se/messages": Received RST_STREAM: Stream cancelled
-2026-01-26 13:39:30.829 - Failed to send mail: I/O error on POST request for "http://localhost:9090/sandbox.hitract.se/messages": Received RST_STREAM: Stream cancelled
-2026-01-26 13:39:30.848 - Failed to send mail: I/O error on POST request for "http://localhost:9090/sandbox.hitract.se/messages": Received RST_STREAM: Stream cancelled
-2026-01-26 13:39:30.867 - Failed to send mail: I/O error on POST request for "http://localhost:9090/sandbox.hitract.se/messages": Received RST_STREAM: Stream cancelled
-2026-01-26 13:40:14.310 - Failed to send mail: I/O error on POST request for "http://localhost:9090/sandbox.hitract.se/messages": EOF reached while reading
-2026-01-26 13:40:14.415 - Failed to send mail: I/O error on POST request for "http://localhost:9090/sandbox.hitract.se/messages": Received RST_STREAM: Stream cancelled
-2026-01-26 13:40:14.431 - Failed to send mail: I/O error on POST request for "http://localhost:9090/sandbox.hitract.se/messages": Received RST_STREAM: Stream cancelled
-2026-01-26 13:46:09.057 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
-2026-01-26 13:46:09.274 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
-2026-01-26 13:46:09.297 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
-2026-01-26 13:48:49.932 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
-2026-01-26 13:48:50.123 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
-2026-01-26 13:48:50.145 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
-2026-01-26 13:57:00.368 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
-2026-01-26 13:57:00.633 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
-2026-01-26 13:57:00.707 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
-2026-01-26 14:00:07.402 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
-2026-01-26 14:00:07.549 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
-2026-01-26 14:00:07.571 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
-2026-01-26 14:04:48.970 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
-2026-01-26 14:04:49.231 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
-2026-01-26 14:04:49.270 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
-2026-01-26 14:11:12.780 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
-2026-01-26 14:11:12.957 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
-2026-01-26 14:11:12.978 - Failed to send mail: Mailgun API Error: 404 NOT_FOUND
-2026-01-26 19:07:47.360 - Failed to send mail: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+2026-01-27 17:26:15.349 - Failed to send mail: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
 List of constraint violations:[
 	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
-	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=mailType, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
 ]
-2026-01-26 19:07:47.360 - Failed to send mail: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
-List of constraint violations:[
-	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=mailType, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
-	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
-]
-2026-01-26 19:07:47.363 - FAILED to construct mail for romeo@hitract.se: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+2026-01-27 17:26:15.349 - Failed to send mail: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
 List of constraint violations:[
 	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
-	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=mailType, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
 ]
-2026-01-26 19:07:47.363 - FAILED to construct mail for zander.n.do@gmail.com: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+2026-01-27 17:26:15.354 - FAILED to process mail for null: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
 List of constraint violations:[
-	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=mailType, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-27 17:26:15.354 - FAILED to process mail for null: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-27 17:26:15.356 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: jakarta.validation.ConstraintViolationException: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-27 17:26:15.356 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: jakarta.validation.ConstraintViolationException: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-27 17:26:21.931 - Failed to send mail: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-27 17:26:21.934 - FAILED to process mail for null: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-27 17:26:21.935 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: jakarta.validation.ConstraintViolationException: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-27 17:26:21.937 - Failed to send mail: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-27 17:26:21.943 - FAILED to process mail for null: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-27 17:26:21.944 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: jakarta.validation.ConstraintViolationException: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-27 17:26:29.948 - Failed to send mail: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-27 17:26:29.948 - Failed to send mail: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-27 17:26:29.951 - FAILED to process mail for null: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-27 17:26:29.951 - FAILED to process mail for null: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-27 17:26:29.951 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: jakarta.validation.ConstraintViolationException: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-27 17:26:29.951 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: jakarta.validation.ConstraintViolationException: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-27 18:18:11.621 - Failed to send mail: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-27 18:18:11.621 - Failed to send mail: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-27 18:18:11.625 - FAILED to process mail for null: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-27 18:18:11.625 - FAILED to process mail for null: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-27 18:18:11.626 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: jakarta.validation.ConstraintViolationException: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-27 18:18:11.626 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: jakarta.validation.ConstraintViolationException: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-27 18:18:17.864 - Failed to send mail: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-27 18:18:17.866 - Failed to send mail: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-27 18:18:17.867 - FAILED to process mail for null: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-27 18:18:17.867 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: jakarta.validation.ConstraintViolationException: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-27 18:18:17.870 - FAILED to process mail for null: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-27 18:18:17.872 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: jakarta.validation.ConstraintViolationException: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-27 18:18:23.816 - Failed to send mail: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-27 18:18:23.816 - Failed to send mail: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-27 18:18:23.819 - FAILED to process mail for null: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-27 18:18:23.819 - FAILED to process mail for null: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-27 18:18:23.819 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: jakarta.validation.ConstraintViolationException: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-01-27 18:18:23.819 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: jakarta.validation.ConstraintViolationException: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
 	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
 ]
