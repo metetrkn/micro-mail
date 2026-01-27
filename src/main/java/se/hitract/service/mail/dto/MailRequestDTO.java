@@ -22,6 +22,8 @@ public class MailRequestDTO{
     private String subject;
     private String content;
     private boolean internalUser;
+    private String firstName;
+
 
 }
 

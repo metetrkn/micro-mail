@@ -151,13 +151,13 @@ public class MailContentBuilderService {
 //
 //        return templateEngine.process("mail/paymentReportMailNoData", context);
 //	}
-//
-//	public String sendSpecialMail(HitMember hitMember) {
-//		Context context = new Context();
-//		context.setVariable("hitMember", hitMember);
-//
-//        return templateEngine.process("mail/specialMail", context);
-//	}
+
+    public String sendSpecialMail(String firstName) {
+        Context context = new Context();
+        context.setVariable("firstName", firstName);
+
+        return templateEngine.process("mail/specialMail", context);
+    }
 
 	public String sendM1() {
 		Context context = new Context();

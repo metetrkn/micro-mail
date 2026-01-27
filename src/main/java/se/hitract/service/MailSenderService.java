@@ -122,21 +122,33 @@ public class MailSenderService {
 	public void sendM1(MailRequestDTO request) {
 		try {
 			String content = mailContentBuilderService.sendM1();
-
+			request.setContent(content);
 			request.setFromMail("noreply@hitract.se");
 			request.setSubject("Uppdatering av våra Användarvillkor");
-			request.setContent(content);
-
-			// This call should throw an exception if it fails
 			mailgunHttpService.send(request);
 
 			log.info("Mail successfully processed for: {}", request.getEmail());
 		} catch (Exception e) {
 			log.error("FAILED to process mail for {}: {}", request.getEmail(), e.getMessage());
-			// THROW the exception so Rqueue knows to retry!
 			throw new RuntimeException("Email delivery failed", e);
 		}
 	}
+
+	public void sendSpecialMail(MailRequestDTO request) {
+
+		try {
+			String content = mailContentBuilderService.sendSpecialMail(request.getFirstName());
+			request.setContent(content);
+			request.setFromMail("noreply@hitract.se");
+			request.setSubject("Mailutskick");
+			mailgunHttpService.send(request);
+			log.info("Mail successfully processed for: {}", request.getEmail());
+		} catch (Exception e) {
+			log.error("FAILED to process mail for {}: {}", request.getEmail(), e.getMessage());
+			throw new RuntimeException("Email delivery failed", e);
+		}
+	}
+
 
 //
 //	//@Scheduled(fixedRate=30000)
@@ -270,15 +282,9 @@ public class MailSenderService {
 //		String content = mailContentBuilderService.paymentReportNoData(fromDate, toDate);
 //		sendMail(toMail, "noreply@hitract.se", "", content, "Rapport hitract - ingen data för perioden", MAIL_TYPE.PAYMENT_REPORT);
 //	}
-//
-//	public void sendSpecialMail(HitMember hitMember) {
-//
-//		String fromMail = "noreply@hitract.se";
-//		String content = mailContentBuilderService.sendSpecialMail(hitMember);
-//		String subject = "Mailutskick";
-//		sendMail(hitMember.getEmail(), fromMail, "", content, subject, MAIL_TYPE.SPECIAL);
-//	}
-//
+
+
+
 //	@RqueueListener(value = "sendWebOrderPayed", numRetries = "0", concurrency = "1", active = "${queue.enable}")
 //	public void sendWebOrderPayed(OrderDTO orderDTO) throws IOException {
 //

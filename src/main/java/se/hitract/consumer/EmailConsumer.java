@@ -25,12 +25,21 @@ public class EmailConsumer {
     )
 
     public void processEmail(MailRequestDTO emailDto) {
+
+        // 1. Check if the email is missing, if so logs it but system continues running
+        if (emailDto.getEmail() == null || emailDto.getEmail().trim().isEmpty()) {
+            log.warn("SWALLOWED: No email address for ID {}. Skipping processing.", emailDto.getStudentId());
+            return;
+        }
+
+        // 3. Normal process continues only if the check above passes
         try {
             log.info("START: Processing email for: {}", emailDto.getEmail());
             mailRoutingService.routeEmail(emailDto);
             log.info("SUCCESS: Sent to: {}", emailDto.getEmail());
         } catch (Exception e) {
-            log.warn("Attempt failed for {}. Rqueue will retry.", emailDto.getEmail());
+            // We only catch and rethrow real system errors (like the mail server being down)
+            log.error("SYSTEM ERROR: Attempt failed for {}. Rqueue will retry.", emailDto.getEmail());
             throw e;
         }
     }
