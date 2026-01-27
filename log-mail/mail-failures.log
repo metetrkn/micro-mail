@@ -48,3 +48,5 @@ List of constraint violations:[
 	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=mailType, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
 	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
 ]
+2026-01-27 11:31:32.577 - FAILED to construct mail for roy.biplobslu@gmail.com: Error resolving template [mail/studentSignInMail], template might not exist or might not be accessible by any of the configured Template Resolvers
+2026-01-27 11:32:46.712 - FAILED to construct mail for roy.biplobslu@gmail.com: Error resolving template [mail/mailFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/studentSignInMail" - line 2, col 11)

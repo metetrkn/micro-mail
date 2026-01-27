@@ -1,4 +1,4 @@
-package se.hitract.model.domains;
+package se.hitract.model.enums;
 
 public enum MAIL_TYPE {
 
@@ -25,6 +25,8 @@ public enum MAIL_TYPE {
     CONFIRM_EMAIL,
     JONKOPING_PAY_MEMBERSHIP_MAIL,
     RECEIPT,
-    PAYPOUT_REPORT_NOT_MATCH
+    PAYPOUT_REPORT_NOT_MATCH,
+    STUDENT_SIGNIN,
+    STUDENT_SIGNUP
 
 }

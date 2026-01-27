@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.NoArgsConstructor;
 import se.hitract.model.enums.EntityType;
-import se.hitract.model.domains.MAIL_TYPE;
+import se.hitract.model.enums.MAIL_TYPE;
 import se.hitract.model.enums.SENT_MAIL_STATUS;
 
 @Getter

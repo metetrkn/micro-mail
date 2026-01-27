@@ -1,14 +1,10 @@
 package se.hitract.service;
 
-import java.util.List;
-
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
-import se.hitract.model.domains.MAIL_TYPE;
 import se.hitract.service.mail.dto.MailRequestDTO;
 
 @Slf4j
@@ -125,14 +121,13 @@ public class MailSenderService {
 
 			request.setFromMail("noreply@hitract.se");
 			request.setSubject("Uppdatering av våra Användarvillkor");
-			request.setContent(content);
 
 			// This call should throw an exception if it fails
-			mailgunHttpService.send(request);
+			mailgunHttpService.send(request, content);
 
-			log.info("Mail successfully processed for: {}", request.getEmail());
+			log.info("Mail successfully processed for: {}", request.getToMail());
 		} catch (Exception e) {
-			log.error("FAILED to process mail for {}: {}", request.getEmail(), e.getMessage());
+			log.error("FAILED to process mail for {}: {}", request.getToMail(), e.getMessage());
 			// THROW the exception so Rqueue knows to retry!
 			throw new RuntimeException("Email delivery failed", e);
 		}
@@ -184,16 +179,17 @@ public class MailSenderService {
 //		sendMail(email, fromMail, "", content, subject, MAIL_TYPE.COMPANY_SIGNUP);
 //	}
 //
-//	@Async
-//	public void sendStudentSigInInMail(Student toStudent, String token) {
-//
-//		LANGUAGE language = toStudent.getLanguage() != null ? toStudent.getLanguage() : LANGUAGE.sv;
-//
-//		String fromMail = "login@hitract.se";
-//		String content = mailContentBuilderService.studentSignInContent(toStudent.getIdentifier(), token, language);
-//		String subject =  language.equals(LANGUAGE.sv) ? "Logga in på hitract" : "Login to hitract";
-//		sendMail(toStudent, fromMail, content, subject, MAIL_TYPE.MAIL_SIGNIN);
-//	}
+public void sendStudentSigInInMail(MailRequestDTO request) {
+
+    try {
+        String content = mailContentBuilderService.studentSignInContent(request);
+        mailgunHttpService.send(request,content);
+
+        log.debug("Mail queued for API send: {}", request.getToMail());
+    } catch (Exception e) {
+        log.error("FAILED to construct mail for {}: {}", request.getToMail(), e.getMessage());
+    }
+}
 //
 //	@Async
 //	public void sendHitClubSignupInMail(Student toStudent, String token) {

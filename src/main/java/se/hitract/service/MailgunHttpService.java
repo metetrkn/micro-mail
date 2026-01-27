@@ -55,12 +55,12 @@ public class MailgunHttpService {
     }
 
     @Async
-    public void send(MailRequestDTO request) {
+    public void send(MailRequestDTO request, String content) {
         MultiValueMap<String, Object> body = new LinkedMultiValueMap<>();
         body.add("from", "Hitract <" + request.getFromMail() + ">");
-        body.add("to", request.getEmail());
+        body.add("to", request.getToMail());
         body.add("subject", request.getSubject());
-        body.add("html", request.getContent());
+        body.add("html", content);
 
         try {
             MailgunResponse response = restClient.post()
@@ -85,8 +85,8 @@ public class MailgunHttpService {
     private void logSentMail(MailRequestDTO req, SENT_MAIL_STATUS status, String error) {
         SentMail mail = new SentMail();
 
-        mail.setEmail(req.getEmail());
-        mail.setStudentId(req.getStudentId());
+        mail.setEmail(req.getToMail());
+        mail.setStudentId(req.getStudent_id());
         mail.setEntityId(req.getEntityId());
 
         // Handle Enum conversion safely

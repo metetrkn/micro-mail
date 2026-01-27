@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
+import se.hitract.service.mail.dto.MailRequestDTO;
 //import se.hitract.model.domains.PRODUCT_TYPE;
 //import se.hitract.repository.BuddySuggestionRepository;
 //import se.hitract.repository.ChatGroupRepository;
@@ -20,7 +21,7 @@ import org.thymeleaf.context.Context;
 public class MailContentBuilderService {
 
     @Autowired private TemplateEngine templateEngine;
-//    @Autowired private PropertiesService propertiesService;
+    @Autowired private PropertiesService propertiesService;
 //    @Autowired private ChatGroupRepository chatGroupRepository;
 //    @Autowired private BuddySuggestionRepository buddySuggestionRepository;
 //    @Autowired private QrCodeService qrCodeService;
@@ -71,14 +72,15 @@ public class MailContentBuilderService {
 //        return templateEngine.process("mail/studentSignUpMail", context);
 //    }
 //
-//    public String studentSignInContent(String email, String token, @NotNull LANGUAGE language) {
-//    	Context context = new Context();
-//    	context.setVariable("email", email);
-//    	context.setVariable("token", token);
-//		context.setVariable("language", language);
-//		context.setVariable("environment", propertiesService.getEnvironment());
-//        return templateEngine.process("mail/studentSignInMail", context);
-//    }
+public String studentSignInContent(MailRequestDTO request) {
+    Context context = new Context();
+    context.setVariable("email", request.getToMail());
+    context.setVariable("token", request.getToken());
+    Object lang = request.getLanguage();
+    context.setVariable("language", lang != null ? lang.toString() : "sv");
+    context.setVariable("environment", propertiesService.getEnvironment());
+    return templateEngine.process("mail/studentSignInMail", context);
+}
 //
 //    public String chatGroupNotSeenContent(ChatGroupParticipant chatGroupParticipant) {
 //    	Context context = new Context();

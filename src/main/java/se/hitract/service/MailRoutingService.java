@@ -7,7 +7,7 @@ import se.hitract.service.mail.dto.MailRequestDTO;
 @Slf4j
 public class MailRoutingService {
 
-    private MailSenderService mailSenderService;
+    private final MailSenderService mailSenderService;
     public MailRoutingService(MailSenderService mailSenderService) {
         this.mailSenderService = mailSenderService;
     }
@@ -15,6 +15,7 @@ public class MailRoutingService {
     public void routeEmail(@org.checkerframework.checker.nullness.qual.MonotonicNonNull MailRequestDTO emailDto) {
         switch (emailDto.getMailType()) {
             case SPECIAL_M1 -> mailSenderService.sendM1(emailDto);
+            case STUDENT_SIGNIN -> mailSenderService.sendStudentSigInInMail(emailDto);
             default -> log.error("No logic implemented for MAIL_TYPE: {}", emailDto.toString());
 //            case COMPANY_SIGNIN -> handleCompanySignIn(email);
 //            case COMPANY_SIGNUP -> handleCompanySignUp(email);

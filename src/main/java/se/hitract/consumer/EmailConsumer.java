@@ -26,11 +26,11 @@ public class EmailConsumer {
 
     public void processEmail(MailRequestDTO emailDto) {
         try {
-            log.info("START: Processing email for: {}", emailDto.getEmail());
+            log.info("START: Processing email for: {}", emailDto.getToMail());
             mailRoutingService.routeEmail(emailDto);
-            log.info("SUCCESS: Sent to: {}", emailDto.getEmail());
+            log.info("SUCCESS: Sent to: {}", emailDto.getToMail());
         } catch (Exception e) {
-            log.warn("Attempt failed for {}. Rqueue will retry.", emailDto.getEmail());
+            log.warn("Attempt failed for {}. Rqueue will retry.", emailDto.getToMail());
             throw e;
         }
     }

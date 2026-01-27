@@ -183,3 +183,14 @@ List of constraint violations:[
 2026-01-26 19:23:51.788 [mailEventsListener-2] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: romeo@hitract.se
 2026-01-26 19:23:51.788 [mailEventsListener-1] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: zander.n.do@gmail.com
 2026-01-26 19:23:51.788 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: zander.n.do@gmail.com
+2026-01-27 11:30:34.709 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 23.0.2 with PID 24388 (C:\Users\biplo\Desktop\admission\micro-mail\target\classes started by biplo in C:\Users\biplo\Desktop\admission\micro-mail)
+2026-01-27 11:30:34.709 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-27 11:30:39.252 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 4.804 seconds (process running for 6.823)
+2026-01-27 11:31:32.577 [tomcat-handler-0] ERROR s.hitract.service.MailSenderService - FAILED to construct mail for roy.biplobslu@gmail.com: Error resolving template [mail/studentSignInMail], template might not exist or might not be accessible by any of the configured Template Resolvers
+2026-01-27 11:32:33.722 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 23.0.2 with PID 16400 (C:\Users\biplo\Desktop\admission\micro-mail\target\classes started by biplo in C:\Users\biplo\Desktop\admission\micro-mail)
+2026-01-27 11:32:33.723 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-27 11:32:38.535 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 5.103 seconds (process running for 5.919)
+2026-01-27 11:32:46.712 [tomcat-handler-0] ERROR s.hitract.service.MailSenderService - FAILED to construct mail for roy.biplobslu@gmail.com: Error resolving template [mail/mailFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/studentSignInMail" - line 2, col 11)
+2026-01-27 11:33:51.622 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 23.0.2 with PID 8820 (C:\Users\biplo\Desktop\admission\micro-mail\target\classes started by biplo in C:\Users\biplo\Desktop\admission\micro-mail)
+2026-01-27 11:33:51.622 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-27 11:33:56.346 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 4.983 seconds (process running for 5.837)
