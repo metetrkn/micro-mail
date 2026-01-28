@@ -52,6 +52,13 @@ public class MailContentBuilderService {
 
         return templateEngine.process("mail/userProductUsed", context);
     }
+
+    public String sendUserProductUnUsed(Long userProductId) {
+        Context context = new Context();
+        context.setVariable("userProduct", Map.of("userProductId", userProductId));
+
+        return templateEngine.process("mail/userProductUnUsed", context);
+    }
 //
 //    public String yourBuddy() {
 //        Context context = new Context();
@@ -212,13 +219,8 @@ public class MailContentBuilderService {
 
 
 
-//	public String sendUserProductUnUsed(UserProduct userProduct) {
-//		Context context = new Context();
-//		context.setVariable("userProduct", userProduct);
-//
-//        return templateEngine.process("mail/userProductUnUsed", context);
-//	}
-//
+
+
 //	public String sendContactInfo(ContactInfo contactInfo) {
 //		Context context = new Context();
 //		context.setVariable("contactInfo", contactInfo);

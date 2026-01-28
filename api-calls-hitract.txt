@@ -40,4 +40,20 @@ WHERE identifier = 'WExZDM1MTM2MTk3NTQ5YmFjNTJjNjBmO';
 }
 
 
+POST http://localhost:8080/api/product/v2/unUseProduct
+
+-- 1. Ensure the order is marked as a Web Order for the email logic
+UPDATE orderr SET from_web = 1 WHERE order_id = 574362;
+
+-- 2. Ensure the product is in the USED state so 'unUseProductV2' can process it
+UPDATE user_product
+SET user_product_status = 'USED',
+    number_of_usages_left = 0
+WHERE user_product_id = 633792;
+
+{
+  "identifier": "LxjSPWsElwWZlFEFBqZMJBhAkdmWcjbe",
+  "numberOfUsages": 1
+}
+
 
