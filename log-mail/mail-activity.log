@@ -156,3 +156,15 @@ List of constraint violations:[
 2026-01-28 17:12:53.354 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: Nordstrom.robert@gmail.com
 2026-01-28 17:12:53.687 [mailEventsListener-1] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: Nordstrom.robert@gmail.com
 2026-01-28 17:12:53.688 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: Nordstrom.robert@gmail.com
+2026-01-28 17:24:00.002 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 20308 (C:\Users\metet\IdeaProjects\micro-service\target\classes started by metet in C:\Users\metet\IdeaProjects\micro-service)
+2026-01-28 17:24:00.003 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-28 17:24:03.807 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 4.05 seconds (process running for 4.703)
+2026-01-28 17:27:30.656 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: Nordstrom.robert@gmail.com
+2026-01-28 17:27:30.932 [mailEventsListener-1] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: Nordstrom.robert@gmail.com
+2026-01-28 17:27:30.932 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: Nordstrom.robert@gmail.com
+2026-01-28 17:31:39.887 [mailEventsListener-3] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: Nordstrom.robert@gmail.com
+2026-01-28 17:31:39.887 [mailEventsListener-2] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: Nordstrom.robert@gmail.com
+2026-01-28 17:31:39.932 [mailEventsListener-3] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: Nordstrom.robert@gmail.com
+2026-01-28 17:31:39.932 [mailEventsListener-3] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: Nordstrom.robert@gmail.com
+2026-01-28 17:31:39.934 [mailEventsListener-2] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: Nordstrom.robert@gmail.com
+2026-01-28 17:31:39.934 [mailEventsListener-2] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: Nordstrom.robert@gmail.com

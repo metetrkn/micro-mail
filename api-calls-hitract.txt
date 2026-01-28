@@ -1,0 +1,43 @@
+http://localhost:8080/api/admin//mail/sendM1
+[list of studnet mails]
+
+http://localhost:8080/api/admin/mail/sendSpecial
+bearer token     user:29
+
+req body,    hit_member table hit_member_id fields given as parameter
+[275398,
+275400
+]
+
+
+http://localhost:8080/api/product/useProducts
+beaare token     user:29
+[
+  {
+    "identifier": "DFkODg4OTJmZjI0ZWZmOGE3Y2E0MTI1MmY2O"
+  },
+  {
+    "identifier": "2UxYWE5NjFhY2E2NjUzYzMwN2ZjM2"
+  }
+]
+
+http://localhost:8080/api/product/useProduct
+beaare token     user:29
+
+-- Step 1: Force the order to be a Web Order
+UPDATE orderr
+SET from_web = 1
+WHERE order_id = (SELECT order_id FROM user_product WHERE identifier = 'WExZDM1MTM2MTk3NTQ5YmFjNTJjNjBmO');
+
+-- Step 2: Ensure the ticket itself is PAID and has usages (if you already tested with it)
+UPDATE user_product
+SET user_product_status = 'PAID', number_of_usages_left = 1
+WHERE identifier = 'WExZDM1MTM2MTk3NTQ5YmFjNTJjNjBmO';
+
+{
+  "identifier": "WExZDM1MTM2MTk3NTQ5YmFjNTJjNjBmO",
+  "productOfferIds": [13980]
+}
+
+
+
