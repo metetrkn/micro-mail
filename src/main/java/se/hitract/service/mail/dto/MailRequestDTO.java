@@ -2,6 +2,7 @@ package se.hitract.service.mail.dto;
 
 import lombok.*;
 import se.hitract.model.domains.MAIL_TYPE;
+import se.hitract.model.enums.EntityType;
 
 import java.util.List;
 import java.util.Map;
@@ -23,6 +24,7 @@ public class MailRequestDTO{
     private String content;
     private boolean internalUser;
     private String firstName;
+    private Long userProductId;
 
 
 }

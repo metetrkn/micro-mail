@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
+
+import java.util.Map;
 //import se.hitract.model.domains.PRODUCT_TYPE;
 //import se.hitract.repository.BuddySuggestionRepository;
 //import se.hitract.repository.ChatGroupRepository;
@@ -29,6 +31,26 @@ public class MailContentBuilderService {
         Context context = new Context();
         //context.setVariable("message", message);
         return templateEngine.process("mail/signup", context);
+    }
+
+
+    public String sendSpecialMail(String firstName) {
+        Context context = new Context();
+        context.setVariable("firstName", firstName);
+
+        return templateEngine.process("mail/specialMail", context);
+    }
+
+    public String sendM1() {
+        Context context = new Context();
+        return templateEngine.process("mail/sendM1", context);
+    }
+
+    public String sendUserProductUsed(Long userProductId) {
+        Context context = new Context();
+        context.setVariable("userProduct", Map.of("userProductId", userProductId));
+
+        return templateEngine.process("mail/userProductUsed", context);
     }
 //
 //    public String yourBuddy() {
@@ -152,17 +174,7 @@ public class MailContentBuilderService {
 //        return templateEngine.process("mail/paymentReportMailNoData", context);
 //	}
 
-    public String sendSpecialMail(String firstName) {
-        Context context = new Context();
-        context.setVariable("firstName", firstName);
 
-        return templateEngine.process("mail/specialMail", context);
-    }
-
-	public String sendM1() {
-		Context context = new Context();
-        return templateEngine.process("mail/sendM1", context);
-	}
 
 //	public String sendWebOrderPayed(Orderr order, HitEvent hitEvent) {
 //		Context context = new Context();
@@ -197,14 +209,9 @@ public class MailContentBuilderService {
 //
 //        return templateEngine.process("mail/orderPayed", context);
 //	}
-//
-//	public String sendUserProductUsed(UserProduct userProduct) {
-//		Context context = new Context();
-//		context.setVariable("userProduct", userProduct);
-//
-//        return templateEngine.process("mail/userProductUsed", context);
-//	}
-//
+
+
+
 //	public String sendUserProductUnUsed(UserProduct userProduct) {
 //		Context context = new Context();
 //		context.setVariable("userProduct", userProduct);

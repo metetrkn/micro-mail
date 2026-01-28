@@ -16,6 +16,7 @@ public class MailRoutingService {
         switch (emailDto.getMailType()) {
             case SPECIAL_M1 -> mailSenderService.sendM1(emailDto);
             case SPECIAL -> mailSenderService.sendSpecialMail(emailDto);
+            case USER_PRODUCT_USED -> mailSenderService.sendUserProductUsed(emailDto);
             default -> log.error("No logic implemented for MAIL_TYPE: {}", emailDto.toString());
 //            case COMPANY_SIGNIN -> handleCompanySignIn(email);
 //            case COMPANY_SIGNUP -> handleCompanySignUp(email);

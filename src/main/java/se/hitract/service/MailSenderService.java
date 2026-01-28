@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import se.hitract.model.domains.MAIL_TYPE;
+import se.hitract.model.enums.EntityType;
 import se.hitract.service.mail.dto.MailRequestDTO;
 
 @Slf4j
@@ -149,7 +150,21 @@ public class MailSenderService {
 		}
 	}
 
-
+	@Async
+	public void sendUserProductUsed(MailRequestDTO request) {
+		try {
+			request.setEntityType("USER_PRODUCT");
+			request.setFromMail("noreply@hitract.se");
+			String content = mailContentBuilderService.sendUserProductUsed(request.getUserProductId());
+			request.setContent(content);
+			request.setSubject("hitract - din biljett har checkats in");
+			mailgunHttpService.send(request);
+			log.info("Mail successfully processed for: {}", request.getEmail());
+		} catch (Exception e) {
+			log.error("FAILED to process mail for {}: {}", request.getEmail(), e.getMessage());
+			throw new RuntimeException("Email delivery failed", e);
+		}
+	}
 //
 //	//@Scheduled(fixedRate=30000)
 //	//@RqueueListener(value = "sendChatGroupNotReadMails", numRetries = "0")
@@ -391,17 +406,8 @@ public class MailSenderService {
 //		footer.setBorderWidthBottom(0);
 //		return footer;
 //	}
-//
-//	@Async
-//	public void sendUserProductUsed(UserProduct userProduct) {
-//
-//		String fromMail = "noreply@hitract.se";
-//		String content = mailContentBuilderService.sendUserProductUsed(userProduct);
-//		String subject = "hitract - din biljett har checkats in";
-//		sendMail(userProduct.getOrder().getStudent().getEmail(), fromMail, "", content, subject, MAIL_TYPE.USER_PRODUCT_USED, EntityType.USER_PRODUCT, userProduct.getUserProductId());
-//
-//	}
-//
+
+
 //	@Async
 //	public void sendUserProductUnUsed(UserProduct userProduct) {
 //
