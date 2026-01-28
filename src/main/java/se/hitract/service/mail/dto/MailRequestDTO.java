@@ -13,6 +13,7 @@ import java.util.Map;
 @AllArgsConstructor
 @Builder
 public class MailRequestDTO{
+
     private MAIL_TYPE mailType;
     private String email;
     private Map<String, Object> propertiesData;
@@ -25,7 +26,7 @@ public class MailRequestDTO{
     private boolean internalUser;
     private String firstName;
     private Long userProductId;
-
+    private Long productOfferIds;
 
 }
 
