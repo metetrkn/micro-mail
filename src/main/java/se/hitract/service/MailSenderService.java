@@ -165,6 +165,24 @@ public class MailSenderService {
 			throw new RuntimeException("Email delivery failed", e);
 		}
 	}
+
+	@Async
+	public void sendUserProductUnUsed(MailRequestDTO request) {
+		try {
+			request.setEntityType("USER_PRODUCT");
+			request.setFromMail("noreply@hitract.se");
+			String content = mailContentBuilderService.sendUserProductUnUsed(request.getUserProductId());
+			request.setContent(content);
+			request.setSubject("hitract - din biljett har checkats ut");
+			mailgunHttpService.send(request);
+			log.info("Mail successfully processed for: {}", request.getEmail());
+		} catch (Exception e) {
+			log.error("FAILED to process mail for {}: {}", request.getEmail(), e.getMessage());
+			throw new RuntimeException("Email delivery failed", e);
+		}
+	}
+
+
 //
 //	//@Scheduled(fixedRate=30000)
 //	//@RqueueListener(value = "sendChatGroupNotReadMails", numRetries = "0")
@@ -408,16 +426,7 @@ public class MailSenderService {
 //	}
 
 
-//	@Async
-//	public void sendUserProductUnUsed(UserProduct userProduct) {
-//
-//		String fromMail = "noreply@hitract.se";
-//		String content = mailContentBuilderService.sendUserProductUnUsed(userProduct);
-//		String subject = "hitract - din biljett har checkats ut";
-//		sendMail(userProduct.getOrder().getStudent().getEmail(), fromMail, "", content, subject, MAIL_TYPE.USER_PRODUCT_UN_USED, EntityType.USER_PRODUCT, userProduct.getUserProductId());
-//
-//	}
-//
+
 //	public void sendNewContactInfoMail(ContactInfo contactInfo) {
 //
 //		String fromMail = "info@hitract.se";
