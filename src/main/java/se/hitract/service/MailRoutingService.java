@@ -1,6 +1,7 @@
 package se.hitract.service;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
+import se.hitract.model.domains.MAIL_TYPE;
 import se.hitract.service.mail.dto.MailRequestDTO;
 
 @Component
@@ -18,6 +19,9 @@ public class MailRoutingService {
             case SPECIAL -> mailSenderService.sendSpecialMail(emailDto);
             case USER_PRODUCT_USED -> mailSenderService.sendUserProductUsed(emailDto);
             case USER_PRODUCT_UN_USED -> mailSenderService.sendUserProductUnUsed(emailDto);
+            case CONFIRM_EMAIL -> mailSenderService.confirmEmail(emailDto);
+            case PAYMENT_REPORT -> mailSenderService.sendPaymentReport(emailDto);
+            case PAYMENT_REPORT_NO_DATA -> mailSenderService.sendPaymentReportNoData(emailDto);
             default -> log.error("No logic implemented for MAIL_TYPE: {}", emailDto.toString());
 //            case COMPANY_SIGNIN -> handleCompanySignIn(email);
 //            case COMPANY_SIGNUP -> handleCompanySignUp(email);
