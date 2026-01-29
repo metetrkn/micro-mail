@@ -199,3 +199,12 @@ List of constraint violations:[
 2026-01-28 20:44:00.300 [mailEventsListener-8] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: Nordstrom.robert@gmail.com
 2026-01-28 20:52:38.758 [mailEventsListener-9] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: Nordstrom.robert@gmail.com
 2026-01-28 20:52:38.764 [mailEventsListener-9] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: Nordstrom.robert@gmail.com
+2026-01-29 16:41:13.384 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 15912 (C:\Users\metet\Desktop\micro-mail\target\classes started by metet in C:\Users\metet\Desktop\micro-mail)
+2026-01-29 16:41:13.385 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-29 16:41:23.490 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 10.696 seconds (process running for 13.696)
+2026-01-29 16:51:08.412 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: student.test@hitract.se
+2026-01-29 16:51:09.090 [mailEventsListener-1] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: student.test@hitract.se
+2026-01-29 16:51:09.090 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: student.test@hitract.se
+2026-01-29 17:13:47.167 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 23844 (C:\Users\metet\Desktop\micro-mail\target\classes started by metet in C:\Users\metet\Desktop\micro-mail)
+2026-01-29 17:13:47.171 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-29 17:14:03.614 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 17.949 seconds (process running for 20.815)

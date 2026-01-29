@@ -182,6 +182,47 @@ public class MailSenderService {
 		}
 	}
 
+	public void confirmEmail(MailRequestDTO request) {
+		try {
+			request.setFromMail("noreply@hitract.se");
+			String content = mailContentBuilderService.confirmEmail(request.getToken());
+			request.setContent(content);
+			request.setSubject("Bekräfta din mail");
+			mailgunHttpService.send(request);
+			log.info("Mail successfully processed for: {}", request.getEmail());
+		} catch (Exception e) {
+			log.error("FAILED to process mail for {}: {}", request.getEmail(), e.getMessage());
+			throw new RuntimeException("Email delivery failed", e);
+		}
+	}
+
+	public void sendPaymentReport(MailRequestDTO request) {
+		try {
+			request.setFromMail("noreply@hitract.se");
+			String content = mailContentBuilderService.paymentReport(request.getFromDate(), request.getToDate());
+			request.setContent(content);
+			request.setSubject("Rapport hitract - ny rapport skapad");
+			mailgunHttpService.send(request);
+			log.info("Mail successfully processed for: {}", request.getEmail());
+		} catch (Exception e) {
+			log.error("FAILED to process mail for {}: {}", request.getEmail(), e.getMessage());
+			throw new RuntimeException("Email delivery failed", e);
+		}
+	}
+
+	public void sendPaymentReportNoData(MailRequestDTO request) {
+		try {
+			String content = mailContentBuilderService.paymentReportNoData(request.getFromDate(), request.getToDate());
+			request.setContent(content);
+			request.setFromMail("noreply@hitract.se");
+			request.setSubject("Rapport hitract - ingen data för perioden");
+			mailgunHttpService.send(request);
+			log.info("Mail successfully processed for: {}", request.getEmail());
+		} catch (Exception e) {
+			log.error("FAILED to process mail for {}: {}", request.getEmail(), e.getMessage());
+			throw new RuntimeException("Email delivery failed", e);
+		}
+	}
 
 //
 //	//@Scheduled(fixedRate=30000)
@@ -304,17 +345,10 @@ public class MailSenderService {
 //		String subject = hitClubName + " || " + "Betala medlemskap";
 //		sendMail(hitMember.getEmail(), fromMail, hitClubName, content, subject, MAIL_TYPE.HIT_CLUB_MEMBER_PAY);
 //	}
-//
-//	public void sendPaymentReport(String toMail, Date fromDate, Date toDate) {
-//		String content = mailContentBuilderService.paymentReport(fromDate, toDate);
-//		sendMail(toMail, "noreply@hitract.se", "", content, "Rapport hitract - ny rapport skapad", MAIL_TYPE.PAYMENT_REPORT);
-//
-//	}
-//
-//	public void sendPaymentReportNoData(String toMail, Date fromDate, Date toDate) {
-//		String content = mailContentBuilderService.paymentReportNoData(fromDate, toDate);
-//		sendMail(toMail, "noreply@hitract.se", "", content, "Rapport hitract - ingen data för perioden", MAIL_TYPE.PAYMENT_REPORT);
-//	}
+
+
+
+
 
 
 
@@ -497,16 +531,7 @@ public class MailSenderService {
 //		sendMail("robert@hitract.se", fromMail, "", content, subject, MAIL_TYPE.ERROR);
 //
 //	}
-//
-//	public void confirmEmail(String email, String token) {
-//
-//		String fromMail = "noreply@hitract.se";
-//		String content = mailContentBuilderService.confirmEmail(token);
-//		String subject = "Bekräfta din mail";
-//		sendMail(email, fromMail, "", content, subject, MAIL_TYPE.CONFIRM_EMAIL);
-//
-//	}
-//
+
 //	public boolean alreadySent(MAIL_TYPE mailType, EntityType entityType, Long orderId) {
 //		return sentMailRepository.existsByMailTypeAndEntityTypeAndEntityId(mailType, entityType, orderId);
 //	}

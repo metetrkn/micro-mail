@@ -1,3 +1,11 @@
+ # Did not tested!
++ in MailRoutingService.java                    + this mail published in original app in here
+ - mailSenderService.sendPaymentReport();       - StripeRestController.java line: 694
+ - mailSenderService.sendPaymentReportNoData(); - StripeRestController.java line: 356
+ - mailSenderService.sendPaymentReport();       - SumUpService.java line: 623
+
+
+
 http://localhost:8080/api/admin//mail/sendM1
 [list of studnet mails]
 
@@ -54,6 +62,12 @@ WHERE user_product_id = 633792;
 {
   "identifier": "LxjSPWsElwWZlFEFBqZMJBhAkdmWcjbe",
   "numberOfUsages": 1
+}
+
+POST http://localhost:8080/api/student/confirmEmail
+{
+    "email": "student.test@hitract.se",
+    "role": "ROLE_USER"
 }
 
 

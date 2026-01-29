@@ -4,6 +4,7 @@ import lombok.*;
 import se.hitract.model.domains.MAIL_TYPE;
 import se.hitract.model.enums.EntityType;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -27,6 +28,9 @@ public class MailRequestDTO{
     private String firstName;
     private Long userProductId;
     private Long productOfferIds;
+    private String token;
+    private Date fromDate;
+    private Date toDate;
 
 }
 

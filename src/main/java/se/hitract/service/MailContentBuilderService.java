@@ -1,27 +1,19 @@
 package se.hitract.service;
 
+import se.hitract.service.PropertiesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 
+import java.util.Date;
 import java.util.Map;
-//import se.hitract.model.domains.PRODUCT_TYPE;
-//import se.hitract.repository.BuddySuggestionRepository;
-//import se.hitract.repository.ChatGroupRepository;
-//import se.hitract.service.PropertiesService;
-//import se.hitract.service.QrCodeService;
-//import se.hitract.service.util.HashIdUtil;
-//import se.hitract.web.controller.api.LANGUAGE;
-//import se.hitract.config.BeanUtil;
-//import se.hitract.dto.HitMemberDTO;
-//import se.hitract.dto.OrderDTO;
-
 
 @Service
 public class MailContentBuilderService {
 
     @Autowired private TemplateEngine templateEngine;
+    @Autowired private PropertiesService propertiesService;
 //    @Autowired private PropertiesService propertiesService;
 //    @Autowired private ChatGroupRepository chatGroupRepository;
 //    @Autowired private BuddySuggestionRepository buddySuggestionRepository;
@@ -59,7 +51,32 @@ public class MailContentBuilderService {
 
         return templateEngine.process("mail/userProductUnUsed", context);
     }
-//
+
+
+	public String confirmEmail(String token) {
+		Context context = new Context();
+		context.setVariable("token", token);
+		context.setVariable("environment", propertiesService.getEnvironment());
+        return templateEngine.process("mail/confirmEmail", context);
+	}
+
+	public String paymentReport(Date fromDate, Date toDate) {
+		Context context = new Context();
+		context.setVariable("fromDate", fromDate);
+		context.setVariable("toDate", toDate);
+
+        return templateEngine.process("mail/paymentReportMail", context);
+	}
+
+    public String paymentReportNoData(Date fromDate, Date toDate) {
+        Context context = new Context();
+        context.setVariable("fromDate", fromDate);
+        context.setVariable("toDate", toDate);
+
+        return templateEngine.process("mail/paymentReportMailNoData", context);
+    }
+
+
 //    public String yourBuddy() {
 //        Context context = new Context();
 //        //context.setVariable("message", message);
@@ -165,21 +182,7 @@ public class MailContentBuilderService {
 //
 //
 //
-//	public String paymentReport(Date fromDate, Date toDate) {
-//		Context context = new Context();
-//		context.setVariable("fromDate", fromDate);
-//		context.setVariable("toDate", toDate);
-//
-//        return templateEngine.process("mail/paymentReportMail", context);
-//	}
-//
-//	public String paymentReportNoData(Date fromDate, Date toDate) {
-//		Context context = new Context();
-//		context.setVariable("fromDate", fromDate);
-//		context.setVariable("toDate", toDate);
-//
-//        return templateEngine.process("mail/paymentReportMailNoData", context);
-//	}
+
 
 
 
@@ -252,14 +255,7 @@ public class MailContentBuilderService {
 //
 //        return templateEngine.process("mail/error", context);
 //	}
-//
-//	public String confirmEmail(String token) {
-//		Context context = new Context();
-//		context.setVariable("token", token);
-//		context.setVariable("environment", propertiesService.getEnvironment());
-//        return templateEngine.process("mail/confirmEmail", context);
-//	}
-//
+
 //    public String jonkopingMail() {
 //		Context context = new Context();
 //		return templateEngine.process("mail/jonkopingMail", context);
