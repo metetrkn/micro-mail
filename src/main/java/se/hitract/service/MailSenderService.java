@@ -1,6 +1,7 @@
 package se.hitract.service;
 
 import java.util.List;
+import java.util.function.Supplier;
 
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
@@ -122,8 +123,8 @@ public class MailSenderService {
 	//	}
 	public void sendM1(MailRequestDTO request) {
 		try {
-			String content = mailContentBuilderService.sendM1();
-			request.setContent(content);
+            String content = mailContentBuilderService.sendM1();
+            request.setContent(content);
 			request.setFromMail("noreply@hitract.se");
 			request.setSubject("Uppdatering av våra Användarvillkor");
 			mailgunHttpService.send(request);
@@ -223,6 +224,76 @@ public class MailSenderService {
 			throw new RuntimeException("Email delivery failed", e);
 		}
 	}
+	public void sendStudentSigInInMail(MailRequestDTO request) {
+
+		request.setFromMail("login@hitract.se");
+		request.setSubject(request.getLanguage().equals("sv") ? "Logga in på hitract" : "Login to hitract");
+		String content=buildContent(()->mailContentBuilderService.studentSignInContent(request), request.getEmail());
+		request.setContent(content);
+		mailgunHttpService.send(request);
+
+	}
+
+	public void sendStudentSignUpMail(MailRequestDTO request) {
+		request.setFromMail("login@hitract.se");
+		request.setSubject(request.getLanguage().equals("sv") ? "Nytt konto på hitract" : "New account on hitract");
+		String content=buildContent(()->mailContentBuilderService.studentSignUpContent(request), request.getEmail());
+		mailgunHttpService.send(request);
+	}
+
+	public void sendHitClubSignupInMail(MailRequestDTO request) {
+		request.setFromMail("login@hitract.se");
+		request.setSubject(request.getLanguage().equals("sv") ? "Logga in på hitract" : "Login to hitract");
+		String content=buildContent(()->mailContentBuilderService.hitClubSignInContent(request), request.getEmail());
+		request.setContent(content);
+		mailgunHttpService.send(request);
+
+	}
+
+	public void sendCompanySignInMail(MailRequestDTO request) {
+		request.setFromMail("login@hitract.se");
+		request.setSubject(request.getLanguage().equals("sv") ? "Logga in på hitract" : "Login to hitract");
+		String content=buildContent(()->mailContentBuilderService.companySignInContent(request), request.getEmail());
+		request.setContent(content);
+		mailgunHttpService.send(request);
+
+	}
+
+	public void sendCompanySignupUpMail(MailRequestDTO request) {
+		request.setFromMail("login@hitract.se");
+		request.setSubject(request.getLanguage().equals("sv") ? "Nytt konto på hitract" : "New account on hitract");
+		String content=buildContent(()->mailContentBuilderService.companySignUpContent(request), request.getEmail());
+		request.setContent(content);
+		mailgunHttpService.send(request);
+
+	}
+
+	private String buildContent(Supplier<String> contentSupplier, String mail) {
+		String content;
+		try {
+			content = contentSupplier.get();
+		} catch (Exception e) {
+			log.error("Template rendering failed for {}: {}", mail, e.getMessage());
+			throw new RuntimeException("Template Rendering failed: " + e.getMessage(), e);
+		}
+
+		return content;
+	}    public void sendErrorMail(MailRequestDTO request) {
+		try {
+			String content=mailContentBuilderService.sendError(request.getMessage());
+			request.setContent(content);
+			request.setFromMail("noreply@hitract.se");
+			request.setSubject("hitract error");
+			mailgunHttpService.send(request);
+
+			log.info("Mail successfully processed for: {}", request.getEmail());
+		} catch (Exception e) {
+			log.error("FAILED to process mail for {}: {}", request.getEmail(), e.getMessage());
+			// THROW the exception so Rqueue knows to retry!
+			throw new RuntimeException("Email delivery failed", e);
+		}
+
+	}
 
 //
 //	//@Scheduled(fixedRate=30000)
@@ -269,18 +340,7 @@ public class MailSenderService {
 //		String subject = languageNullSafe.equals(LANGUAGE.sv) ? "Nytt konto på hitract" : "New account on hitract";
 //		sendMail(email, fromMail, "", content, subject, MAIL_TYPE.COMPANY_SIGNUP);
 //	}
-//
-//	@Async
-//	public void sendStudentSigInInMail(Student toStudent, String token) {
-//
-//		LANGUAGE language = toStudent.getLanguage() != null ? toStudent.getLanguage() : LANGUAGE.sv;
-//
-//		String fromMail = "login@hitract.se";
-//		String content = mailContentBuilderService.studentSignInContent(toStudent.getIdentifier(), token, language);
-//		String subject =  language.equals(LANGUAGE.sv) ? "Logga in på hitract" : "Login to hitract";
-//		sendMail(toStudent, fromMail, content, subject, MAIL_TYPE.MAIL_SIGNIN);
-//	}
-//
+
 //	@Async
 //	public void sendHitClubSignupInMail(Student toStudent, String token) {
 //

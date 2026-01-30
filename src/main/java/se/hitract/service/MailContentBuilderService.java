@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
+import se.hitract.service.mail.dto.MailRequestDTO;
 
 import java.util.Date;
 import java.util.Map;
@@ -14,14 +15,9 @@ public class MailContentBuilderService {
 
     @Autowired private TemplateEngine templateEngine;
     @Autowired private PropertiesService propertiesService;
-//    @Autowired private PropertiesService propertiesService;
-//    @Autowired private ChatGroupRepository chatGroupRepository;
-//    @Autowired private BuddySuggestionRepository buddySuggestionRepository;
-//    @Autowired private QrCodeService qrCodeService;
 
     public String build() {
         Context context = new Context();
-        //context.setVariable("message", message);
         return templateEngine.process("mail/signup", context);
     }
 
@@ -76,6 +72,56 @@ public class MailContentBuilderService {
         return templateEngine.process("mail/paymentReportMailNoData", context);
     }
 
+    public String studentSignInContent(MailRequestDTO request) {
+        Context context = new Context();
+        context.setVariable("email", request.getEmail());
+        context.setVariable("token", request.getToken());
+        Object lang = request.getLanguage();
+        context.setVariable("language", lang != null ? lang.toString() : "sv");
+        context.setVariable("environment", propertiesService.getEnvironment());
+        return templateEngine.process("mail/studentSignInMail", context);
+    }
+
+    public String studentSignUpContent(MailRequestDTO request) {
+        Context context = new Context();
+        context.setVariable("email", request.getEmail());
+        context.setVariable("token", request.getToken());
+        context.setVariable("language", request.getLanguage());
+        context.setVariable("environment", propertiesService.getEnvironment());
+        return templateEngine.process("mail/studentSignUpMail", context);
+    }
+
+    public String hitClubSignInContent(MailRequestDTO request) {
+        Context context = new Context();
+        context.setVariable("token", request.getToken());
+        context.setVariable("email", request.getEmail());
+        context.setVariable("environment", propertiesService.getEnvironment());
+        return templateEngine.process("mail/hitClubSignInMail", context);
+    }
+
+    public String companySignInContent(MailRequestDTO request) {
+        Context context = new Context();
+        context.setVariable("token", request.getToken());
+        context.setVariable("email", request.getEmail());
+        context.setVariable("newSite", request.isNewSite());
+        context.setVariable("language", request.getLanguage() == null ? "sv" : request.getLanguage());
+        context.setVariable("environment", propertiesService.getEnvironment());
+        return templateEngine.process("mail/companySignInMail", context);
+    }
+
+    public String companySignUpContent(MailRequestDTO request) {
+        Context context = new Context();
+        context.setVariable("email", request.getEmail());
+        context.setVariable("environment", propertiesService.getEnvironment());
+        return templateEngine.process("mail/companySignUpMail", context);
+    }
+
+    public String sendError(String msg) {
+        Context context = new Context();
+        context.setVariable("msg", msg);
+
+        return templateEngine.process("mail/error", context);
+    }
 
 //    public String yourBuddy() {
 //        Context context = new Context();
