@@ -7,6 +7,7 @@ import org.springframework.core.io.ByteArrayResource;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.MediaType;
 import org.springframework.scheduling.annotation.Async;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
@@ -26,20 +27,20 @@ public class MailgunHttpService {
 
     private final RestClient restClient;
     private final String domain;
-    private final String apiKey; // Class field to make it accessible in all methods
+    private final String apiKey;
     private final SentMailRepository sentMailRepository;
-    private final PropertiesService propertiesService;
+
 
     public MailgunHttpService(RestClient.Builder builder,
                               @Value("${mailgun.api-key}") String apiKey,
                               @Value("${mailgun.domain}") String domain,
                               @Value("${mailgun.base-url}") String baseUrl,
                               SentMailRepository sentMailRepository,
-                              PropertiesService propertiesService) {
+                              PropertiesService propertiesService
+    ) {
         this.domain = domain;
-        this.apiKey = apiKey; // Assigning the constructor parameter to the class field
+        this.apiKey = apiKey;
         this.sentMailRepository = sentMailRepository;
-        this.propertiesService = propertiesService;
 
         this.restClient = builder
                 .baseUrl(baseUrl)
@@ -54,7 +55,6 @@ public class MailgunHttpService {
                 .build();
     }
 
-    @Async
     public void send(MailRequestDTO request) {
         MultiValueMap<String, Object> body = new LinkedMultiValueMap<>();
         body.add("from", "Hitract <" + request.getFromMail() + ">");
@@ -73,23 +73,32 @@ public class MailgunHttpService {
 
             if (response != null) {
                 System.out.printf("WireMock/Mailgun Success: ID=%s Message=%s%n", response.id(), response.message());
-                logSentMail(request, SENT_MAIL_STATUS.SUCCESS, "");
+                try {
+                    logSentMail(request, SENT_MAIL_STATUS.SUCCESS, "");
+                } catch (Exception dbEx) {
+                    log.error("Mail sent successfully, but DB recording failed: {}", dbEx.getMessage());
+                }
             }
 
-         } catch (Exception e) {
+        } catch (Exception e) {
             log.error("Failed to send mail: {}", e.getMessage());
-            logSentMail(request, SENT_MAIL_STATUS.ERROR, e.toString());
+            try {
+
+                logSentMail(request, SENT_MAIL_STATUS.ERROR, e.toString());
+            } catch (Exception dbException) {
+                log.error("Could not record failure to DB: " + dbException.getMessage());
+            }
+            throw new RuntimeException("Mailgun delivery failure: " + e.getMessage(), e);
         }
     }
 
-    private void logSentMail(MailRequestDTO req, SENT_MAIL_STATUS status, String error) {
+    protected void logSentMail(MailRequestDTO req, SENT_MAIL_STATUS status, String error) {
         SentMail mail = new SentMail();
 
         mail.setEmail(req.getEmail());
         mail.setStudentId(req.getStudentId());
         mail.setEntityId(req.getEntityId());
 
-        // Handle Enum conversion safely
         if (req.getEntityType() != null) {
             mail.setEntityType(EntityType.valueOf(req.getEntityType()));
         }

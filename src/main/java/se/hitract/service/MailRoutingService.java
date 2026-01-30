@@ -1,7 +1,7 @@
 package se.hitract.service;
+
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
-import se.hitract.model.domains.MAIL_TYPE;
 import se.hitract.service.mail.dto.MailRequestDTO;
 
 @Component
@@ -22,7 +22,14 @@ public class MailRoutingService {
             case CONFIRM_EMAIL -> mailSenderService.confirmEmail(emailDto);
             case PAYMENT_REPORT -> mailSenderService.sendPaymentReport(emailDto);
             case PAYMENT_REPORT_NO_DATA -> mailSenderService.sendPaymentReportNoData(emailDto);
+            case STUDENT_SIGNIN -> mailSenderService.sendStudentSigInInMail(emailDto);
+            case STUDENT_SIGNUP -> mailSenderService.sendStudentSignUpMail(emailDto);
+            case COMPANY_SIGNIN -> mailSenderService.sendCompanySignInMail(emailDto);
+            case COMPANY_SIGNUP -> mailSenderService.sendCompanySignupUpMail(emailDto);
+            case HITCLUB_SIGNIN -> mailSenderService.sendHitClubSignupInMail(emailDto);
+            case ERROR -> mailSenderService.sendErrorMail(emailDto);
             default -> log.error("No logic implemented for MAIL_TYPE: {}", emailDto.toString());
+
 //            case COMPANY_SIGNIN -> handleCompanySignIn(email);
 //            case COMPANY_SIGNUP -> handleCompanySignUp(email);
 //            case STATUS_MAIL -> handleStatusMail(email);

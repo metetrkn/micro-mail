@@ -31,6 +31,9 @@ public class MailRequestDTO{
     private String token;
     private Date fromDate;
     private Date toDate;
+    private String language;
+    private boolean newSite;
+    private String message;
 
 }
 

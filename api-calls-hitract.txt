@@ -6,8 +6,12 @@
 
 
 
-http://localhost:8080/api/admin//mail/sendM1
-[list of studnet mails]
+http://localhost:8080/api/admin/mail/sendM1
+[
+    "sakib_97@hotmail.com",
+    "Philip+0@hitract.com"
+]
+
 
 http://localhost:8080/api/admin/mail/sendSpecial
 bearer token     user:29
@@ -69,5 +73,7 @@ POST http://localhost:8080/api/student/confirmEmail
     "email": "student.test@hitract.se",
     "role": "ROLE_USER"
 }
+
+
 
 
