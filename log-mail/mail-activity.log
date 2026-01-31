@@ -14,3 +14,35 @@
 2026-01-30 17:23:22.580 [mailEventsListener-3] WARN  se.hitract.consumer.EmailConsumer - SWALLOWED: No email address for ID 12957. Skipping processing.
 2026-01-30 17:27:05.986 [mailEventsListener-5] WARN  se.hitract.consumer.EmailConsumer - SWALLOWED: No email address for ID 12957. Skipping processing.
 2026-01-30 17:27:05.986 [mailEventsListener-6] WARN  se.hitract.consumer.EmailConsumer - SWALLOWED: No email address for ID 8780. Skipping processing.
+2026-01-31 15:54:02.143 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 16468 (C:\Users\metet\IdeaProjects\micro-service\target\classes started by metet in C:\Users\metet\IdeaProjects\micro-service)
+2026-01-31 15:54:02.144 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-31 15:54:07.122 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 5.265 seconds (process running for 6.389)
+2026-01-31 15:56:17.811 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: sakib_97@hotmail.com
+2026-01-31 15:56:17.988 [mailEventsListener-2] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: Philip+0@hitract.com
+2026-01-31 15:56:18.311 [mailEventsListener-1] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: sakib_97@hotmail.com
+2026-01-31 15:56:18.311 [mailEventsListener-2] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: Philip+0@hitract.com
+2026-01-31 15:56:18.311 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: sakib_97@hotmail.com
+2026-01-31 15:56:18.311 [mailEventsListener-2] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: Philip+0@hitract.com
+2026-01-31 15:57:44.274 [mailEventsListener-4] WARN  se.hitract.consumer.EmailConsumer - SWALLOWED: No email address for ID 8780. Skipping processing.
+2026-01-31 15:57:44.274 [mailEventsListener-3] WARN  se.hitract.consumer.EmailConsumer - SWALLOWED: No email address for ID 12957. Skipping processing.
+2026-01-31 17:15:27.461 [mailEventsListener-5] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: adolfssonaxels@gmail.com
+2026-01-31 17:15:27.462 [mailEventsListener-6] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: ottossontuva@gmail.com
+2026-01-31 17:15:27.653 [mailEventsListener-5] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: adolfssonaxels@gmail.com
+2026-01-31 17:15:27.653 [mailEventsListener-5] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: adolfssonaxels@gmail.com
+2026-01-31 17:15:27.653 [mailEventsListener-6] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: ottossontuva@gmail.com
+2026-01-31 17:15:27.653 [mailEventsListener-6] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: ottossontuva@gmail.com
+2026-01-31 19:25:13.553 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 20992 (C:\Users\metet\IdeaProjects\micro-service\target\classes started by metet in C:\Users\metet\IdeaProjects\micro-service)
+2026-01-31 19:25:13.553 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-01-31 19:25:17.630 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 4.311 seconds (process running for 5.205)
+2026-01-31 19:40:10.411 [mailEventsListener-2] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: Nordstrom.robert@gmail.com
+2026-01-31 19:40:10.411 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: Nordstrom.robert@gmail.com
+2026-01-31 19:40:10.905 [mailEventsListener-2] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: Nordstrom.robert@gmail.com
+2026-01-31 19:40:10.905 [mailEventsListener-1] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: Nordstrom.robert@gmail.com
+2026-01-31 19:40:10.906 [mailEventsListener-2] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: Nordstrom.robert@gmail.com
+2026-01-31 19:40:10.906 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: Nordstrom.robert@gmail.com
+2026-01-31 19:43:03.540 [mailEventsListener-4] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: Nordstrom.robert@gmail.com
+2026-01-31 19:43:03.540 [mailEventsListener-3] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: Nordstrom.robert@gmail.com
+2026-01-31 19:43:03.575 [mailEventsListener-3] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: Nordstrom.robert@gmail.com
+2026-01-31 19:43:03.575 [mailEventsListener-4] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: Nordstrom.robert@gmail.com
+2026-01-31 19:43:03.575 [mailEventsListener-3] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: Nordstrom.robert@gmail.com
+2026-01-31 19:43:03.575 [mailEventsListener-4] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: Nordstrom.robert@gmail.com

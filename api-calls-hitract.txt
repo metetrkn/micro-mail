@@ -5,13 +5,13 @@
  - mailSenderService.sendPaymentReport();       - SumUpService.java line: 623
 
 
-
+-----------------------------------------------------------------------------------------------
 http://localhost:8080/api/admin/mail/sendM1
 [
     "sakib_97@hotmail.com",
     "Philip+0@hitract.com"
 ]
-
+-----------------------------------------------------------------------------------------------
 
 http://localhost:8080/api/admin/mail/sendSpecial
 bearer token     user:29
@@ -20,9 +20,27 @@ req body,    hit_member table hit_member_id fields given as parameter
 [275398,
 275400
 ]
-
+-----------------------------------------------------------------------------------------------
 
 http://localhost:8080/api/product/useProducts
+first run this script to ensure db is appopiate
+UPDATE user_product
+SET
+    user_product_status = 'PAID',
+    number_of_usages_left = 1,       -- Must be > 0 to pass check
+    used_date = NULL,                -- Clear previous execution date
+    latest_used_date = NULL          -- Clear previous execution date
+WHERE identifier IN ('DFkODg4OTJmZjI0ZWZmOGE3Y2E0MTI1MmY2O', '2UxYWE5NjFhY2E2NjUzYzMwN2ZjM2');
+
+
+UPDATE orderr
+SET from_web = 1
+WHERE order_id IN (
+    SELECT order_id
+    FROM user_product
+    WHERE identifier IN ('DFkODg4OTJmZjI0ZWZmOGE3Y2E0MTI1MmY2O', '2UxYWE5NjFhY2E2NjUzYzMwN2ZjM2')
+);
+than till req
 beaare token     user:29
 [
   {
@@ -32,7 +50,7 @@ beaare token     user:29
     "identifier": "2UxYWE5NjFhY2E2NjUzYzMwN2ZjM2"
   }
 ]
-
+-----------------------------------------------------------------------------------------------
 http://localhost:8080/api/product/useProduct
 beaare token     user:29
 
@@ -50,7 +68,7 @@ WHERE identifier = 'WExZDM1MTM2MTk3NTQ5YmFjNTJjNjBmO';
   "identifier": "WExZDM1MTM2MTk3NTQ5YmFjNTJjNjBmO",
   "productOfferIds": [13980]
 }
-
+-----------------------------------------------------------------------------------------------
 
 POST http://localhost:8080/api/product/v2/unUseProduct
 
@@ -67,13 +85,12 @@ WHERE user_product_id = 633792;
   "identifier": "LxjSPWsElwWZlFEFBqZMJBhAkdmWcjbe",
   "numberOfUsages": 1
 }
-
+-----------------------------------------------------------------------------------------------
 POST http://localhost:8080/api/student/confirmEmail
 {
     "email": "student.test@hitract.se",
     "role": "ROLE_USER"
 }
-
-
+-----------------------------------------------------------------------------------------------
 
 
