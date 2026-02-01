@@ -55,9 +55,9 @@ public class MailgunHttpService {
                 .build();
     }
 
-    public void send(MailRequestDTO request) {
+    public void send(MailRequestDTO request, String personal) {
         MultiValueMap<String, Object> body = new LinkedMultiValueMap<>();
-        body.add("from", "Hitract <" + request.getFromMail() + ">");
+        body.add("from", personal + " <" + request.getFromMail() + ">");
         body.add("to", request.getEmail());
         body.add("subject", request.getSubject());
         body.add("html", request.getContent());

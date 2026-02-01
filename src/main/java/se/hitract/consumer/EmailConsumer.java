@@ -5,6 +5,7 @@ import com.github.sonus21.rqueue.annotation.RqueueListener;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
+import se.hitract.model.domains.MAIL_TYPE;
 import se.hitract.service.mail.dto.MailRequestDTO;
 import se.hitract.service.MailRoutingService;
 
@@ -23,23 +24,22 @@ public class EmailConsumer {
             numRetries = "3",
             concurrency = "20-50"
     )
-
     public void processEmail(MailRequestDTO emailDto) {
 
-        // 1. Check if the email is missing, if so logs it but system continues running
-        if (emailDto.getEmail() == null || emailDto.getEmail().trim().isEmpty()) {
+        boolean isJonkoping = emailDto.getMailType() == MAIL_TYPE.JONKOPING_PAY_MEMBERSHIP_MAIL;
+        boolean hasNoEmail = emailDto.getEmail() == null || emailDto.getEmail().trim().isEmpty();
+
+        if (hasNoEmail && !isJonkoping) {
             log.warn("SWALLOWED: No email address for ID {}. Skipping processing.", emailDto.getStudentId());
             return;
         }
 
-        // 3. Normal process continues only if the check above passes
         try {
-            log.info("START: Processing email for: {}", emailDto.getEmail());
+            log.info("START: Processing email for type: {} (Email: {})", emailDto.getMailType(), emailDto.getEmail());
             mailRoutingService.routeEmail(emailDto);
-            log.info("SUCCESS: Sent to: {}", emailDto.getEmail());
+            log.info("SUCCESS: Sent/Processed type: {}", emailDto.getMailType());
         } catch (Exception e) {
-            // We only catch and rethrow real system errors (like the mail server being down)
-            log.error("SYSTEM ERROR: Attempt failed for {}. Rqueue will retry.", emailDto.getEmail());
+            log.error("SYSTEM ERROR: Attempt failed for {}. Rqueue will retry.", emailDto.getMailType(), e);
             throw e;
         }
     }

@@ -44,6 +44,10 @@ TODO
 5- make system robust, in error scenierios
 6- make it effecient
 
++ make all logs to show mail payload details in logging
++ make a global try-catch function that apply try catches for all my current implamentations
+instead of making it seperately for each file
+
 TODO
 COmmonDTO fields should be set in main app not in here, in ms should only recieved those who created other side
 do not extend commondto from mailrqeuestdto, rather use in send mail in this side, create your own dto and use in here
@@ -69,3 +73,13 @@ Here is a breakdown of where they are active and how you can explicitly use them
    Based on your application.properties, you have credentials for TikTok, LinkedIn, Instagram, and Google. This suggests your application likely fetches data from these services.
    This is the perfect use case for virtual threads: Scatter-Gather. You can fire off requests to all these social platforms in parallel. Because virtual threads are cheap, you can spin up a new thread for every single API call without worrying about resource exhaustion.
    Here is a new service example demonstrating how to fetch data from multiple sources in parallel using Executors.newVirtualThreadPerTaskExecutor().
+
+
+FILES TO BE DELETED FROM BACKEDN APP
+- SendMail entitiy
+- SendMail entity
+- SendMail reposiotroy
+- SendMail repository
+- MailContentBuilder
+- WeeklyMailSender
+- A lot of methods in mail sender services

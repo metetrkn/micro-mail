@@ -9,8 +9,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
+import se.hitract.model.SendMail;
 import se.hitract.model.domains.MAIL_TYPE;
 import se.hitract.model.enums.EntityType;
+import se.hitract.repository.SendMailRepository;
 import se.hitract.service.mail.dto.MailRequestDTO;
 
 @Slf4j
@@ -19,6 +21,7 @@ public class MailSenderService {
 
 	@Autowired private MailgunHttpService mailgunHttpService;
 	@Autowired private MailContentBuilderService mailContentBuilderService;
+	@Autowired private SendMailRepository sendMailRepository;
 
 
 	private static final Logger logger = LoggerFactory.getLogger(MailSenderService.class);
@@ -127,7 +130,7 @@ public class MailSenderService {
             request.setContent(content);
 			request.setFromMail("noreply@hitract.se");
 			request.setSubject("Uppdatering av våra Användarvillkor");
-			mailgunHttpService.send(request);
+			mailgunHttpService.send(request, "Hitract");
 
 			log.info("Mail successfully processed for: {}", request.getEmail());
 		} catch (Exception e) {
@@ -143,7 +146,7 @@ public class MailSenderService {
 			request.setContent(content);
 			request.setFromMail("noreply@hitract.se");
 			request.setSubject("Mailutskick");
-			mailgunHttpService.send(request);
+			mailgunHttpService.send(request, "Hitract");
 			log.info("Mail successfully processed for: {}", request.getEmail());
 		} catch (Exception e) {
 			log.error("FAILED to process mail for {}: {}", request.getEmail(), e.getMessage());
@@ -159,7 +162,7 @@ public class MailSenderService {
 			String content = mailContentBuilderService.sendUserProductUsed(request.getUserProductId());
 			request.setContent(content);
 			request.setSubject("hitract - din biljett har checkats in");
-			mailgunHttpService.send(request);
+			mailgunHttpService.send(request, "Hitract");
 			log.info("Mail successfully processed for: {}", request.getEmail());
 		} catch (Exception e) {
 			log.error("FAILED to process mail for {}: {}", request.getEmail(), e.getMessage());
@@ -175,7 +178,7 @@ public class MailSenderService {
 			String content = mailContentBuilderService.sendUserProductUnUsed(request.getUserProductId());
 			request.setContent(content);
 			request.setSubject("hitract - din biljett har checkats ut");
-			mailgunHttpService.send(request);
+			mailgunHttpService.send(request, "Hitract");
 			log.info("Mail successfully processed for: {}", request.getEmail());
 		} catch (Exception e) {
 			log.error("FAILED to process mail for {}: {}", request.getEmail(), e.getMessage());
@@ -189,7 +192,7 @@ public class MailSenderService {
 			String content = mailContentBuilderService.confirmEmail(request.getToken());
 			request.setContent(content);
 			request.setSubject("Bekräfta din mail");
-			mailgunHttpService.send(request);
+			mailgunHttpService.send(request, "Hitract");
 			log.info("Mail successfully processed for: {}", request.getEmail());
 		} catch (Exception e) {
 			log.error("FAILED to process mail for {}: {}", request.getEmail(), e.getMessage());
@@ -203,7 +206,7 @@ public class MailSenderService {
 			String content = mailContentBuilderService.paymentReport(request.getFromDate(), request.getToDate());
 			request.setContent(content);
 			request.setSubject("Rapport hitract - ny rapport skapad");
-			mailgunHttpService.send(request);
+			mailgunHttpService.send(request, "Hitract");
 			log.info("Mail successfully processed for: {}", request.getEmail());
 		} catch (Exception e) {
 			log.error("FAILED to process mail for {}: {}", request.getEmail(), e.getMessage());
@@ -217,7 +220,7 @@ public class MailSenderService {
 			request.setContent(content);
 			request.setFromMail("noreply@hitract.se");
 			request.setSubject("Rapport hitract - ingen data för perioden");
-			mailgunHttpService.send(request);
+			mailgunHttpService.send(request, "Hitract");
 			log.info("Mail successfully processed for: {}", request.getEmail());
 		} catch (Exception e) {
 			log.error("FAILED to process mail for {}: {}", request.getEmail(), e.getMessage());
@@ -230,7 +233,7 @@ public class MailSenderService {
 		request.setSubject(request.getLanguage().equals("sv") ? "Logga in på hitract" : "Login to hitract");
 		String content=buildContent(()->mailContentBuilderService.studentSignInContent(request), request.getEmail());
 		request.setContent(content);
-		mailgunHttpService.send(request);
+		mailgunHttpService.send(request, "Hitract");
 
 	}
 
@@ -238,7 +241,7 @@ public class MailSenderService {
 		request.setFromMail("login@hitract.se");
 		request.setSubject(request.getLanguage().equals("sv") ? "Nytt konto på hitract" : "New account on hitract");
 		String content=buildContent(()->mailContentBuilderService.studentSignUpContent(request), request.getEmail());
-		mailgunHttpService.send(request);
+		mailgunHttpService.send(request, "Hitract");
 	}
 
 	public void sendHitClubSignupInMail(MailRequestDTO request) {
@@ -246,7 +249,7 @@ public class MailSenderService {
 		request.setSubject(request.getLanguage().equals("sv") ? "Logga in på hitract" : "Login to hitract");
 		String content=buildContent(()->mailContentBuilderService.hitClubSignInContent(request), request.getEmail());
 		request.setContent(content);
-		mailgunHttpService.send(request);
+		mailgunHttpService.send(request, "Hitract");
 
 	}
 
@@ -255,7 +258,7 @@ public class MailSenderService {
 		request.setSubject(request.getLanguage().equals("sv") ? "Logga in på hitract" : "Login to hitract");
 		String content=buildContent(()->mailContentBuilderService.companySignInContent(request), request.getEmail());
 		request.setContent(content);
-		mailgunHttpService.send(request);
+		mailgunHttpService.send(request, "Hitract");
 
 	}
 
@@ -264,7 +267,7 @@ public class MailSenderService {
 		request.setSubject(request.getLanguage().equals("sv") ? "Nytt konto på hitract" : "New account on hitract");
 		String content=buildContent(()->mailContentBuilderService.companySignUpContent(request), request.getEmail());
 		request.setContent(content);
-		mailgunHttpService.send(request);
+		mailgunHttpService.send(request, "Hitract");
 
 	}
 
@@ -284,7 +287,7 @@ public class MailSenderService {
 			request.setContent(content);
 			request.setFromMail("noreply@hitract.se");
 			request.setSubject("hitract error");
-			mailgunHttpService.send(request);
+			mailgunHttpService.send(request, "Hitract");
 
 			log.info("Mail successfully processed for: {}", request.getEmail());
 		} catch (Exception e) {
@@ -292,10 +295,36 @@ public class MailSenderService {
 			// THROW the exception so Rqueue knows to retry!
 			throw new RuntimeException("Email delivery failed", e);
 		}
-
 	}
 
-//
+	@Async
+	public void sendJonkopingMail() {
+
+		List<String> emails = sendMailRepository.findAllEmails();
+
+		if (emails == null || emails.isEmpty()) {
+			log.info("There is no mail in sendMail for sendJonkopingMail. Stopping execution.");
+			return;
+		}
+
+		for (String email : emails) {
+			try {
+				MailRequestDTO request = new MailRequestDTO();
+				request.setEmail(email);
+				request.setFromMail("noreply@hitract.se");
+				String content = mailContentBuilderService.jonkopingMail();
+				request.setContent(content);
+				request.setSubject("JSU membership payment");
+				request.setMailType(MAIL_TYPE.JONKOPING_PAY_MEMBERSHIP_MAIL);
+				mailgunHttpService.send(request, "JSU");
+				log.info("Mail successfully processed for: {}", request.getEmail());
+			} catch (Exception e) {
+				log.error("FAILED to process mail: {}", e.getMessage());
+				throw new RuntimeException("Email delivery failed", e);
+			}
+		}
+	}
+
 //	//@Scheduled(fixedRate=30000)
 //	//@RqueueListener(value = "sendChatGroupNotReadMails", numRetries = "0")
 //	public void sendChatGroupNotReadMails() {

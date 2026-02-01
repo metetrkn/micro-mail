@@ -1,48 +1,29 @@
-2026-01-30 13:46:06.219 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 17224 (C:\Users\metet\Desktop\micro-mail\target\classes started by metet in C:\Users\metet\Desktop\micro-mail)
-2026-01-30 13:46:06.224 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
-2026-01-30 13:46:16.027 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 10.481 seconds (process running for 13.21)
-2026-01-30 17:16:57.752 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 22572 (C:\Users\metet\Desktop\micro-mail\target\classes started by metet in C:\Users\metet\Desktop\micro-mail)
-2026-01-30 17:16:57.755 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
-2026-01-30 17:17:04.083 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 6.796 seconds (process running for 8.253)
-2026-01-30 17:21:51.733 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: sakib_97@hotmail.com
-2026-01-30 17:21:52.259 [mailEventsListener-2] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: Philip+0@hitract.com
-2026-01-30 17:21:52.530 [mailEventsListener-1] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: sakib_97@hotmail.com
-2026-01-30 17:21:52.530 [mailEventsListener-2] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: Philip+0@hitract.com
-2026-01-30 17:21:52.530 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: sakib_97@hotmail.com
-2026-01-30 17:21:52.530 [mailEventsListener-2] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: Philip+0@hitract.com
-2026-01-30 17:23:22.580 [mailEventsListener-4] WARN  se.hitract.consumer.EmailConsumer - SWALLOWED: No email address for ID 8780. Skipping processing.
-2026-01-30 17:23:22.580 [mailEventsListener-3] WARN  se.hitract.consumer.EmailConsumer - SWALLOWED: No email address for ID 12957. Skipping processing.
-2026-01-30 17:27:05.986 [mailEventsListener-5] WARN  se.hitract.consumer.EmailConsumer - SWALLOWED: No email address for ID 12957. Skipping processing.
-2026-01-30 17:27:05.986 [mailEventsListener-6] WARN  se.hitract.consumer.EmailConsumer - SWALLOWED: No email address for ID 8780. Skipping processing.
-2026-01-31 15:54:02.143 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 16468 (C:\Users\metet\IdeaProjects\micro-service\target\classes started by metet in C:\Users\metet\IdeaProjects\micro-service)
-2026-01-31 15:54:02.144 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
-2026-01-31 15:54:07.122 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 5.265 seconds (process running for 6.389)
-2026-01-31 15:56:17.811 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: sakib_97@hotmail.com
-2026-01-31 15:56:17.988 [mailEventsListener-2] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: Philip+0@hitract.com
-2026-01-31 15:56:18.311 [mailEventsListener-1] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: sakib_97@hotmail.com
-2026-01-31 15:56:18.311 [mailEventsListener-2] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: Philip+0@hitract.com
-2026-01-31 15:56:18.311 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: sakib_97@hotmail.com
-2026-01-31 15:56:18.311 [mailEventsListener-2] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: Philip+0@hitract.com
-2026-01-31 15:57:44.274 [mailEventsListener-4] WARN  se.hitract.consumer.EmailConsumer - SWALLOWED: No email address for ID 8780. Skipping processing.
-2026-01-31 15:57:44.274 [mailEventsListener-3] WARN  se.hitract.consumer.EmailConsumer - SWALLOWED: No email address for ID 12957. Skipping processing.
-2026-01-31 17:15:27.461 [mailEventsListener-5] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: adolfssonaxels@gmail.com
-2026-01-31 17:15:27.462 [mailEventsListener-6] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: ottossontuva@gmail.com
-2026-01-31 17:15:27.653 [mailEventsListener-5] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: adolfssonaxels@gmail.com
-2026-01-31 17:15:27.653 [mailEventsListener-5] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: adolfssonaxels@gmail.com
-2026-01-31 17:15:27.653 [mailEventsListener-6] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: ottossontuva@gmail.com
-2026-01-31 17:15:27.653 [mailEventsListener-6] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: ottossontuva@gmail.com
-2026-01-31 19:25:13.553 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 20992 (C:\Users\metet\IdeaProjects\micro-service\target\classes started by metet in C:\Users\metet\IdeaProjects\micro-service)
-2026-01-31 19:25:13.553 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
-2026-01-31 19:25:17.630 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 4.311 seconds (process running for 5.205)
-2026-01-31 19:40:10.411 [mailEventsListener-2] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: Nordstrom.robert@gmail.com
-2026-01-31 19:40:10.411 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: Nordstrom.robert@gmail.com
-2026-01-31 19:40:10.905 [mailEventsListener-2] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: Nordstrom.robert@gmail.com
-2026-01-31 19:40:10.905 [mailEventsListener-1] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: Nordstrom.robert@gmail.com
-2026-01-31 19:40:10.906 [mailEventsListener-2] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: Nordstrom.robert@gmail.com
-2026-01-31 19:40:10.906 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: Nordstrom.robert@gmail.com
-2026-01-31 19:43:03.540 [mailEventsListener-4] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: Nordstrom.robert@gmail.com
-2026-01-31 19:43:03.540 [mailEventsListener-3] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for: Nordstrom.robert@gmail.com
-2026-01-31 19:43:03.575 [mailEventsListener-3] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: Nordstrom.robert@gmail.com
-2026-01-31 19:43:03.575 [mailEventsListener-4] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: Nordstrom.robert@gmail.com
-2026-01-31 19:43:03.575 [mailEventsListener-3] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: Nordstrom.robert@gmail.com
-2026-01-31 19:43:03.575 [mailEventsListener-4] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent to: Nordstrom.robert@gmail.com
+2026-02-01 09:47:22.862 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 7748 (C:\Users\metet\IdeaProjects\micro-service\target\classes started by metet in C:\Users\metet\IdeaProjects\micro-service)
+2026-02-01 09:47:22.866 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-01 09:47:27.737 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 5.176 seconds (process running for 6.437)
+2026-02-01 11:17:26.791 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 17340 (C:\Users\metet\IdeaProjects\micro-service\target\classes started by metet in C:\Users\metet\IdeaProjects\micro-service)
+2026-02-01 11:17:26.792 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-01 11:17:31.328 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 4.782 seconds (process running for 5.628)
+2026-02-01 11:25:22.700 [mailEventsListener-1] WARN  se.hitract.consumer.EmailConsumer - SWALLOWED: No email address for ID null. Skipping processing.
+2026-02-01 11:34:00.813 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 15072 (C:\Users\metet\IdeaProjects\micro-service\target\classes started by metet in C:\Users\metet\IdeaProjects\micro-service)
+2026-02-01 11:34:00.813 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-01 11:34:04.808 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 4.21 seconds (process running for 4.859)
+2026-02-01 11:35:00.054 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for type: JONKOPING_PAY_MEMBERSHIP_MAIL (Email: null)
+2026-02-01 11:35:00.177 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent/Processed type: JONKOPING_PAY_MEMBERSHIP_MAIL
+2026-02-01 11:36:32.735 [mailEventsListener-2] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for type: JONKOPING_PAY_MEMBERSHIP_MAIL (Email: null)
+2026-02-01 11:36:32.739 [mailEventsListener-2] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent/Processed type: JONKOPING_PAY_MEMBERSHIP_MAIL
+2026-02-01 11:36:46.432 [mailEventsListener-3] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for type: JONKOPING_PAY_MEMBERSHIP_MAIL (Email: null)
+2026-02-01 11:36:46.434 [mailEventsListener-3] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent/Processed type: JONKOPING_PAY_MEMBERSHIP_MAIL
+2026-02-01 11:40:48.359 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 18696 (C:\Users\metet\IdeaProjects\micro-service\target\classes started by metet in C:\Users\metet\IdeaProjects\micro-service)
+2026-02-01 11:40:48.359 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-01 11:40:52.518 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 4.397 seconds (process running for 5.033)
+2026-02-01 11:40:57.914 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for type: JONKOPING_PAY_MEMBERSHIP_MAIL (Email: null)
+2026-02-01 11:40:58.029 [mailEventsListener-1] INFO  s.hitract.service.MailSenderService - There is no mail in sendMail for sendJonkopingMail. Stopping execution.
+2026-02-01 11:40:58.029 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent/Processed type: JONKOPING_PAY_MEMBERSHIP_MAIL
+2026-02-01 11:44:55.087 [mailEventsListener-2] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for type: JONKOPING_PAY_MEMBERSHIP_MAIL (Email: null)
+2026-02-01 11:44:55.631 [mailEventsListener-2] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: test.user1@hitract.se
+2026-02-01 11:44:55.652 [mailEventsListener-2] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: student.demo@gmail.com
+2026-02-01 11:44:55.670 [mailEventsListener-2] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: integration.test@hotmail.com
+2026-02-01 11:44:55.687 [mailEventsListener-2] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: already.sent@hitract.se
+2026-02-01 11:44:55.701 [mailEventsListener-2] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: admin.test@hitract.se
+2026-02-01 11:44:55.701 [mailEventsListener-2] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent/Processed type: JONKOPING_PAY_MEMBERSHIP_MAIL
