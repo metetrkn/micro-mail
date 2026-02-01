@@ -93,4 +93,19 @@ POST http://localhost:8080/api/student/confirmEmail
 }
 -----------------------------------------------------------------------------------------------
 
+post http://localhost:8080/api/admin/sendMail
+aut bearer token:    user:29
+no body for this req
+
+DO IT ONLY ONCE!!! THERE IS NO DATA IN send_mail by default, to able to use senJonkoping data needed
+-- Insert 5 fake records,
+INSERT INTO send_mail (mail_sent, email, mail_type, created, updated)
+VALUES
+(0, 'test.user1@hitract.se', 'JONKOPING_PAY_MEMBERSHIP_MAIL', NOW(), NOW()),
+(0, 'student.demo@gmail.com', 'JONKOPING_PAY_MEMBERSHIP_MAIL', NOW(), NOW()),
+(0, 'integration.test@hotmail.com', 'JONKOPING_PAY_MEMBERSHIP_MAIL', NOW(), NOW()),
+(1, 'already.sent@hitract.se', 'JONKOPING_PAY_MEMBERSHIP_MAIL', NOW(), NOW()),
+(0, 'admin.test@hitract.se', 'SPECIAL', NOW(), NOW());
+
+-----------------------------------------------------------------------------------------------
 

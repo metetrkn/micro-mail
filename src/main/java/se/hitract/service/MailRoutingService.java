@@ -27,6 +27,7 @@ public class MailRoutingService {
             case COMPANY_SIGNIN -> mailSenderService.sendCompanySignInMail(emailDto);
             case COMPANY_SIGNUP -> mailSenderService.sendCompanySignupUpMail(emailDto);
             case HITCLUB_SIGNIN -> mailSenderService.sendHitClubSignupInMail(emailDto);
+            case JONKOPING_PAY_MEMBERSHIP_MAIL -> mailSenderService.sendJonkopingMail();
             case ERROR -> mailSenderService.sendErrorMail(emailDto);
             default -> log.error("No logic implemented for MAIL_TYPE: {}", emailDto.toString());
 

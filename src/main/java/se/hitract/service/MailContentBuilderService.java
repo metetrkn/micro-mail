@@ -123,6 +123,13 @@ public class MailContentBuilderService {
         return templateEngine.process("mail/error", context);
     }
 
+
+    public String jonkopingMail() {
+        Context context = new Context();
+        return templateEngine.process("mail/jonkopingMail", context);
+    }
+
+
 //    public String yourBuddy() {
 //        Context context = new Context();
 //        //context.setVariable("message", message);
@@ -302,11 +309,6 @@ public class MailContentBuilderService {
 //        return templateEngine.process("mail/error", context);
 //	}
 
-//    public String jonkopingMail() {
-//		Context context = new Context();
-//		return templateEngine.process("mail/jonkopingMail", context);
-//    }
-//
 //	public String sendPayoutReportNotMatch(String merchantCode, Double totalTransfer, Double totalTransferFee, Double totalPayout) {
 //		Context context = new Context();
 //		context.setVariable("merchantCode", merchantCode);
