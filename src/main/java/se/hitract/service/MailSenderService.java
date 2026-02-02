@@ -325,6 +325,12 @@ public class MailSenderService {
 		}
 	}
 
+
+	public void sendHitClubInviteMail(MailRequestDTO request) {
+		mailgunHttpService.send(request, "Hitract");
+	}
+
+
 //	//@Scheduled(fixedRate=30000)
 //	//@RqueueListener(value = "sendChatGroupNotReadMails", numRetries = "0")
 //	public void sendChatGroupNotReadMails() {
@@ -413,17 +419,6 @@ public class MailSenderService {
 //		sendStatusMail(studentService.findOne(studentId));
 //	}
 
-//	public void sendHitClubInviteMail(HitMemberDTO hitMember) {
-//
-//		HitClubSmallPushDTO hitClub = hitMember.getHitClub();
-//		String hitClubName = hitClub.getHitClubName();
-//
-//		String fromMail = (hitClub.getHitClubMailName() != null ? hitClub.getHitClubMailName() : "noreply") + "@hitract.se";
-//		String content = mailContentBuilderService.hitClubInviteMail(hitMember);
-//		String subject = hitClubName + " || " + "Din aktiveringskod " + hitMember.getActivationCode();
-//		sendMail(hitMember.getEmail(), fromMail, hitClubName, content, subject, MAIL_TYPE.HIT_CLUB_INVITE);
-//	}
-//
 //	public void sendHitClubMemberPayMail(HitMemberDTO hitMember) {
 //
 //		HitClubSmallPushDTO hitClub = hitMember.getHitClub();

@@ -2,10 +2,8 @@ package se.hitract.service.mail.dto;
 
 import lombok.*;
 import se.hitract.model.domains.MAIL_TYPE;
-import se.hitract.model.enums.EntityType;
 
 import java.util.Date;
-import java.util.List;
 import java.util.Map;
 
 @Getter
@@ -13,7 +11,7 @@ import java.util.Map;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class MailRequestDTO{
+public class MailRequestDTO {
 
     private MAIL_TYPE mailType;
     private String email;
@@ -26,6 +24,7 @@ public class MailRequestDTO{
     private String content;
     private boolean internalUser;
     private String firstName;
+    private String lastName; // Required
     private Long userProductId;
     private Long productOfferIds;
     private String token;
@@ -35,5 +34,38 @@ public class MailRequestDTO{
     private boolean newSite;
     private String message;
 
-}
+    // --- Validation Fields (Added) ---
+    private String phoneNumber;
+    private String program;
+    private Integer studyPacePercentage;
+    private String studyPlace;
+    private String associatedHitClub;
 
+    // Address Information
+    private String addressStreet;
+    private String addressCity;
+    private String addressPostCode;
+
+    private String personOfficialId;
+    private String sex;
+    private boolean forceManualApproval;
+    private String hitClubName;
+
+    // Nested Objects
+    private MembershipOfferInfo membershipOffer;
+    private PaymentOptionInfo inputPaymentOption;
+
+    @Data
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class MembershipOfferInfo {
+        private Long membershipOfferId;
+    }
+
+    @Data
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class PaymentOptionInfo {
+        private Long paymentOptionId;
+    }
+}
