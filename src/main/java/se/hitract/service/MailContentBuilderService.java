@@ -1,11 +1,11 @@
 package se.hitract.service;
 
-import se.hitract.service.PropertiesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 import se.hitract.service.mail.dto.MailRequestDTO;
+import se.hitract.service.util.HashIdUtil;
 
 import java.util.Date;
 import java.util.Map;
@@ -129,6 +129,24 @@ public class MailContentBuilderService {
         return templateEngine.process("mail/jonkopingMail", context);
     }
 
+//    public String hitClubInviteMail(HitMemberDTO hitMember) {
+//        Context context = new Context();
+//
+//        // 1. Generate HashID (Safe now, because hitMember.getId() comes from DB)
+//        String data = HashIdUtil.encode(hitMember.getHitMemberId());
+//
+//        // 2. Populate Context
+//        context.setVariable("data", data);
+//        context.setVariable("hitClub", hitMember.getHitClub()); // Uses HitClubSmallPushDTO from mapping
+//        context.setVariable("hitMember", hitMember);
+//        context.setVariable("isProd", propertiesService.isProd());
+//
+//        // 3. Process
+//        return templateEngine.process("mail/hitClubInviteMail", context);
+//    }
+//}
+
+
 
 //    public String yourBuddy() {
 //        Context context = new Context();
@@ -202,20 +220,7 @@ public class MailContentBuilderService {
 //    	context.setVariable("student", student);
 //        return templateEngine.process("mail/statusMail", context);
 //    }
-//
-//	public String hitClubInviteMail(HitMemberDTO hitMember) {
-//		Context context = new Context();
-//
-//    	String data = HashIdUtil.encode(hitMember.getId());
-//
-//    	context.setVariable("data", data);
-//    	context.setVariable("hitClub", hitMember.getHitClub());
-//    	context.setVariable("hitMember", hitMember);
-//    	context.setVariable("isProd", propertiesService.isProd());
-//
-//        return templateEngine.process("mail/hitClubInviteMail", context);
-//	}
-//
+
 //	public String sendHitClubMemberPayMail(HitMemberDTO hitMember) {
 //		Context context = new Context();
 //

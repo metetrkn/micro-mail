@@ -27,3 +27,18 @@
 2026-02-01 11:44:55.687 [mailEventsListener-2] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: already.sent@hitract.se
 2026-02-01 11:44:55.701 [mailEventsListener-2] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: admin.test@hitract.se
 2026-02-01 11:44:55.701 [mailEventsListener-2] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent/Processed type: JONKOPING_PAY_MEMBERSHIP_MAIL
+2026-02-02 14:30:04.316 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 13140 (C:\Users\metet\Desktop\micro-mail\target\classes started by metet in C:\Users\metet\Desktop\micro-mail)
+2026-02-02 14:30:04.318 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-02 14:30:12.894 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 9.0 seconds (process running for 10.962)
+2026-02-02 15:00:22.649 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 1044 (C:\Users\metet\Desktop\micro-mail\target\classes started by metet in C:\Users\metet\Desktop\micro-mail)
+2026-02-02 15:00:22.651 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-02 15:00:30.356 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 8.177 seconds (process running for 10.289)
+2026-02-02 15:51:09.088 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 21376 (C:\Users\metet\Desktop\micro-mail\target\classes started by metet in C:\Users\metet\Desktop\micro-mail)
+2026-02-02 15:51:09.088 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-02 15:51:18.139 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 9.488 seconds (process running for 12.047)
+2026-02-02 15:51:18.143 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for type: HIT_CLUB_INVITE (Email: paid.test@example.com)
+2026-02-02 15:51:18.417 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent/Processed type: HIT_CLUB_INVITE
+2026-02-02 16:37:45.087 [mailEventsListener-2] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for type: HIT_CLUB_INVITE (Email: paid.test@example.com)
+2026-02-02 16:37:45.143 [mailEventsListener-2] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent/Processed type: HIT_CLUB_INVITE
+2026-02-02 16:48:27.163 [mailEventsListener-3] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for type: HIT_CLUB_INVITE (Email: free.test@example.com)
+2026-02-02 16:48:27.209 [mailEventsListener-3] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent/Processed type: HIT_CLUB_INVITE
