@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hitract</title>
+      <style type="text/css">
+         /* ======================================= DESKTOP STYLES */
+         * { -webkit-text-size-adjust: none; }
+         body { margin: 0 !important; padding: 0 !important; }
+         body,table,td,p,a { -ms-text-size-adjust: 100% !important; -webkit-text-size-adjust: 100% !important; }
+         table, tr, td { border-spacing: 0 !important; mso-table-lspace: 0px !important; mso-table-rspace: 0pt !important; border-collapse: collapse !important; mso-line-height-rule:exactly !important;}
+         .ExternalClass * { line-height: 100% }
+         .mobile-link a, .mobile-link span { text-decoration:none !important; color: inherit !important; border: none !important; }
+         /* ======================================= CUSTOM DESKTOP STYLES */
+
+         /* ======================================= FIX GMAIL GUTTERS */
+         /* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+          @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+              u ~ div .email-container {
+                  min-width: 320px !important;
+              }
+          }
+          /* iPhone 6, 6S, 7, 8, and X */
+          @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+              u ~ div .email-container {
+                  min-width: 375px !important;
+              }
+          }
+          /* iPhone 6+, 7+, and 8+ */
+          @media only screen and (min-device-width: 414px) {
+              u ~ div .email-container {
+                  min-width: 414px !important;
+              }
+          }
+         /* ======================================= END FIX */
+
+         /* ======================================= MOBILE STYLES */
+         @media only screen and (max-width: 640px) {
+            body { min-width: 320px!important; margin: 0; max-width:640px!important; }
+            .hide-m { display: none !important; }
+            .show-for-small { display: block !important; overflow: visible !important; width: auto !important; max-height: inherit !important; }
+            .no-float { float: none !important; }
+            .block { display: block !important; }
+            .resize-image { width: 100%; height: auto; }
+            .center-image { display: block; margin: 0 auto; }
+
+            .text-center { text-align: center !important; }
+            .font-14 { font-size: 14px !important; line-height: 16px !important; }
+            .font-16 { font-size: 16px !important; line-height: 18px !important; }
+            .font-18 { font-size: 18px !important; line-height: 20px !important; }
+            .font-20 { font-size: 20px !important; line-height: 22px !important; }
+            .font-22 { font-size: 22px !important; line-height: 24px !important; }
+
+            .pad-t-0 { padding-top: 0px !important; }
+            .pad-r-0 { padding-right: 0px !important; }
+            .pad-b-0 { padding-bottom: 0px !important; }
+            .pad-l-0 { padding-left: 0px !important; }
+            .pad-t-20 { padding-top: 20px !important; }
+            .pad-r-20 { padding-right: 20px !important; }
+            .pad-b-20 { padding-bottom: 20px !important; }
+            .pad-l-20 { padding-left: 20px !important; }
+            .pad-0 { padding-top: 0px !important; padding-right: 0px !important; padding-bottom: 0px !important; padding-left: 0px !important; }
+            .pad-10 { padding-top: 10px !important; padding-right: 10px !important; padding-bottom: 10px !important; padding-left: 10px !important; }
+            .pad-20 { padding-top: 20px !important; padding-right: 20px !important; padding-bottom: 20px !important; padding-left: 20px !important; }
+            .pad-sides-0 { padding-right: 0px !important; padding-left: 0px !important; }
+            .pad-sides-10 { padding-right: 10px !important; padding-left: 10px !important; }
+            .pad-sides-20 { padding-right: 20px !important; padding-left: 20px !important; }
+            .pad-sides-30 { padding-right: 30px !important; padding-left: 30px !important; }
+
+            .w100 { width: 100% !important; min-width: 100% !important; }
+            .w90 { width: 90% !important; min-width: 100% !important; }
+            .w50 { width: 50% !important; min-width: 100% !important; }
+            /* ======================================= CUSTOM MOBILE STYLES */
+
+         }
+      </style>
+   </head>
+   <body>
+
+    <!-- WRAPPER -->
+    <div style="max-width:640px!important; width: 100%!important; min-width:100%!important;">
+    
+    
+      <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="width: 100%!important; min-width:100%!important; background-color: #E0E0E0;">
+        <tbody>
+        	<tr>
+            <td align="center">
+      				<!-- CONTAINER -->
+      				<table cellspacing="0" cellpadding="0" border="0" align="center" style="margin: 0 auto; margin: 8px; ">
+      				   <tbody>
+      				      <tr>
+	                    <td align="center" style="padding-left:7px;padding-right:7px;height:1px;line-height:1px;font-size:1px;">
+	                      <div class="w100" style="display:block;height:1px;background-color:#ffffff;line-height:1px;font-size:1px;">&nbsp;</div>
+	                    </td>
+	                  </tr>
+	                  <tr>
+	                    <td align="center" style="padding-left:5px;padding-right:5px;height:1px;line-height:1px;font-size:1px;">
+	                      <div class="w100" style="display:block;height:1px;background-color:#ffffff;line-height:1px;font-size:1px;">&nbsp;</div>
+	                    </td>
+	                  </tr>
+	                  <tr>
+	                    <td align="center" style="padding-left:4px;padding-right:4px;height:1px;line-height:1px;font-size:1px;">
+	                      <div class="w100" style="display:block;height:1px;background-color:#ffffff;line-height:1px;font-size:1px;">&nbsp;</div>
+	                    </td>
+	                  </tr>
+	                  <tr>
+	                    <td align="center" style="padding-left:3px;padding-right:3px;height:1px;line-height:1px;font-size:1px;">
+	                      <div class="w100" style="display:block;height:1px;background-color:#ffffff;line-height:1px;font-size:1px;">&nbsp;</div>
+	                    </td>
+	                  </tr>
+	                  <tr>
+	                    <td align="center" style="padding-left:2px;padding-right:2px;height:1px;line-height:1px;font-size:1px;">
+	                      <div class="w100" style="display:block;height:1px;background-color:#ffffff;line-height:1px;font-size:1px;">&nbsp;</div>
+	                    </td>
+	                  </tr>
+	                  <tr>
+	                    <td align="center" style="padding-left:1px;padding-right:1px;height:1px;line-height:1px;font-size:1px;">
+	                      <div class="w100" style="display:block;height:1px;background-color:#ffffff;line-height:1px;font-size:1px;">&nbsp;</div>
+	                    </td>
+	                  </tr>
+	                  <tr>
+	                    <td align="center" style="padding-left:1px;padding-right:1px;height:1px;line-height:1px;font-size:1px;">
+	                      <div class="w100" style="display:block;height:1px;background-color:#ffffff;line-height:1px;font-size:1px;">&nbsp;</div>
+	                    </td>
+	                  </tr>
+	                  <tr>
+	                  	<td align="" style="">
+	                  		<!-- CONTAINER -->
+	                  		<table class="w100" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" bgcolor="#0000FF" style="width: 100%!important; min-width: 100%; background-color: #ffffff; margin: 0 auto;">
+	                  		   <tbody>
+	                  		      <tr>
+	                  		         <td align="center">
+	                  		            <img th:src="${hitClub.logo.medium}" width="200px" style="padding-top: 5px;">
+                                    <!-- 2px line -->
+                                    <table border="0" width="70%" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td style="background:none; border-bottom: 2px solid #f6f6f6; height:2px; width:100%; margin:0px 0px 0px 0px;">&nbsp;</td>
+                                        </tr>
+                                    </table>
+                                    <!-- /2px line -->
+	                  		         </td>
+	                  		      </tr>
+	                  		      <tr>
+	                  		      	<td class="pad-sides-30" align="center" style="padding-left: 20px; padding-right: 20px; padding-top: 30px">
+	
+
+	   									<div style="color: #000000; font-family: Arial, sans-serif, 'Open Sans'; font-size: 14px; line-height: 18px;">
+			                        
+			                     Hej<b><span th:if="${hitMember.firstName != null}" th:text="' ' + ${hitMember.firstName}"></span></b>,
+											   	 <br>
+											   	 <br>
+											   	 Du har lagts till som medlem i ... , gör enligt nedan för att aktivera ditt medlemskap:
+											   	 <br>
+											   	 <br>
+											   	 <div style="font-size: 20px;">
+											   	 <il>
+											   	 	<ul style="padding-left: 0px">1. Ladda ner hitract (<a href="https://apps.apple.com/se/app/hitract/id1494632863">App Store</a> och <a href="https://play.google.com/store/apps/details?id=se.hitract.hitract">Google Play</a>)</ul>
+											   	 	<ul style="padding-left: 0px">2. Skapa konto i appen och <b>öppna detta mail igen</b></ul>
+											   	 	<ul style="padding-left: 0px">3. Klicka på knappen nedan</ul>
+											   	 </il>
+											   	 </div>
+											   	 	<br>   	
+												<div><!--[if mso]>
+												<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://" style="height:50px;v-text-anchor:middle;width:170px;" arcsize="10%" stroke="f" fillcolor="#0798ED">
+												<w:anchorlock/>
+												<center>
+												<![endif]-->
+													<a th:href="${'https://' + (isProd ? '' : 'test.') + 'hitract.se/api/app/hitClubInvite/' + data}" title="Joina hitClub" style="background-color:#0798ED;border-radius:40px;color:#ffffff;display:inline-block;font-size: 16px; font-family: 'Roboto', Tahoma, Verdana, Segoe, sans-serif, Helvetica, Arial;font-weight:bold;line-height:35px;text-align:center;text-decoration:none;-webkit-text-size-adjust:none;padding-left: 18px;padding-right: 18px;"><span>Joina hitClub</span></a>
+												<!--[if mso]>
+												</center>
+												</v:roundrect>
+												<![endif]--></div>
+											
+											   	<br>
+											   	<div style="text-align: left">
+											   	Vi ses på hitract! 😍
+											   	<br><br>
+											   	Mvh, <span th:text="${hitClub.hitClubName}"></span>
+                          </div>
+                          <br>
+
+                          <!-- About hitract container -->
+                          <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="width: 100%!important; min-width:100%!important;">
+                            <tbody>
+                              <tr>
+                                <td align="center">
+                                  <!-- CONTAINER -->
+                                  <table cellspacing="0" cellpadding="0" border="0" align="center" style="margin: 0 auto; max-width:640px!important;">
+                                    <tbody>
+                                        <tr>
+                                          <td align="center" style="padding-left:7px;padding-right:7px;height:1px;line-height:1px;font-size:1px;">
+                                            <div class="w100" style="display:block;height:1px;background-color:#EAF9FA;line-height:1px;font-size:1px;">&nbsp;</div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center" style="padding-left:5px;padding-right:5px;height:1px;line-height:1px;font-size:1px;">
+                                            <div class="w100" style="display:block;height:1px;background-color:#EAF9FA;line-height:1px;font-size:1px;">&nbsp;</div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center" style="padding-left:4px;padding-right:4px;height:1px;line-height:1px;font-size:1px;">
+                                            <div class="w100" style="display:block;height:1px;background-color:#EAF9FA;line-height:1px;font-size:1px;">&nbsp;</div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center" style="padding-left:3px;padding-right:3px;height:1px;line-height:1px;font-size:1px;">
+                                            <div class="w100" style="display:block;height:1px;background-color:#EAF9FA;line-height:1px;font-size:1px;">&nbsp;</div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center" style="padding-left:2px;padding-right:2px;height:1px;line-height:1px;font-size:1px;">
+                                            <div class="w100" style="display:block;height:1px;background-color:#EAF9FA;line-height:1px;font-size:1px;">&nbsp;</div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center" style="padding-left:1px;padding-right:1px;height:1px;line-height:1px;font-size:1px;">
+                                            <div class="w100" style="display:block;height:1px;background-color:#EAF9FA;line-height:1px;font-size:1px;">&nbsp;</div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center" style="padding-left:1px;padding-right:1px;height:1px;line-height:1px;font-size:1px;">
+                                            <div class="w100" style="display:block;height:1px;background-color:#EAF9FA;line-height:1px;font-size:1px;">&nbsp;</div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td align="" style="">
+                                            <!-- CONTAINER -->
+                                            <table class="w100" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" bgcolor="#0000FF" style="width: 100%!important; min-width: 100%; background-color:#EAF9FA; margin: 0 auto;">
+                                              <tbody>
+                                                  <tr>
+                                                    <td align="center" style="padding: 5px 8px 5px 8px">
+                                                      <!-- Message in swedish -->
+                                                      Om <b>hitract</b>:<br>
+                                                      hitract är Sveriges största och första digitala studentcommunity, specifikt framtaget för universitet och högskolestudenter. Förutom att vi och våra aktiviteter finns på hitract, får du vägledning och inspiration kopplat till kurser, dina studier, intressen och passioner. Passa även på att nätverka och connecta med likasinnade studenter och arbetsgivare från hela landet. Du hörde rätt, hitract göra det möjligt för arbetsgivare att hitta dig baserat på dina intressen och passioner. Gör din grej så hittar drömjobbet dig!  
+                                                      Skönt va?
+                                                    </td>
+                                                  </tr>
+                                              </tbody>
+                                            </table>
+                                            <!-- /CONTAINER -->
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center" style="padding-left:1px;padding-right:1px;height:1px;line-height:1px;font-size:1px;">
+                                            <div class="w100" style="display:block;height:1px;background-color:#EAF9FA;line-height:1px;font-size:1px;">&nbsp;</div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center" style="padding-left:1px;padding-right:1px;height:1px;line-height:1px;font-size:1px;">
+                                            <div class="w100" style="display:block;height:1px;background-color:#EAF9FA;line-height:1px;font-size:1px;">&nbsp;</div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center" style="padding-left:2px;padding-right:2px;height:1px;line-height:1px;font-size:1px;">
+                                            <div class="w100" style="display:block;height:1px;background-color:#EAF9FA;line-height:1px;font-size:1px;">&nbsp;</div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center" style="padding-left:3px;padding-right:3px;height:1px;line-height:1px;font-size:1px;">
+                                            <div class="w100" style="display:block;height:1px;background-color:#EAF9FA;line-height:1px;font-size:1px;">&nbsp;</div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center" style="padding-left:4px;padding-right:4px;height:1px;line-height:1px;font-size:1px;">
+                                            <div class="w100" style="display:block;height:1px;background-color:#EAF9FA;line-height:1px;font-size:1px;">&nbsp;</div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center" style="padding-left:5px;padding-right:5px;height:1px;line-height:1px;font-size:1px;">
+                                            <div class="w100" style="display:block;height:1px;background-color:#EAF9FA;line-height:1px;font-size:1px;">&nbsp;</div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center" style="padding-left:7px;padding-right:7px;height:1px;line-height:1px;font-size:1px;">
+                                            <div class="w100" style="display:block;height:1px;background-color:#EAF9FA;line-height:1px;font-size:1px;">&nbsp;</div>
+                                          </td>
+                                        </tr>
+                                    </tbody>
+                                  </table>
+                                  <!-- /CONTAINER -->
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>									   	
+                          <!-- /About hitract container -->
+
+                          <!-- 2px line -->
+                          <table border="0" width="70%" cellpadding="0" cellspacing="0">
+                              <tr>
+                                  <td style="background:none; border-bottom: 2px solid #f6f6f6; height:2px; width:100%; margin:0px 0px 0px 0px;">&nbsp;</td>
+                              </tr>
+                          </table>
+                          <!-- /2px line -->
+                          <br>
+                          <!-- Message in english -->
+                           Hi<b><span th:if="${hitMember.firstName != null}" th:text="' ' + ${hitMember.firstName}"></span></b>,
+											   	 <br>
+											   	 <br>
+											   	 Starting today, you will find <b>us, our events</b> and <b>all important information</b> in the hitract app.
+											   	 <br>
+											   	 <br>
+											   	 <div style="font-size: 20px;">
+											   	 <il>
+											   	 	<ul style="padding-left: 0px">1. Download hitract (<a href="https://apps.apple.com/se/app/hitract/id1494632863">App Store</a> or <a href="https://play.google.com/store/apps/details?id=se.hitract.hitract">Google Play</a>)</ul>
+											   	 	<ul style="padding-left: 0px">2. Create an account in this mail and <b>open this email again</b></ul>
+											   	 	<ul style="padding-left: 0px">3. Click on button below</ul>
+											   	 </il>
+											   	 </div>
+											   	 	<br>   	
+												<div><!--[if mso]>
+												<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://" style="height:50px;v-text-anchor:middle;width:170px;" arcsize="10%" stroke="f" fillcolor="#0798ED">
+												<w:anchorlock/>
+												<center>
+												<![endif]-->
+													<a th:href="${'https://' + (isProd ? '' : 'test.') + 'hitract.se/api/app/hitClubInvite/' + data}" title="Join hitClub" style="background-color:#0798ED;border-radius:40px;color:#ffffff;display:inline-block;font-size: 16px; font-family: 'Roboto', Tahoma, Verdana, Segoe, sans-serif, Helvetica, Arial;font-weight:bold;line-height:35px;text-align:center;text-decoration:none;-webkit-text-size-adjust:none;padding-left: 18px;padding-right: 18px;"><span>Join hitClub</span></a>
+												<!--[if mso]>
+												</center>
+												</v:roundrect>
+												<![endif]--></div>
+											
+											   	<br>
+											   	<div style="text-align: left">
+											   	See you on hitract! 😍
+											   	<br><br>
+											   	Kind regards, <span th:text="${hitClub.hitClubName}"></span>
+											   	<br><br>
+                          </div>
+
+
+                          <!-- About hitract container -->
+                          <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="width: 100%!important; min-width:100%!important;">
+                            <tbody>
+                              <tr>
+                                <td align="center">
+                                  <!-- CONTAINER -->
+                                  <table cellspacing="0" cellpadding="0" border="0" align="center" style="margin: 0 auto; max-width:640px!important;">
+                                    <tbody>
+                                        <tr>
+                                          <td align="center" style="padding-left:7px;padding-right:7px;height:1px;line-height:1px;font-size:1px;">
+                                            <div class="w100" style="display:block;height:1px;background-color:#EAF9FA;line-height:1px;font-size:1px;">&nbsp;</div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center" style="padding-left:5px;padding-right:5px;height:1px;line-height:1px;font-size:1px;">
+                                            <div class="w100" style="display:block;height:1px;background-color:#EAF9FA;line-height:1px;font-size:1px;">&nbsp;</div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center" style="padding-left:4px;padding-right:4px;height:1px;line-height:1px;font-size:1px;">
+                                            <div class="w100" style="display:block;height:1px;background-color:#EAF9FA;line-height:1px;font-size:1px;">&nbsp;</div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center" style="padding-left:3px;padding-right:3px;height:1px;line-height:1px;font-size:1px;">
+                                            <div class="w100" style="display:block;height:1px;background-color:#EAF9FA;line-height:1px;font-size:1px;">&nbsp;</div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center" style="padding-left:2px;padding-right:2px;height:1px;line-height:1px;font-size:1px;">
+                                            <div class="w100" style="display:block;height:1px;background-color:#EAF9FA;line-height:1px;font-size:1px;">&nbsp;</div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center" style="padding-left:1px;padding-right:1px;height:1px;line-height:1px;font-size:1px;">
+                                            <div class="w100" style="display:block;height:1px;background-color:#EAF9FA;line-height:1px;font-size:1px;">&nbsp;</div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center" style="padding-left:1px;padding-right:1px;height:1px;line-height:1px;font-size:1px;">
+                                            <div class="w100" style="display:block;height:1px;background-color:#EAF9FA;line-height:1px;font-size:1px;">&nbsp;</div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td align="" style="">
+                                            <!-- CONTAINER -->
+                                            <table class="w100" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" bgcolor="#0000FF" style="width: 100%!important; min-width: 100%; background-color:#EAF9FA; margin: 0 auto;">
+                                              <tbody>
+                                                  <tr>
+                                                    <td align="center" style="padding: 5px 8px 5px 8px">
+                                                      <!-- Message in english -->
+                                                      About <b>hitract</b>:<br>
+                                                      hitract is Sweden’s first and largest digital student community, especially created for university students. Besides finding all our activities on hitract, you’ll get guidance and inspiration related to courses, your studies, interests and passions. Make sure to network and connect with likeminded students and employers from across the country. That’s right, hitract makes it possible for employers to find you based on your interests and passions. Just do your thing and your dream job will find you! Nice, huh?
+                                                    </td>
+                                                  </tr>
+                                              </tbody>
+                                            </table>
+                                            <!-- /CONTAINER -->
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center" style="padding-left:1px;padding-right:1px;height:1px;line-height:1px;font-size:1px;">
+                                            <div class="w100" style="display:block;height:1px;background-color:#EAF9FA;line-height:1px;font-size:1px;">&nbsp;</div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center" style="padding-left:1px;padding-right:1px;height:1px;line-height:1px;font-size:1px;">
+                                            <div class="w100" style="display:block;height:1px;background-color:#EAF9FA;line-height:1px;font-size:1px;">&nbsp;</div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center" style="padding-left:2px;padding-right:2px;height:1px;line-height:1px;font-size:1px;">
+                                            <div class="w100" style="display:block;height:1px;background-color:#EAF9FA;line-height:1px;font-size:1px;">&nbsp;</div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center" style="padding-left:3px;padding-right:3px;height:1px;line-height:1px;font-size:1px;">
+                                            <div class="w100" style="display:block;height:1px;background-color:#EAF9FA;line-height:1px;font-size:1px;">&nbsp;</div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center" style="padding-left:4px;padding-right:4px;height:1px;line-height:1px;font-size:1px;">
+                                            <div class="w100" style="display:block;height:1px;background-color:#EAF9FA;line-height:1px;font-size:1px;">&nbsp;</div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center" style="padding-left:5px;padding-right:5px;height:1px;line-height:1px;font-size:1px;">
+                                            <div class="w100" style="display:block;height:1px;background-color:#EAF9FA;line-height:1px;font-size:1px;">&nbsp;</div>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center" style="padding-left:7px;padding-right:7px;height:1px;line-height:1px;font-size:1px;">
+                                            <div class="w100" style="display:block;height:1px;background-color:#EAF9FA;line-height:1px;font-size:1px;">&nbsp;</div>
+                                          </td>
+                                        </tr>
+                                    </tbody>
+                                  </table>
+                                  <!-- /CONTAINER -->
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>									   	
+                          <!-- /About hitract container -->
+											   	</div>
+                          <!-- 2px line -->
+                          <table border="0" width="70%" cellpadding="0" cellspacing="0">
+                              <tr>
+                                  <td style="background:none; border-bottom: 2px solid #f6f6f6; height:2px; width:100%; margin:0px 0px 0px 0px;">&nbsp;</td>
+                              </tr>
+                          </table>
+                          <!-- /2px line -->
+                          <!-- No reply text Swedish -->
+                          <div>
+											   	  <span style="color: #000000; font-family: Arial, sans-serif, 'Open Sans'; font-size: 9px; line-height: 10px;" th:text="${'Detta mail skickades från '  + hitClub.hitClubName + 's klubbsida och går inte att svara på'}"></span>
+                          <div>
+                          <!-- No reply text English -->
+                          <div>
+											   	  <span style="color: #000000; font-family: Arial, sans-serif, 'Open Sans'; font-size: 9px; line-height: 10px;" th:text="${'This email was sent from the '  + hitClub.hitClubName + 's club page and cannot be replied to.'}"></span>
+                          <div>
+                          <!-- Links -->
+                            <div style="margin-top: 5px">
+                              <a href="https://www.instagram.com/hitract/"><img style="margin-right: 5px" height="16px" src="https://storage.hitract.se/resources/mail-images/instagramIcon.jpg"/></a>
+                              <a href="mailto:info@hitract.se"><img style="margin-right: 5px" height="16px" src="https://storage.hitract.se/resources/mail-images/mailIcon.jpg"/></a>
+                              <a href="https://www.hitract.se/"><img height="16px" src="https://storage.hitract.se/resources/mail-images/homepageIcon.jpg"/></a>
+                            </div>
+                          </div>
+                          <div style="color: #000000; font-family: Arial, sans-serif, 'Open Sans'; font-size: 11px; line-height: 18px;">hitract © 2022</div>
+                    </div>
+	   	
+	                  		        </td>
+	                  		      </tr>
+	                  		   </tbody>
+	                  		</table>
+	                  		<!-- /CONTAINER -->
+	                    </td>
+	                  </tr>
+                    <tr>
+                      <td align="center" style="padding-left:1px;padding-right:1px;height:1px;line-height:1px;font-size:1px;">
+                        <div class="w100" style="display:block;height:1px;background-color:#ffffff;line-height:1px;font-size:1px;">&nbsp;</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center" style="padding-left:1px;padding-right:1px;height:1px;line-height:1px;font-size:1px;">
+                        <div class="w100" style="display:block;height:1px;background-color:#ffffff;line-height:1px;font-size:1px;">&nbsp;</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center" style="padding-left:2px;padding-right:2px;height:1px;line-height:1px;font-size:1px;">
+                        <div class="w100" style="display:block;height:1px;background-color:#ffffff;line-height:1px;font-size:1px;">&nbsp;</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center" style="padding-left:3px;padding-right:3px;height:1px;line-height:1px;font-size:1px;">
+                        <div class="w100" style="display:block;height:1px;background-color:#ffffff;line-height:1px;font-size:1px;">&nbsp;</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center" style="padding-left:4px;padding-right:4px;height:1px;line-height:1px;font-size:1px;">
+                        <div class="w100" style="display:block;height:1px;background-color:#ffffff;line-height:1px;font-size:1px;">&nbsp;</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center" style="padding-left:5px;padding-right:5px;height:1px;line-height:1px;font-size:1px;">
+                        <div class="w100" style="display:block;height:1px;background-color:#ffffff;line-height:1px;font-size:1px;">&nbsp;</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center" style="padding-left:7px;padding-right:7px;height:1px;line-height:1px;font-size:1px;">
+                        <div class="w100" style="display:block;height:1px;background-color:#ffffff;line-height:1px;font-size:1px;">&nbsp;</div>
+                      </td>
+                    </tr>
+      				   </tbody>
+      				</table>
+      				<!-- /CONTAINER -->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- /WRAPPER -->
+      
+      </div>
+   </body>
+</html>

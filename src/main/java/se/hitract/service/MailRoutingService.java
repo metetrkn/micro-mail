@@ -28,6 +28,7 @@ public class MailRoutingService {
             case COMPANY_SIGNUP -> mailSenderService.sendCompanySignupUpMail(emailDto);
             case HITCLUB_SIGNIN -> mailSenderService.sendHitClubSignupInMail(emailDto);
             case ERROR -> mailSenderService.sendErrorMail(emailDto);
+            case WEB_MEMBER_STATUS_CHANGED -> mailSenderService.sendWebMemberStatusChanged(emailDto);
             default -> log.error("No logic implemented for MAIL_TYPE: {}", emailDto.toString());
 
 //            case COMPANY_SIGNIN -> handleCompanySignIn(email);
@@ -55,3 +56,4 @@ public class MailRoutingService {
         }
     }
 }
+

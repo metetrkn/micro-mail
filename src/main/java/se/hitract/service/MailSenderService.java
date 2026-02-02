@@ -23,104 +23,6 @@ public class MailSenderService {
 
 	private static final Logger logger = LoggerFactory.getLogger(MailSenderService.class);
 
-//	public void sendMail(String toMail, String fromMail, String personal, String content, String subject, MAIL_TYPE mailType) {
-//		sendMail(new String[] {toMail}, null, fromMail, personal, content, subject, mailType, null, null, null, null);
-//	}
-//
-//	public void sendMail(String toMail, String fromMail, String personal, String content, String subject, MAIL_TYPE mailType, EntityType entityType, Long entityId) {
-//		sendMail(new Strisng[] {toMail}, null, fromMail, personal, content, subject, mailType, null, entityType, entityId, null);
-//	}
-//
-//	public void sendMail(String toMail, String fromMail, String personal, String content, String subject, MAIL_TYPE mailType, List<MailAttachment> mailAttachments, EntityType entityType, Long entityId) {
-//		sendMail(new String[] {toMail}, null, fromMail, personal, content, subject, mailType, mailAttachments, entityType, entityId, null);
-//	}
-//
-//	private void sendMail(MailRequestDTO dto) {
-//		System.out.println("!!!! another one worked");
-//		String sendToEmail = dto.getToMail();
-//
-//		MimeMessagePreparator messagePreparator = mimeMessage -> {
-//			MimeMessageHelper messageHelper = new MimeMessageHelper(mimeMessage);
-//			messageHelper.setFrom(dto.getFromMail(), "hitract");
-//			messageHelper.setTo(sendToEmail);
-//			messageHelper.setSubject(dto.getSubject());
-//			messageHelper.setText(dto.getContent(), true);
-//		};
-//
-//		try {
-//			boolean isWhitelisted = sendToEmail.contains("hitract.se")
-//					|| sendToEmail.contains("hitract.com")
-//					|| sendToEmail.contains("nordstrom.robert@gmail.com");
-//
-//			if ("PROD".equals(propertiesService.getEnvironment()) || dto.isInternalUser() || isWhitelisted) {
-//
-//				//javaMailSender.send(messagePreparator);
-//
-//				// Matches your new SentMail constructor exactly
-//				sentMailRepository.save(new SentMail(
-//						SENT_MAIL_STATUS.SUCCESS,
-//						sendToEmail,
-//						dto.getId(),      // This is the 'toStudent' Long
-//						dto.getMailType(),
-//						null,             // error
-//						null,             // entityType (if not in DTO)
-//						null              // entityId (if not in DTO)
-//				));
-//			}
-//		} catch (Exception e) {
-//			logger.error("Failed to send mail: {}", e.getMessage());
-//
-//			sentMailRepository.save(new SentMail(
-//					SENT_MAIL_STATUS.ERROR,
-//					sendToEmail,
-//					dto.getId(),
-//					dto.getMailType(),
-//					e.toString(),
-//					null,
-//					null
-//			));
-//		}
-//	}
-//
-//	private void sendMail(String[] toMails, String[] cc, String fromMail, String personal, String content, String subject, MAIL_TYPE mailType, List<MailAttachment> mailAttachments, EntityType entityType, Long entityId, String replyTo) {
-//
-//		System.out.println("!!!! send mail worked sb");
-//		MimeMessagePreparator messagePreparator = mimeMessage -> {
-//			MimeMessageHelper messageHelper = new MimeMessageHelper(mimeMessage, true);
-//			messageHelper.setFrom(fromMail, personal);
-//			if(cc != null) {
-//				messageHelper.setCc(cc);
-//			}
-//
-//			messageHelper.setTo(toMails);
-//			messageHelper.setSubject(subject);
-//			if(replyTo != null) {
-//				messageHelper.setReplyTo(replyTo);
-//			}
-//			//mimeMessage.addHeader("List-Unsubscribe", "<mailto: unsubscribe@hitract.se?subject=Unsubscribe>");
-//			messageHelper.setText(content, true);
-//			if(mailAttachments != null) {
-//				for(MailAttachment mailAttachment : mailAttachments) {
-//					messageHelper.addAttachment(mailAttachment.getFilename(), new ByteArrayResource(mailAttachment.getData()));
-//				}
-//			}
-//		};
-//
-//		boolean isHitractMail = Arrays.stream(toMails).anyMatch(toMail -> toMail.contains("hitract.se") || toMail.contains("hitract.com") || toMail.contains("nordstrom.robert@gmail.com"));
-//		String mails = String.join(",", toMails);
-//		try {
-//			if (propertiesService.getEnvironment().equals("PROD") || isHitractMail) {
-//				logger.debug("Sending mailType: " + mailType + " to email: " + mails);
-//				//javaMailSender.send(messagePreparator);
-//				sentMailRepository.save(new SentMail(SENT_MAIL_STATUS.SUCCESS, mails , null, mailType, null, entityType, entityId));
-//			} else {
-//				logger.debug("User don't want emails (or non prod environment)");
-//			}
-//		} catch (Exception e) {
-//			logger.error("Could not send chat group not read mail: " + e);
-//			sentMailRepository.save(new SentMail(SENT_MAIL_STATUS.ERROR, mails, null, mailType, e.toString(), entityType, entityId));
-//		}
-	//	}
 	public void sendM1(MailRequestDTO request) {
 		try {
             String content = mailContentBuilderService.sendM1();
@@ -278,7 +180,8 @@ public class MailSenderService {
 		}
 
 		return content;
-	}    public void sendErrorMail(MailRequestDTO request) {
+	}
+    public void sendErrorMail(MailRequestDTO request) {
 		try {
 			String content=mailContentBuilderService.sendError(request.getMessage());
 			request.setContent(content);
@@ -292,6 +195,35 @@ public class MailSenderService {
 			// THROW the exception so Rqueue knows to retry!
 			throw new RuntimeException("Email delivery failed", e);
 		}
+
+	}
+
+    public void sendWebMemberStatusChanged(MailRequestDTO request) {
+
+		String subject;
+
+        if(request.getHitMemberMailDTO().getPaymentOptionId() == null) {
+            subject = "hitract - din medlemsansökan ["+request.getHitMemberMailDTO().getHitClubName()+"]";
+        } else {
+            if(request.getHitMemberMailDTO().getHitMemberStatus().equals("MEMBER")) {
+                subject = "hitract - du är medlem ["+request.getHitMemberMailDTO().getHitClubName()+"]";
+            } else if(request.getHitMemberMailDTO().getHitMemberStatus().equals("PENDING_PAYMENT")) {
+                subject = "hitract - betala medlemsavgift [" +request.getHitMemberMailDTO().getHitClubName() + "]";
+            } else {
+                throw new RuntimeException("Subject Couldnt resolve for WebMemberStatusChanged");
+            }
+        }
+
+        try{
+            String content=mailContentBuilderService.sendWebMemberStatusChanged(request);
+            request.setContent(content);
+            request.setFromMail("noreply@hitract.se");
+            request.setSubject(subject);
+            mailgunHttpService.send(request);
+        }catch (Exception e) {
+            log.error("FAILED to process mail for {}: {}", request.getEmail(), e.getMessage());
+            throw new RuntimeException("Email delivery failed", e);
+        }
 
 	}
 
@@ -321,43 +253,10 @@ public class MailSenderService {
 //	}
 //
 //
-//	@Async
-//	public void sendCompanySignInMail(Student toStudent, String token, boolean newSite) {
-//
-//		String fromMail = "login@hitract.se";
-//		String content = mailContentBuilderService.companySignInContent(toStudent.getLanguage(), toStudent.getIdentifier(), token, newSite);
-//		String subject = "Logga in på hitract";
-//		sendMail(toStudent, fromMail, content, subject, MAIL_TYPE.MAIL_SIGNIN);
-//	}
-//
-//	@Async
-//	public void sendStudentSignUpMail(String email, String token, LANGUAGE language) {
-//
-//		LANGUAGE languageNullSafe = language == null ? LANGUAGE.sv : language;
-//
-//		String fromMail = "login@hitract.se";
-//		String content = mailContentBuilderService.studentSignUpContent(email, token, languageNullSafe);
-//		String subject = languageNullSafe.equals(LANGUAGE.sv) ? "Nytt konto på hitract" : "New account on hitract";
-//		sendMail(email, fromMail, "", content, subject, MAIL_TYPE.COMPANY_SIGNUP);
-//	}
 
-//	@Async
-//	public void sendHitClubSignupInMail(Student toStudent, String token) {
-//
-//		String fromMail = "login@hitract.se";
-//		String content = mailContentBuilderService.hitClubSignInContent(toStudent.getEmail(), token);
-//		String subject = "Logga in på hitract";
-//		sendMail(toStudent, fromMail, content, subject, MAIL_TYPE.HITCLUB_SIGNIN);
-//	}
-//
-//	@Async
-//	public void sendCompanySignupUpMail(Student toStudent) {
-//
-//		String fromMail = "login@hitract.se";
-//		String content = mailContentBuilderService.companySignUpContent(toStudent.getEmail());
-//		String subject = "Nytt konto på hitract";
-//		sendMail(toStudent, fromMail, content, subject, MAIL_TYPE.COMPANY_SIGNUP);
-//	}
+
+
+
 //
 //	@Async
 //	public void sendJonkopingMail(String email) {
@@ -561,27 +460,7 @@ public class MailSenderService {
 //		sendMail(order.getStudent().getEmail(), fromMail, "", content, subject, MAIL_TYPE.ORDER_PAYED, attachments, EntityType.ORDER, order.getOrderId());
 //	}
 //
-//	public void sendWebMemberStatusChanged(HitMember hitMember) {
-//
-//		String fromMail = "noreply@hitract.se";
-//		String content = mailContentBuilderService.sendWebMemberStatusChanged(BeanUtil.getBean(ModelMapper.class).map(hitMember, HitMemberDTO.class));
-//
-//		String subject;
-//		if(hitMember.getPaymentOption() == null) {
-//			subject = "hitract - din medlemsansökan ["+hitMember.getHitClub().getHitClubName()+"]";
-//		} else {
-//			if(hitMember.getHitMemberStatus().equals(HIT_MEMBER_STATUS.MEMBER)) {
-//				subject = "hitract - du är medlem ["+hitMember.getHitClub().getHitClubName()+"]";
-//			} else if(hitMember.getHitMemberStatus().equals(HIT_MEMBER_STATUS.PENDING_PAYMENT)) {
-//				subject = "hitract - betala medlemsavgift [" + hitMember.getHitClub().getHitClubName() + "]";
-//			} else {
-//				throw new RuntimeException("Not implemented");
-//			}
-//		}
-//
-//		sendMail(hitMember.getEmail(), fromMail, "", content, subject, MAIL_TYPE.WEB_MEMBER_STATUS_CHANGED);
-//
-//	}
+
 //
 //	public void sendErrorMail(String msg) {
 //

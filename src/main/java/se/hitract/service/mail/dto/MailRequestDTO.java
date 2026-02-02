@@ -34,6 +34,7 @@ public class MailRequestDTO{
     private String language;
     private boolean newSite;
     private String message;
+    private HitMemberMailDTO  hitMemberMailDTO;
 
 }
 

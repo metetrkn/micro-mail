@@ -1,1 +1,20 @@
-2026-01-31 20:14:12.340 - Template rendering failed for jesperstenbergs@gmail.com: Exception evaluating SpringEL expression: "language.name() == 'sv' ? 'Logga in' : 'Login'" (template: "mail/studentSignInMail" - line 2, col 11)
+2026-02-02 00:10:15.938 - Template rendering failed for romeo@hitract.se: Exception evaluating SpringEL expression: "language.name() == 'sv' ? 'Logga in' : 'Login'" (template: "mail/studentSignInMail" - line 2, col 11)
+2026-02-02 00:28:29.815 - Template rendering failed for romeo@hitract.se: Exception evaluating SpringEL expression: "language.name() == 'sv'" (template: "mail/mailFragments" - line 458, col 51)
+2026-02-02 01:14:00.876 - FAILED to process mail for romeo@hitract.se: Exception evaluating SpringEL expression: "hitMember.hitMemberStatus.toString() == 'CANCELLED_DECLINED'" (template: "mail/webMemberStatusChanged" - line 206, col 9)
+2026-02-02 01:14:00.877 - SYSTEM ERROR: Attempt failed for romeo@hitract.se. Rqueue will retry.
+2026-02-02 01:14:00.878 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "hitMember.hitMemberStatus.toString() == 'CANCELLED_DECLINED'" (template: "mail/webMemberStatusChanged" - line 206, col 9)
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'hitMemberStatus' cannot be found on object of type 'java.lang.String' - maybe not public or not valid?
+2026-02-02 01:14:09.393 - FAILED to process mail for romeo@hitract.se: Exception evaluating SpringEL expression: "hitMember.hitMemberStatus.toString() == 'CANCELLED_DECLINED'" (template: "mail/webMemberStatusChanged" - line 206, col 9)
+2026-02-02 01:14:09.393 - SYSTEM ERROR: Attempt failed for romeo@hitract.se. Rqueue will retry.
+2026-02-02 01:14:09.393 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "hitMember.hitMemberStatus.toString() == 'CANCELLED_DECLINED'" (template: "mail/webMemberStatusChanged" - line 206, col 9)
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'hitMemberStatus' cannot be found on object of type 'java.lang.String' - maybe not public or not valid?
+2026-02-02 01:14:17.477 - FAILED to process mail for romeo@hitract.se: Exception evaluating SpringEL expression: "hitMember.hitMemberStatus.toString() == 'CANCELLED_DECLINED'" (template: "mail/webMemberStatusChanged" - line 206, col 9)
+2026-02-02 01:14:17.477 - SYSTEM ERROR: Attempt failed for romeo@hitract.se. Rqueue will retry.
+2026-02-02 01:14:17.478 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "hitMember.hitMemberStatus.toString() == 'CANCELLED_DECLINED'" (template: "mail/webMemberStatusChanged" - line 206, col 9)
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'hitMemberStatus' cannot be found on object of type 'java.lang.String' - maybe not public or not valid?

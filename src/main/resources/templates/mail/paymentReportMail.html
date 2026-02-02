@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hitract</title>
+      
+   </head>
+   	<body>
+	    <div style="max-width:640px!important; width: 100%!important; min-width:100%!important;">
+	    Hej,<br><br>
+	    Din rapport för perioden <b><span th:text="${#dates.format(fromDate, 'yyyy-MM-dd')}"></span></b> till <b><span th:text="${#dates.format(toDate, 'yyyy-MM-dd')}"></span></b> finns nu att ladda ner här: <a href="https://webapp.hitract.se/hitclub/hitpayments">https://webapp.hitract.se/hitclub/hitpayments</a>
+	    <br>
+		<br>
+		Mvh,<br>
+		Hitract
+		<br>
+		
+      </div>
+   </body>
+</html>
