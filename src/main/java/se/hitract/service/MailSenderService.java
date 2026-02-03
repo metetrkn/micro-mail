@@ -330,6 +330,35 @@ public class MailSenderService {
 		mailgunHttpService.send(request, "Hitract");
 	}
 
+    public void sendWebMemberStatusChanged(MailRequestDTO request) {
+
+        String subject;
+
+        if(request.getHitMemberMailDTO().getPaymentOptionId() == null) {
+            subject = "hitract - din medlemsansökan ["+request.getHitMemberMailDTO().getHitClubName()+"]";
+        } else {
+            if(request.getHitMemberMailDTO().getHitMemberStatus().equals("MEMBER")) {
+                subject = "hitract - du är medlem ["+request.getHitMemberMailDTO().getHitClubName()+"]";
+            } else if(request.getHitMemberMailDTO().getHitMemberStatus().equals("PENDING_PAYMENT")) {
+                subject = "hitract - betala medlemsavgift [" +request.getHitMemberMailDTO().getHitClubName() + "]";
+            } else {
+                throw new RuntimeException("Subject Couldnt resolve for WebMemberStatusChanged");
+            }
+        }
+
+        try{
+            String content=mailContentBuilderService.sendWebMemberStatusChanged(request);
+            request.setContent(content);
+            request.setFromMail("noreply@hitract.se");
+            request.setSubject(subject);
+            mailgunHttpService.send(request,"Hitract");
+        }catch (Exception e) {
+            log.error("FAILED to process mail for {}: {}", request.getEmail(), e.getMessage());
+            throw new RuntimeException("Email delivery failed", e);
+        }
+
+    }
+
 
 //	//@Scheduled(fixedRate=30000)
 //	//@RqueueListener(value = "sendChatGroupNotReadMails", numRetries = "0")
