@@ -129,6 +129,16 @@ public class MailContentBuilderService {
         return templateEngine.process("mail/jonkopingMail", context);
     }
 
+    public String sendWebMemberStatusChanged(MailRequestDTO request) {
+        Context context = new Context();
+        context.setVariable("hitMember", request.getHitMemberMailDTO());
+        context.setVariable("paymentOptionId", request.getHitMemberMailDTO().getPaymentOptionId()!= null ? request.getHitMemberMailDTO().getPaymentOptionId() : null);
+        context.setVariable("hitMemberIdHash",request.getHitMemberMailDTO().getHitMemberIdHash() );
+        context.setVariable("isProd", propertiesService.isProd());
+
+        return templateEngine.process("mail/webMemberStatusChanged", context);
+    }
+
 //    public String hitClubInviteMail(HitMemberDTO hitMember) {
 //        Context context = new Context();
 //
@@ -297,15 +307,7 @@ public class MailContentBuilderService {
 //        return templateEngine.process("mail/webBecomeMember", context);
 //	}
 //
-//	public String sendWebMemberStatusChanged(HitMemberDTO hitMember) {
-//		Context context = new Context();
-//		context.setVariable("hitMember", hitMember);
-//		context.setVariable("paymentOptionId", hitMember.getPaymentOption() != null ? hitMember.getPaymentOption().getPaymentOptionId() : null);
-//		context.setVariable("hitMemberIdHash", HashIdUtil.encodeLong(hitMember.getHitMemberId()));
-//		context.setVariable("isProd", propertiesService.isProd());
-//
-//        return templateEngine.process("mail/webMemberStatusChanged", context);
-//	}
+
 //
 //	public String sendError(String msg) {
 //		Context context = new Context();

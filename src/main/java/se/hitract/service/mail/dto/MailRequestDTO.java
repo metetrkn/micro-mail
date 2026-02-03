@@ -34,6 +34,8 @@ public class MailRequestDTO {
     private boolean newSite;
     private String message;
 
+    private HitMemberMailDTO hitMemberMailDTO;
+
     // --- Validation Fields (Added) ---
     private String phoneNumber;
     private String program;

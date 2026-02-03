@@ -1,6 +1,5 @@
 
-
-<th:block th:replace="mail/mailFragments :: header(${language == 'sv' ? 'Logga in' : 'Login'})" />
+<th:block th:replace="mail/mailFragments :: header(${language == 'sv' ? 'Skapa konto' : 'Create an account'})" />
 
 <div class="u-row-container" style="padding: 0px;background-color: transparent">
     <div class="u-row"
@@ -86,8 +85,8 @@
 
                                     <div style="font-family: inherit; font-size: 14px; line-height: 140%; text-align: center; word-wrap: break-word;">
 
-                                        <th:p th:if="${language == 'sv'}" style="line-height: 140%;">Logga in på hitract genom att klicka på knappen nedan. Vi ses på insidan!</th:p>
-                                        <th:p th:if="${language != 'sv'}" style="line-height: 140%;">Login to hitract by clicking on the button below. See you on the inside!</th:p>
+                                        <th:p th:if="${language == 'sv'}" style="line-height: 140%;">Skapa konto på hitract genom att klicka på knappen nedan. Vi ses på insidan!</th:p>
+                                        <th:p th:if="${language != 'sv'}" style="line-height: 140%;">Create account on hitract by clicking on the button below. See you on the inside!</th:p>
 
                                     </div>
 
@@ -108,9 +107,9 @@
                                     <div align="center">
                                         <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="" style="height:37px; v-text-anchor:middle; width:134px;" arcsize="81%"  stroke="f" fillcolor="#62b9df"><w:anchorlock/><center style="color:#FFFFFF;"><![endif]-->
 
-                                        <a th:href="${'https://' + (environment == 'DEV' ? 'test.' : '') + 'hitract.se/api/app/email/signin/' + email + '/' + token}" target="_blank" class="v-button"
+                                        <a th:href="${'https://' + (environment == 'DEV' ? 'test.' : '') + 'hitract.se/api/app/email/signup/' + email + '/' + token}" target="_blank" class="v-button"
                                            style="box-sizing: border-box;display: inline-block;text-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: #FFFFFF; background-color: #62b9df; border-radius: 30px;-webkit-border-radius: 30px; -moz-border-radius: 30px; width:28%; max-width:100%; overflow-wrap: break-word; word-break: break-word; word-wrap:break-word; mso-border-alt: none;font-size: 14px;">
-                      <span th:text="${language == 'sv' ? 'Logga in' : 'Login'}" style="display:block;padding:10px 20px;line-height:120%;"><span
+                      <span th:text="${language == 'sv' ? 'Skapa konto' : 'Create account'}" style="display:block;padding:10px 20px;line-height:120%;"><span
                               style="line-height: 16.8px;">Logga in</span></span>
                                         </a>
                                         <!--[if mso]></center></v:roundrect><![endif]-->
@@ -121,28 +120,27 @@
                             </tbody>
                         </table>
 
-                        <table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0"
-                               cellspacing="0" width="100%" border="0">
-                            <tbody>
-                            <tr>
-                                <td
-                                        style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;"
-                                        align="left">
+                        <!--                        <table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0"-->
+                        <!--                               cellspacing="0" width="100%" border="0">-->
+                        <!--                            <tbody>-->
+                        <!--                            <tr>-->
+                        <!--                                <td-->
+                        <!--                                        style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;"-->
+                        <!--                                        align="left">-->
 
-                                    <!--[if mso]><style>.v-button {background: transparent !important;}</style><![endif]-->
-                                    <div align="center">
+                        <!--                                    &lt;!&ndash;[if mso]><style>.v-button {background: transparent !important;}</style><![endif]&ndash;&gt;-->
+                        <!--                                    <div align="center">-->
 
-                                        Om det inte fungerar att klicka på länken:
-                                        <br>1. Välj i appen: "Logga in med kod"
-                                        <br>2. Ange: <b><span th:text="${token}"></span></b>
+                        <!--                                        Om det inte fungerar att klicka på länken:-->
+                        <!--                                        <br>1. Välj i appen: "Logga in med kod"-->
+                        <!--                                        <br>2. Ange: <b><span th:text="${token}"></span></b>-->
 
-                                    </div>
+                        <!--                                    </div>-->
 
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-
+                        <!--                                </td>-->
+                        <!--                            </tr>-->
+                        <!--                            </tbody>-->
+                        <!--                        </table>-->
 
                         <table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0"
                                cellspacing="0" width="100%" border="0">
