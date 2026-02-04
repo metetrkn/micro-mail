@@ -300,7 +300,8 @@ public class MailSenderService {
 	@Async
 	public void sendJonkopingMail() {
 
-		List<String> emails = sendMailRepository.findAllEmails();
+		// Gets only mails that is not send, send this mail only those
+		List<String> emails = sendMailRepository.findUnsentEmails();
 
 		if (emails == null || emails.isEmpty()) {
 			log.info("There is no mail in sendMail for sendJonkopingMail. Stopping execution.");
