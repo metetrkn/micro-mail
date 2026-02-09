@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
+import se.hitract.model.HitMemberDTO;
 import se.hitract.service.mail.dto.MailRequestDTO;
 import se.hitract.service.util.HashIdUtil;
 
@@ -139,22 +140,33 @@ public class MailContentBuilderService {
         return templateEngine.process("mail/webMemberStatusChanged", context);
     }
 
-//    public String hitClubInviteMail(HitMemberDTO hitMember) {
-//        Context context = new Context();
+    public String hitClubInviteMail(HitMemberDTO hitMember) {
+        Context context = new Context();
+
+        String data = HashIdUtil.encode(hitMember.getHitMemberId());
+
+        context.setVariable("data", data);
+        context.setVariable("hitClub", hitMember.getHitClub());
+        context.setVariable("hitMember", hitMember);
+        context.setVariable("isProd", propertiesService.isProd());
+
+        return templateEngine.process("mail/hitClubInviteMail", context);
+    }
+
+    //
+//	public String hitClubInviteMail(HitMemberDTO hitMember) {
+//		Context context = new Context();
 //
-//        // 1. Generate HashID (Safe now, because hitMember.getId() comes from DB)
-//        String data = HashIdUtil.encode(hitMember.getHitMemberId());
+//    	String data = HashIdUtil.encode(hitMember.getId());
 //
-//        // 2. Populate Context
-//        context.setVariable("data", data);
-//        context.setVariable("hitClub", hitMember.getHitClub()); // Uses HitClubSmallPushDTO from mapping
-//        context.setVariable("hitMember", hitMember);
-//        context.setVariable("isProd", propertiesService.isProd());
+//    	context.setVariable("data", data);
+//    	context.setVariable("hitClub", hitMember.getHitClub());
+//    	context.setVariable("hitMember", hitMember);
+//    	context.setVariable("isProd", propertiesService.isProd());
 //
-//        // 3. Process
 //        return templateEngine.process("mail/hitClubInviteMail", context);
-//    }
-//}
+//	}
+
 
 
 

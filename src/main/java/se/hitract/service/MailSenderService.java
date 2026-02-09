@@ -3,12 +3,15 @@ package se.hitract.service;
 import java.util.List;
 import java.util.function.Supplier;
 
+import io.lettuce.core.ScriptOutputType;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
+import se.hitract.model.HitClubSmallPushDTO;
+import se.hitract.model.HitMemberDTO;
 import se.hitract.model.SendMail;
 import se.hitract.model.domains.MAIL_TYPE;
 import se.hitract.model.enums.EntityType;
@@ -325,12 +328,47 @@ public class MailSenderService {
 		}
 	}
 
-
 	public void sendHitClubInviteMail(MailRequestDTO request) {
-		mailgunHttpService.send(request, "Hitract");
+		try {
+			HitMemberDTO hitMember = request.getHitMemberDTO();
+			HitClubSmallPushDTO hitClub = hitMember.getHitClub();
+			String hitClubName = hitClub.getHitClubName();
+
+			String content = mailContentBuilderService.hitClubInviteMail(hitMember);
+			request.setContent(content);
+
+			String subject = hitClubName + " || " + "Din aktiveringskod " + hitMember.getActivationCode();
+			request.setSubject(subject);
+
+			String fromMail = (hitClub.getHitClubMailName() != null ? hitClub.getHitClubMailName() : "noreply") + "@hitract.se";
+			request.setFromMail(fromMail);
+
+			mailgunHttpService.send(request, hitClubName);
+			log.info("Mail successfully processed for: {}", request.getEmail());
+		} catch (Exception e) {
+			log.error("FAILED to process mail: {}", e.getMessage());
+			throw new RuntimeException("Email delivery failed", e);
+		}
+
 	}
 
-    public void sendWebMemberStatusChanged(MailRequestDTO request) {
+
+
+//    public void sendHitClubInviteMail(HitMemberDTO hitMember) {
+//
+//        HitClubSmallPushDTO hitClub = hitMember.getHitClub();
+//        String hitClubName = hitClub.getHitClubName();
+//
+//        String fromMail = (hitClub.getHitClubMailName() != null ? hitClub.getHitClubMailName() : "noreply") + "@hitract.se";
+//        String content = mailContentBuilderService.hitClubInviteMail(hitMember);
+//        String subject = hitClubName + " || " + "Din aktiveringskod " + hitMember.getActivationCode();
+//            sendMail(hitMember.getEmail(), fromMail, hitClubName, content, subject, MAIL_TYPE.HIT_CLUB_INVITE);
+//    }
+
+
+
+
+	public void sendWebMemberStatusChanged(MailRequestDTO request) {
 
         String subject;
 
