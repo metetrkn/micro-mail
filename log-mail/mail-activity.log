@@ -4,3 +4,22 @@
 2026-02-10 10:06:45.138 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for type: HIT_CLUB_INVITE (Email: Betul7@hotmail.se)
 2026-02-10 10:06:46.960 [mailEventsListener-1] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: Betul7@hotmail.se
 2026-02-10 10:06:46.961 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent/Processed type: HIT_CLUB_INVITE
+2026-02-10 10:13:16.581 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 2732 (C:\Users\metet\IdeaProjects\micro-service\target\classes started by metet in C:\Users\metet\IdeaProjects\micro-service)
+2026-02-10 10:13:16.582 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-10 10:13:21.072 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 4.723 seconds (process running for 5.508)
+2026-02-10 10:15:05.683 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for type: JONKOPING_PAY_MEMBERSHIP_MAIL (Email: null)
+2026-02-10 10:15:06.306 [mailEventsListener-1] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: test.user1@hitract.se
+2026-02-10 10:15:06.324 [mailEventsListener-1] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: student.demo@gmail.com
+2026-02-10 10:15:06.337 [mailEventsListener-1] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: integration.test@hotmail.com
+2026-02-10 10:15:06.353 [mailEventsListener-1] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: already.sent@hitract.se
+2026-02-10 10:15:06.367 [mailEventsListener-1] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: admin.test@hitract.se
+2026-02-10 10:15:06.367 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent/Processed type: JONKOPING_PAY_MEMBERSHIP_MAIL
+2026-02-10 10:18:27.695 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 13928 (C:\Users\metet\IdeaProjects\micro-service\target\classes started by metet in C:\Users\metet\IdeaProjects\micro-service)
+2026-02-10 10:18:27.695 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-10 10:18:32.499 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 5.029 seconds (process running for 5.68)
+2026-02-10 10:18:36.999 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for type: JONKOPING_PAY_MEMBERSHIP_MAIL (Email: null)
+2026-02-10 10:18:37.614 [mailEventsListener-1] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: test.user1@hitract.se
+2026-02-10 10:18:37.633 [mailEventsListener-1] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: student.demo@gmail.com
+2026-02-10 10:18:37.647 [mailEventsListener-1] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: integration.test@hotmail.com
+2026-02-10 10:18:37.661 [mailEventsListener-1] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: admin.test@hitract.se
+2026-02-10 10:18:37.661 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent/Processed type: JONKOPING_PAY_MEMBERSHIP_MAIL

@@ -303,7 +303,7 @@ public class MailSenderService {
 	@Async
 	public void sendJonkopingMail() {
 
-		List<String> emails = sendMailRepository.findAllEmails();
+		List<String> emails = sendMailRepository.findPendingEmails();
 
 		if (emails == null || emails.isEmpty()) {
 			log.info("There is no mail in sendMail for sendJonkopingMail. Stopping execution.");

@@ -97,7 +97,7 @@ post http://localhost:8080/api/admin/sendMail
 aut bearer token:    user:29
 no body for this req
 
-DO IT ONLY ONCE!!! THERE IS NO DATA IN send_mail by default, to able to use senJonkoping data needed
+!!!!!!!!!!!!!!DO IT ONLY ONCE!!! THERE IS NO DATA IN send_mail by default, to able to use senJonkoping data needed
 -- Insert 5 fake records,
 INSERT INTO send_mail (mail_sent, email, mail_type, created, updated)
 VALUES
