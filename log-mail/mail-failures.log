@@ -1,1 +1,43 @@
 2026-01-31 20:14:12.340 - Template rendering failed for jesperstenbergs@gmail.com: Exception evaluating SpringEL expression: "language.name() == 'sv' ? 'Logga in' : 'Login'" (template: "mail/studentSignInMail" - line 2, col 11)
+2026-02-03 04:52:44.708 - FAILED to process mail for romeo@hitract.se: Error resolving template [mail/webExternalMemberFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/webMemberStatusChanged" - line 423, col 16)
+2026-02-03 04:52:44.709 - SYSTEM ERROR: Attempt failed for WEB_MEMBER_STATUS_CHANGED. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [mail/webExternalMemberFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/webMemberStatusChanged" - line 423, col 16)
+2026-02-03 04:52:44.710 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [mail/webExternalMemberFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/webMemberStatusChanged" - line 423, col 16)
+2026-02-03 04:52:51.289 - FAILED to process mail for romeo@hitract.se: Error resolving template [mail/webExternalMemberFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/webMemberStatusChanged" - line 423, col 16)
+2026-02-03 04:52:51.289 - SYSTEM ERROR: Attempt failed for WEB_MEMBER_STATUS_CHANGED. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [mail/webExternalMemberFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/webMemberStatusChanged" - line 423, col 16)
+2026-02-03 04:52:51.289 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [mail/webExternalMemberFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/webMemberStatusChanged" - line 423, col 16)
+2026-02-03 04:52:59.308 - FAILED to process mail for romeo@hitract.se: Error resolving template [mail/webExternalMemberFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/webMemberStatusChanged" - line 423, col 16)
+2026-02-03 04:52:59.308 - SYSTEM ERROR: Attempt failed for WEB_MEMBER_STATUS_CHANGED. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [mail/webExternalMemberFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/webMemberStatusChanged" - line 423, col 16)
+2026-02-03 04:52:59.308 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [mail/webExternalMemberFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/webMemberStatusChanged" - line 423, col 16)
+2026-02-03 04:56:33.528 - FAILED to process mail for romeo@hitract.se: Error resolving template [mail/webExternalMemberFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/webMemberStatusChanged" - line 423, col 16)
+2026-02-03 04:56:33.528 - SYSTEM ERROR: Attempt failed for WEB_MEMBER_STATUS_CHANGED. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [mail/webExternalMemberFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/webMemberStatusChanged" - line 423, col 16)
+2026-02-03 04:56:33.528 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [mail/webExternalMemberFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/webMemberStatusChanged" - line 423, col 16)
+2026-02-03 04:56:39.218 - FAILED to process mail for romeo@hitract.se: Error resolving template [mail/webExternalMemberFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/webMemberStatusChanged" - line 423, col 16)
+2026-02-03 04:56:39.219 - SYSTEM ERROR: Attempt failed for WEB_MEMBER_STATUS_CHANGED. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [mail/webExternalMemberFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/webMemberStatusChanged" - line 423, col 16)
+2026-02-03 04:56:39.219 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [mail/webExternalMemberFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/webMemberStatusChanged" - line 423, col 16)
+2026-02-03 04:56:47.250 - FAILED to process mail for romeo@hitract.se: Error resolving template [mail/webExternalMemberFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/webMemberStatusChanged" - line 423, col 16)
+2026-02-03 04:56:47.250 - SYSTEM ERROR: Attempt failed for WEB_MEMBER_STATUS_CHANGED. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [mail/webExternalMemberFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/webMemberStatusChanged" - line 423, col 16)
+2026-02-03 04:56:47.250 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [mail/webExternalMemberFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/webMemberStatusChanged" - line 423, col 16)
