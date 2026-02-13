@@ -197,18 +197,18 @@ public class MailSenderService {
 		}
 
 		return content;
-	}    public void sendErrorMail(MailRequestDTO request) {
+	}
+
+	public void sendErrorMail(MailRequestDTO request) {
 		try {
 			String content=mailContentBuilderService.sendError(request.getMessage());
 			request.setContent(content);
 			request.setFromMail("noreply@hitract.se");
 			request.setSubject("hitract error");
-			mailgunHttpService.send(request, "Hitract");
-
+			mailgunHttpService.send(request, "");
 			log.info("Mail successfully processed for: {}", request.getEmail());
 		} catch (Exception e) {
 			log.error("FAILED to process mail for {}: {}", request.getEmail(), e.getMessage());
-			// THROW the exception so Rqueue knows to retry!
 			throw new RuntimeException("Email delivery failed", e);
 		}
 	}
