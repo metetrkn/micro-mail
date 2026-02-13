@@ -3,17 +3,68 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
+
 trigger:
-- main
+  - init-clean
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: 'ubuntu-latest'
+
+variables:
+  imageName: 'hitract-mail-sender-microservice'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+  - task: Maven@3
+    displayName: Build Docker Image
+    inputs:
+      mavenPomFile: 'pom.xml'
+      goals: 'spring-boot:build-image'
+      jdkVersionOption: '1.21'
+      options: '-DskipTests'
+      publishJUnitResults: false
+
+
+  - task: Docker@2
+    displayName: Tag Image for DigitalOcean
+    inputs:
+      containerRegistry: 'xxxxxxxxxxxx'     #containerRegistry: '05436aeb-d601-4847-be85-77429b3fac63'
+      repository: 'hitract/$(imageName)'
+      command: 'tag'
+      arguments: 'registry.digitalocean.com/hitract/$(imageName):latest registry.digitalocean.com/hitract/$(imageName):$(Build.BuildId)'
+
+
+  # 3. DEBUG: List images on the VM to PROVE it was built
+  - script: |
+      echo "--- LISTING DOCKER IMAGES CREATED ON THE AGENT ---"
+      docker images
+    displayName: Verify Build Result
+
+
+# - task: Docker@2
+#   displayName: 'Step 4: Push to DigitalOcean'
+#   inputs:
+#     containerRegistry: 'xxxxxxxxxxxx'     #containerRegistry: '05436aeb-d601-4847-be85-77429b3fac63'
+#     repository: 'hitract/$(imageName)'
+#     command: 'push'
+#     tags: |
+#       latest
+#       $(Build.BuildId)
+
+
+
+
+
+
+#  - task: CopyFiles@2
+#    displayName: Copy artifacts
+#    inputs:
+#      Contents: 'hitractBackendDeployment.yml'
+#      TargetFolder: '$(Build.ArtifactStagingDirectory)'
+#
+#
+#  - task: PublishBuildArtifacts@1
+#    inputs:
+#      PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+#      ArtifactName: 'drop'
+#      publishLocation: 'Container'

@@ -24,35 +24,35 @@ public class PropertiesService {
     @Value("${queue.enable}")
     private boolean queueEnable;
 
-    @Value("${fortnox.clientId}")
-    private String FORTNOX_CLIENT_ID;
-
-    @Value("${fortnox.clientPassword}")
-    private String FORTNOX_CLIENT_PASSWORD;
-
-    @Value("${instagram.clientId}")
-    private String INSTAGRAM_CLIENT_ID;
-
-    @Value("${instagram.clientPassword}")
-    private String INSTAGRAM_CLIENT_PASSWORD;
-
-    @Value("${linkedIn.apiId}")
-    private String LINKEDIN_CLIENT_ID;
-
-    @Value("${linkedIn.secret}")
-    private String LINKEDIN_CLIENT_SECRET;
-
-    @Value("${tikTok.apiId.sandbox}")
-    private String TIKTOK_CLIENT_ID_SANDBOX;
-
-    @Value("${tikTok.secret.sandbox}")
-    private String TIKTOK_CLIENT_SECRET_SANDBOX;
-
-    @Value("${tikTok.apiId.prod}")
-    private String TIKTOK_CLIENT_ID_PROD;
-
-    @Value("${tikTok.secret.prod}")
-    private String TIKTOK_CLIENT_SECRET_PROD;
+//    @Value("${fortnox.clientId}")
+//    private String FORTNOX_CLIENT_ID;
+//
+//    @Value("${fortnox.clientPassword}")
+//    private String FORTNOX_CLIENT_PASSWORD;
+//
+//    @Value("${instagram.clientId}")
+//    private String INSTAGRAM_CLIENT_ID;
+//
+//    @Value("${instagram.clientPassword}")
+//    private String INSTAGRAM_CLIENT_PASSWORD;
+//
+//    @Value("${linkedIn.apiId}")
+//    private String LINKEDIN_CLIENT_ID;
+//
+//    @Value("${linkedIn.secret}")
+//    private String LINKEDIN_CLIENT_SECRET;
+//
+//    @Value("${tikTok.apiId.sandbox}")
+//    private String TIKTOK_CLIENT_ID_SANDBOX;
+//
+//    @Value("${tikTok.secret.sandbox}")
+//    private String TIKTOK_CLIENT_SECRET_SANDBOX;
+//
+//    @Value("${tikTok.apiId.prod}")
+//    private String TIKTOK_CLIENT_ID_PROD;
+//
+//    @Value("${tikTok.secret.prod}")
+//    private String TIKTOK_CLIENT_SECRET_PROD;
 
     public boolean getQueueEnable() {
     	return queueEnable;
@@ -82,37 +82,37 @@ public class PropertiesService {
         return runRedisImports;
     }
 
-    public String getFortnoxClientId() {
-        return FORTNOX_CLIENT_ID;
-    }
-
-    public String getFortnoxClientPassword() {
-        return FORTNOX_CLIENT_PASSWORD;
-    }
-
-    public String getInstagramClientId() {
-        return INSTAGRAM_CLIENT_ID;
-    }
-
-    public String getInstagramClientPassword() {
-        return INSTAGRAM_CLIENT_PASSWORD;
-    }
-
-    public String getLinkedinClientId() {
-        return LINKEDIN_CLIENT_ID;
-    }
-
-    public String getLinkedinClientSecret() {
-        return LINKEDIN_CLIENT_SECRET;
-    }
-
-    public String getTikTokClientId() {
-        return isProd() ? TIKTOK_CLIENT_ID_PROD : TIKTOK_CLIENT_ID_SANDBOX;
-    }
-
-    public String getTikTokClientSecret() {
-        return isProd() ? TIKTOK_CLIENT_SECRET_PROD : TIKTOK_CLIENT_SECRET_SANDBOX;
-    }
+//    public String getFortnoxClientId() {
+//        return FORTNOX_CLIENT_ID;
+//    }
+//
+//    public String getFortnoxClientPassword() {
+//        return FORTNOX_CLIENT_PASSWORD;
+//    }
+//
+//    public String getInstagramClientId() {
+//        return INSTAGRAM_CLIENT_ID;
+//    }
+//
+//    public String getInstagramClientPassword() {
+//        return INSTAGRAM_CLIENT_PASSWORD;
+//    }
+//
+//    public String getLinkedinClientId() {
+//        return LINKEDIN_CLIENT_ID;
+//    }
+//
+//    public String getLinkedinClientSecret() {
+//        return LINKEDIN_CLIENT_SECRET;
+//    }
+//
+//    public String getTikTokClientId() {
+//        return isProd() ? TIKTOK_CLIENT_ID_PROD : TIKTOK_CLIENT_ID_SANDBOX;
+//    }
+//
+//    public String getTikTokClientSecret() {
+//        return isProd() ? TIKTOK_CLIENT_SECRET_PROD : TIKTOK_CLIENT_SECRET_SANDBOX;
+//    }
 
 
     public String getRedirectUri(INTEGRATION_TYPE integrationType) {

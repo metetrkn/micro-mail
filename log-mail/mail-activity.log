@@ -34,3 +34,18 @@
 2026-02-04 17:12:24.872 [mailEventsListener-1] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: test.student2@example.com
 2026-02-04 17:12:24.897 [mailEventsListener-1] INFO  s.hitract.service.MailSenderService - Mail successfully processed for: test.student3@example.com
 2026-02-04 17:12:24.898 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent/Processed type: JONKOPING_PAY_MEMBERSHIP_MAIL
+2026-02-13 05:11:02.664 [main] INFO  s.hitract.MicroMailApplicationTests - Starting MicroMailApplicationTests using Java 21.0.5 with PID 18984 (started by biplo in C:\Users\biplo\Desktop\admission\micro-mail)
+2026-02-13 05:11:02.664 [main] INFO  s.hitract.MicroMailApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-02-13 05:22:45.798 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 23.0.2 with PID 11660 (C:\Users\biplo\Desktop\admission\micro-mail\target\classes started by biplo in C:\Users\biplo\Desktop\admission\micro-mail)
+2026-02-13 05:22:45.799 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-13 05:26:14.304 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 23.0.2 with PID 22516 (C:\Users\biplo\Desktop\admission\micro-mail\target\classes started by biplo in C:\Users\biplo\Desktop\admission\micro-mail)
+2026-02-13 05:26:14.305 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-13 05:29:05.655 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 23.0.2 with PID 10460 (C:\Users\biplo\Desktop\admission\micro-mail\target\classes started by biplo in C:\Users\biplo\Desktop\admission\micro-mail)
+2026-02-13 05:29:05.656 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-13 05:32:53.355 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 23.0.2 with PID 8856 (C:\Users\biplo\Desktop\admission\micro-mail\target\classes started by biplo in C:\Users\biplo\Desktop\admission\micro-mail)
+2026-02-13 05:32:53.355 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-13 05:32:58.456 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 5.348 seconds (process running for 6.061)
+2026-02-13 05:33:51.512 [main] INFO  s.hitract.MicroMailApplicationTests - Starting MicroMailApplicationTests using Java 21.0.5 with PID 21024 (started by biplo in C:\Users\biplo\Desktop\admission\micro-mail)
+2026-02-13 05:33:51.512 [main] INFO  s.hitract.MicroMailApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-02-13 05:41:36.891 [main] INFO  s.hitract.MicroMailApplicationTests - Starting MicroMailApplicationTests using Java 21.0.5 with PID 320 (started by biplo in C:\Users\biplo\Desktop\admission\micro-mail)
+2026-02-13 05:41:36.891 [main] INFO  s.hitract.MicroMailApplicationTests - No active profile set, falling back to 1 default profile: "default"
