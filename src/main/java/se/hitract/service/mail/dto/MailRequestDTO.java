@@ -1,8 +1,7 @@
 package se.hitract.service.mail.dto;
 
 import lombok.*;
-import se.hitract.model.HitMemberDTO;
-import se.hitract.model.ImageDTO;
+import se.hitract.model.*;
 import se.hitract.model.domains.MAIL_TYPE;
 
 import java.util.Date;
@@ -35,9 +34,14 @@ public class MailRequestDTO {
     private String language;
     private boolean newSite;
     private String message;
+    private String hitEvent;
+    private String hitEventName;
+    private ImageDTO headerLogo;
+    private ImageDTO logo;
+    private OrderMailDTO orderMailDTO;
+    private HitEventMailDTO hitEventMailDTO;
     private ImageDTO image;
     private HitMemberDTO hitMemberDTO;
-
     private HitMemberMailDTO hitMemberMailDTO;
 
     // --- Validation Fields (Added) ---

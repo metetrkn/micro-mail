@@ -1,4 +1,4 @@
-db and error handling, than apply all this into other mail types as well
+**db and error handling, than apply all this into other mail types as well
 
 error handling, retry system for mail sender,http, logging db opertions
 logging in producer side after sending successfully and after consumer gets the messages, db saving after mailgun succeffully sends the message
@@ -84,6 +84,7 @@ FILES TO BE DELETED FROM BACKEDN APP
 - WeeklyMailSender
 - A lot of methods in mail sender services
 
-
+sendWebOrderPayed
+I** HAVE SET DTO 'S ' HITEVENTMAILDTO AND ODERMAILDTO SET RELATED FIELDS FROM PRODUCER SIDE AND USE THEM IN CONSUMER SIDE
 
 
