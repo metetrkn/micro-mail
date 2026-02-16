@@ -58,9 +58,29 @@ public class MailgunHttpService {
     public void send(MailRequestDTO request, String personal) {
         MultiValueMap<String, Object> body = new LinkedMultiValueMap<>();
         body.add("from", personal + " <" + request.getFromMail() + ">");
-        body.add("to", request.getEmail());
+
+        // Multiple recipient case
+        if (request.getEmails().length > 0 && request.getEmails()[0] != null) {
+            for (String recipient : request.getEmails()) {
+                body.add("to", recipient);
+            }
+        } else {
+            body.add("to", request.getEmail());
+        }
         body.add("subject", request.getSubject());
         body.add("html", request.getContent());
+
+        // Attachment handling
+        if (request.getMailAttachments() != null && !request.getMailAttachments().isEmpty()) {
+            for (MailAttachment attachment : request.getMailAttachments()) {
+                body.add("attachment", new ByteArrayResource(attachment.getData()) {
+                    @Override
+                    public String getFilename() {
+                        return attachment.getFilename();
+                    }
+                });
+            }
+        }
 
         try {
             MailgunResponse response = restClient.post()

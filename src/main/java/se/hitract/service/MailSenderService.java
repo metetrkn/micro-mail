@@ -293,6 +293,32 @@ public class MailSenderService {
         }
     }
 
+	public void sendPayoutReportNotMatch(MailRequestDTO request) {
+		try {
+			request.setFromMail("noreply@hitract.se");
+			String content = mailContentBuilderService.sendPayoutReportNotMatch(
+					request.getMerchantCode(),
+					request.getTotalTransfer(),
+					request.getTotalTransferFee(),
+					request.getTotalPayout());
+			request.setContent(content);
+			request.setSubject("Felaktig rapport");
+			request.setMailType(MAIL_TYPE.PAYPOUT_REPORT_NOT_MATCH);
+
+			List<MailAttachment> attachments = new ArrayList<MailAttachment>();
+			MailAttachment mailAttachment = new MailAttachment();
+			mailAttachment.setFilename("Felaktig rapport " + request.getMerchantCode() + ".pdf");
+			mailAttachment.setData(request.getData());
+			attachments.add(mailAttachment);
+
+			mailgunHttpService.send(request,"");
+			log.info("Mail successfully processed for mail type: {}", MAIL_TYPE.PAYPOUT_REPORT_NOT_MATCH);
+		} catch (Exception e) {
+			log.error("FAILED to process mail for {}: {}", request.getEmail(), e.getMessage());
+			throw new RuntimeException("Email delivery failed", e);
+		}
+	}
+
 	public void sendWebOrderPayed(MailRequestDTO request) {
 		try {
 			OrderMailDTO order = request.getOrderMailDTO();
@@ -330,7 +356,6 @@ public class MailSenderService {
 					mailAttachment.setData(getPdf(userProduct.getQrCode(), orderItem.getProductOffer().getLabel(), userProduct.getUserProductId().toString(), hitEvent));
 					attachments.add(mailAttachment);
 				}
-				//sendMail(order.getStudent().getEmail(), fromMail, "", content, subject, MAIL_TYPE.WEB_ORDER_PAYED, attachments, EntityType.ORDER, order.getOrderId());
 				mailgunHttpService.send(request,"");
 			}
 		} catch (Exception e) {

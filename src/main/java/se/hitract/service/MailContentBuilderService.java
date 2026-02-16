@@ -174,4 +174,14 @@ public class MailContentBuilderService {
 
         return templateEngine.process("mail/webOrderPayed", context);
     }
+
+    public String sendPayoutReportNotMatch(String merchantCode, Double totalTransfer, Double totalTransferFee, Double totalPayout) {
+        Context context = new Context();
+        context.setVariable("merchantCode", merchantCode);
+        context.setVariable("totalTransfer", totalTransfer);
+        context.setVariable("totalTransferFee", totalTransferFee);
+        context.setVariable("totalPayout", totalPayout);
+
+        return templateEngine.process("mail/payoutReportNotMatch", context);
+    }
 }
