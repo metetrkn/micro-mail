@@ -1,0 +1,84 @@
+#apiVersion: v1
+#kind: Service
+#metadata:
+#  name: backend
+#spec:
+#  selector:
+#    app: backend
+#  ports:
+#    - protocol: TCP
+#      port: 80
+#      targetPort: 8080
+#---
+#apiVersion: apps/v1
+#kind: Deployment
+#metadata:
+#  name: backend
+#  namespace: default
+#  labels:
+#    app: backend
+#spec:
+#  replicas: 2
+#  minReadySeconds: 90
+#  progressDeadlineSeconds: 150
+#  selector:
+#    matchLabels:
+#      app: backend
+#  template:
+#    metadata:
+#      labels:
+#        app: backend
+#    spec:
+#      containers:
+#        - name: backend
+#          image: registry.digitalocean.com/hitract/hitractbackend:${Build.BuildId}
+#          imagePullPolicy: Always
+#          resources:
+#            limits:
+#              # cpu: 1500m
+#              memory: "8Gi"
+#            requests:
+#              cpu: 250m
+#              memory: "2Gi"
+#          ports:
+#            - containerPort: 8080
+#              name: http
+#          env:
+#            - name: HITRACT_MYSQL_DB_HOST
+#              value: "#{HITRACT_MYSQL_DB_HOST}#"
+#            - name: HITRACT_MYSQL_DB_PORT
+#              value: "#{HITRACT_MYSQL_DB_PORT}#"
+#            - name: HITRACT_MYSQL_DB_NAME
+#              value: "#{HITRACT_MYSQL_DB_NAME}#"
+#            - name: HITRACT_MYSQL_DB_USERNAME
+#              value: "#{HITRACT_MYSQL_DB_USERNAME}#"
+#            - name: HITRACT_MYSQL_DB_PASSWORD
+#              value: "#{HITRACT_MYSQL_DB_PASSWORD}#"
+#            - name: HITRACT_SPRING_SOCIAL_HOST
+#              value: "#{HITRACT_SPRING_SOCIAL_HOST}#"
+#            - name: HITRACT_SPRING_SOCIAL_PORT
+#              value: "#{HITRACT_SPRING_SOCIAL_PORT}#"
+#            - name: ENVIRONMENT
+#              value: "#{ENVIRONMENT}#"
+#            - name: HITRACT_REDIS_URL
+#              value: "#{HITRACT_REDIS_URL}#"
+#            - name: HITRACT_REDIS_PORT
+#              value: "#{HITRACT_REDIS_PORT}#"
+#            - name: HITRACT_REDIS_USERNAME
+#              value: "#{HITRACT_REDIS_USERNAME}#"
+#            - name: HITRACT_REDIS_PASSWORD
+#              value: "#{HITRACT_REDIS_PASSWORD}#"
+#            - name: HITRACT_REDIS_USE_SSL
+#              value: "#{HITRACT_REDIS_USE_SSL}#"
+#            - name: TZ
+#              value: "Europe/Stockholm"
+#            - name: LANG
+#              value: "en_US.UTF-8"
+#            - name: _JAVA_OPTIONS
+#              value: "-XX:MaxDirectMemorySize=100m"
+#            - name: QUEUE_ENABLE
+#              value: "false"
+#            - name: MAIN_NODE
+#              value: "true"
+#            - name: RUN_REDIS_IMPORTS
+#              value: "false"
