@@ -5,7 +5,7 @@
 
 
 trigger:
-  - cleanmain
+  - main
 
 pool:
   vmImage: 'ubuntu-latest'
