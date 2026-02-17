@@ -7,6 +7,7 @@ import org.thymeleaf.context.Context;
 import se.hitract.model.HitEventMailDTO;
 import se.hitract.model.HitMemberDTO;
 import se.hitract.model.OrderMailDTO;
+import se.hitract.model.enums.LANGUAGE;
 import se.hitract.model.enums.PRODUCT_TYPE;
 import se.hitract.service.mail.dto.MailRequestDTO;
 import se.hitract.service.util.HashIdUtil;
@@ -183,5 +184,11 @@ public class MailContentBuilderService {
         context.setVariable("totalPayout", totalPayout);
 
         return templateEngine.process("mail/payoutReportNotMatch", context);
+    }
+
+    public String sendReceipt(LANGUAGE language) {
+        Context context = new Context();
+        context.setVariable("language", language);
+        return templateEngine.process("mail/sendReceipt", context);
     }
 }

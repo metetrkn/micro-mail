@@ -32,6 +32,7 @@ public class MailRoutingService {
             case WEB_MEMBER_STATUS_CHANGED -> mailSenderService.sendWebMemberStatusChanged(emailDto);
             case WEB_ORDER_PAYED -> mailSenderService.sendWebOrderPayed(emailDto);
             case PAYPOUT_REPORT_NOT_MATCH -> mailSenderService.sendPayoutReportNotMatch(emailDto);
+            case RECEIPT -> mailSenderService.sendReceipt(emailDto);
             case ERROR -> mailSenderService.sendErrorMail(emailDto);
             default -> log.error("No logic implemented for MAIL_TYPE: {}", emailDto.toString());
 
@@ -55,7 +56,7 @@ public class MailRoutingService {
 //            case HIT_CLUB_MEMBER_PAY -> handleHitClubMemberPay(email);
 //            case CONFIRM_EMAIL -> handleConfirmEmail(email);
 //            case JONKOPING_PAY_MEMBERSHIP_MAIL -> handleJonkopingMembership(email);
-//            case RECEIPT -> handleReceipt(email);
+//
 //            case PAYPOUT_REPORT_NOT_MATCH -> handlePayoutReportMismatch(email);
         }
     }

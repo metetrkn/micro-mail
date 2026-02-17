@@ -4,3 +4,6 @@
 2026-02-16 16:10:32.498 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 1676 (C:\Users\metet\Desktop\micro-mail\target\classes started by metet in C:\Users\metet\Desktop\micro-mail)
 2026-02-16 16:10:32.499 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
 2026-02-16 16:10:42.535 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 10.563 seconds (process running for 14.224)
+2026-02-17 16:18:35.086 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 18200 (C:\Users\metet\IdeaProjects\micro-service\target\classes started by metet in C:\Users\metet\IdeaProjects\micro-service)
+2026-02-17 16:18:35.087 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-17 16:18:40.393 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 5.582 seconds (process running for 6.676)

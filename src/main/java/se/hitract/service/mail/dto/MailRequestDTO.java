@@ -52,6 +52,7 @@ public class MailRequestDTO {
     private HitMemberMailDTO hitMemberMailDTO;
     private byte[] data;
     private List<MailAttachment> mailAttachments;
+    private Long transactionId;
 
     // --- Validation Fields (Added) ---
     private String phoneNumber;

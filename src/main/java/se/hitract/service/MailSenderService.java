@@ -24,6 +24,7 @@ import org.springframework.stereotype.Service;
 import se.hitract.model.*;
 import se.hitract.model.domains.MAIL_TYPE;
 import se.hitract.model.enums.EntityType;
+import se.hitract.model.enums.LANGUAGE;
 import se.hitract.model.enums.PRODUCT_TYPE;
 import se.hitract.repository.SendMailRepository;
 import se.hitract.service.mail.dto.MailRequestDTO;
@@ -292,6 +293,33 @@ public class MailSenderService {
             throw new RuntimeException("Email delivery failed", e);
         }
     }
+
+	public void sendReceipt(MailRequestDTO request) {
+		try {
+			LANGUAGE language = LANGUAGE.sv;
+
+			request.setFromMail("noreply@hitract.se");
+			request.setSubject(language.equals(LANGUAGE.sv) ? "Kvitto" : "Receipt");
+			String content = mailContentBuilderService.sendReceipt(language);
+			request.setContent(content);
+
+
+			List<MailAttachment> attachments = new ArrayList<MailAttachment>();
+
+			MailAttachment mailAttachment = new MailAttachment();
+			mailAttachment.setFilename((language.equals(LANGUAGE.sv) ? "Kvitto" : "Receipt") + "_" + request.getTransactionId() + ".pdf");
+			mailAttachment.setData(request.getData());
+			attachments.add(mailAttachment);
+			request.setMailAttachments(attachments);
+			request.setEntityType("TRANSACTION");
+
+			mailgunHttpService.send(request, "");
+		} catch (Exception e) {
+			log.error("FAILED to process mail for {}: {}", request.getEmail(), e.getMessage());
+			throw new RuntimeException("Email delivery failed", e);
+		}
+}
+
 
 	public void sendPayoutReportNotMatch(MailRequestDTO request) {
 		try {
