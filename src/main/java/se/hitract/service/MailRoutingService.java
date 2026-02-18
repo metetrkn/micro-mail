@@ -8,9 +8,11 @@ import se.hitract.service.mail.dto.MailRequestDTO;
 @Slf4j
 public class MailRoutingService {
 
+    private final MailContentBuilderService mailContentBuilderService;
     private MailSenderService mailSenderService;
-    public MailRoutingService(MailSenderService mailSenderService) {
+    public MailRoutingService(MailSenderService mailSenderService, MailContentBuilderService mailContentBuilderService) {
         this.mailSenderService = mailSenderService;
+        this.mailContentBuilderService = mailContentBuilderService;
     }
 
     public void routeEmail(@org.checkerframework.checker.nullness.qual.MonotonicNonNull MailRequestDTO emailDto) {
@@ -31,6 +33,7 @@ public class MailRoutingService {
             case HIT_CLUB_INVITE -> mailSenderService.sendHitClubInviteMail(emailDto);
             case WEB_MEMBER_STATUS_CHANGED -> mailSenderService.sendWebMemberStatusChanged(emailDto);
             case WEB_ORDER_PAYED -> mailSenderService.sendWebOrderPayed(emailDto);
+            case ORDER_PAYED -> mailSenderService.sendOrderPayed(emailDto);
             case PAYPOUT_REPORT_NOT_MATCH -> mailSenderService.sendPayoutReportNotMatch(emailDto);
             case RECEIPT -> mailSenderService.sendReceipt(emailDto);
             case ERROR -> mailSenderService.sendErrorMail(emailDto);

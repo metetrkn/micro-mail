@@ -43,8 +43,8 @@ public class MailSenderService {
 
 	public void sendM1(MailRequestDTO request) {
 		try {
-            String content = mailContentBuilderService.sendM1();
-            request.setContent(content);
+			String content = mailContentBuilderService.sendM1();
+			request.setContent(content);
 			request.setFromMail("noreply@hitract.se");
 			request.setSubject("Uppdatering av våra Användarvillkor");
 			mailgunHttpService.send(request, "Hitract");
@@ -268,31 +268,57 @@ public class MailSenderService {
 
 	public void sendWebMemberStatusChanged(MailRequestDTO request) {
 
-        String subject;
+		String subject;
 
-        if(request.getHitMemberMailDTO().getPaymentOptionId() == null) {
-            subject = "hitract - din medlemsansökan ["+request.getHitMemberMailDTO().getHitClubName()+"]";
-        } else {
-            if(request.getHitMemberMailDTO().getHitMemberStatus().equals("MEMBER")) {
-                subject = "hitract - du är medlem ["+request.getHitMemberMailDTO().getHitClubName()+"]";
-            } else if(request.getHitMemberMailDTO().getHitMemberStatus().equals("PENDING_PAYMENT")) {
-                subject = "hitract - betala medlemsavgift [" +request.getHitMemberMailDTO().getHitClubName() + "]";
-            } else {
-                throw new RuntimeException("Subject Couldnt resolve for WebMemberStatusChanged");
-            }
-        }
+		if(request.getHitMemberMailDTO().getPaymentOptionId() == null) {
+			subject = "hitract - din medlemsansökan ["+request.getHitMemberMailDTO().getHitClubName()+"]";
+		} else {
+			if(request.getHitMemberMailDTO().getHitMemberStatus().equals("MEMBER")) {
+				subject = "hitract - du är medlem ["+request.getHitMemberMailDTO().getHitClubName()+"]";
+			} else if(request.getHitMemberMailDTO().getHitMemberStatus().equals("PENDING_PAYMENT")) {
+				subject = "hitract - betala medlemsavgift [" +request.getHitMemberMailDTO().getHitClubName() + "]";
+			} else {
+				throw new RuntimeException("Subject Couldnt resolve for WebMemberStatusChanged");
+			}
+		}
 
-        try{
-            String content=mailContentBuilderService.sendWebMemberStatusChanged(request);
-            request.setContent(content);
-            request.setFromMail("noreply@hitract.se");
-            request.setSubject(subject);
-            mailgunHttpService.send(request,"Hitract");
-        }catch (Exception e) {
-            log.error("FAILED to process mail for {}: {}", request.getEmail(), e.getMessage());
-            throw new RuntimeException("Email delivery failed", e);
-        }
-    }
+		try{
+			String content=mailContentBuilderService.sendWebMemberStatusChanged(request);
+			request.setContent(content);
+			request.setFromMail("noreply@hitract.se");
+			request.setSubject(subject);
+			mailgunHttpService.send(request,"Hitract");
+		}catch (Exception e) {
+			log.error("FAILED to process mail for {}: {}", request.getEmail(), e.getMessage());
+			throw new RuntimeException("Email delivery failed", e);
+		}
+	}
+
+	@Async
+	public void sendOrderPayed(MailRequestDTO request) {
+		try{
+			request.setFromMail("noreply@hitract.se");
+			String content = mailContentBuilderService.sendOrderPayed(request);
+			request.setContent(content);
+			request.setSubject("ENGÅNGSKÖP: hitract - Tack för ditt köp [" + request.getOrderId() + "]");
+
+			List<MailAttachment> attachments = new ArrayList<MailAttachment>();
+			if (request.getData() != null) {
+				MailAttachment mailAttachment = new MailAttachment();
+				mailAttachment.setFilename("Kvitto.pdf");
+				mailAttachment.setData(request.getData());
+				attachments.add(mailAttachment);
+			}
+			request.setMailAttachments(attachments);
+			request.setEntityType("ORDER");
+
+			mailgunHttpService.send(request,"");
+		}catch (Exception e) {
+			log.error("FAILED to process mail for {}: {}", request.getEmail(), e.getMessage());
+			throw new RuntimeException("Email delivery failed", e);
+		}
+	}
+
 
 	public void sendReceipt(MailRequestDTO request) {
 		try {
@@ -318,7 +344,7 @@ public class MailSenderService {
 			log.error("FAILED to process mail for {}: {}", request.getEmail(), e.getMessage());
 			throw new RuntimeException("Email delivery failed", e);
 		}
-}
+	}
 
 
 	public void sendPayoutReportNotMatch(MailRequestDTO request) {
@@ -387,10 +413,10 @@ public class MailSenderService {
 				mailgunHttpService.send(request,"");
 			}
 		} catch (Exception e) {
-				log.error("FAILED to process mail for {}: {}", request.getEmail(), e.getMessage());
-				throw new RuntimeException("Email delivery failed", e);
-			}
+			log.error("FAILED to process mail for {}: {}", request.getEmail(), e.getMessage());
+			throw new RuntimeException("Email delivery failed", e);
 		}
+	}
 
 	public byte[] getPdf(String qrCode, String ticketName, String id, HitEventMailDTO hitEvent) throws IOException {
 		ByteArrayOutputStream pdfOutputFile = new ByteArrayOutputStream();

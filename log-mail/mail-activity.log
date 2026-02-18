@@ -7,3 +7,11 @@
 2026-02-17 16:18:35.086 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 18200 (C:\Users\metet\IdeaProjects\micro-service\target\classes started by metet in C:\Users\metet\IdeaProjects\micro-service)
 2026-02-17 16:18:35.087 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
 2026-02-17 16:18:40.393 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 5.582 seconds (process running for 6.676)
+2026-02-17 22:39:04.821 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 7416 (C:\Users\metet\IdeaProjects\micro-service\target\classes started by metet in C:\Users\metet\IdeaProjects\micro-service)
+2026-02-17 22:39:04.822 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-17 22:39:10.173 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 5.637 seconds (process running for 6.925)
+2026-02-17 22:43:26.711 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - START: Processing email for type: RECEIPT (Email: robert@hitract.se)
+2026-02-17 22:43:28.468 [mailEventsListener-1] INFO  se.hitract.consumer.EmailConsumer - SUCCESS: Sent/Processed type: RECEIPT
+2026-02-18 23:01:55.832 [main] INFO  se.hitract.MicroMailApplication - Starting MicroMailApplication using Java 21.0.10 with PID 4628 (C:\Users\metet\IdeaProjects\micro-service\target\classes started by metet in C:\Users\metet\IdeaProjects\micro-service)
+2026-02-18 23:01:55.833 [main] INFO  se.hitract.MicroMailApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-18 23:02:01.567 [main] INFO  se.hitract.MicroMailApplication - Started MicroMailApplication in 6.284 seconds (process running for 7.259)

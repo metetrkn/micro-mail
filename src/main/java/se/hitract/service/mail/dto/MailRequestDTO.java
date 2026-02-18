@@ -53,6 +53,13 @@ public class MailRequestDTO {
     private byte[] data;
     private List<MailAttachment> mailAttachments;
     private Long transactionId;
+    private String orderPaidDate;
+    private String orderId;
+    private String[] label;
+    private String[] quantity;
+    private String[] unitPrice;
+    private String[] total;
+    private String  totalOrderAmount;
 
     // --- Validation Fields (Added) ---
     private String phoneNumber;

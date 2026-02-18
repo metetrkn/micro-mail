@@ -1,6 +1,8 @@
 package se.hitract.service;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
@@ -12,8 +14,7 @@ import se.hitract.model.enums.PRODUCT_TYPE;
 import se.hitract.service.mail.dto.MailRequestDTO;
 import se.hitract.service.util.HashIdUtil;
 
-import java.util.Date;
-import java.util.Map;
+import java.util.*;
 
 @Service
 public class MailContentBuilderService {
@@ -191,4 +192,42 @@ public class MailContentBuilderService {
         context.setVariable("language", language);
         return templateEngine.process("mail/sendReceipt", context);
     }
+
+    @Async
+    public String sendOrderPayed(MailRequestDTO request) {
+        Context context = new Context();
+
+        Map<String, Object> orderMap = new HashMap<>();
+        orderMap.put("orderPaidDate", request.getOrderPaidDate());
+        orderMap.put("orderId", request.getOrderId());
+        orderMap.put("orderAmount", request.getTotalOrderAmount());
+
+        List<Map<String, Object>> itemsList = new ArrayList<>();
+        String[] labels = request.getLabel();
+
+        if (labels != null) {
+            for (int i = 0; i < labels.length; i++) {
+                Map<String, Object> itemMap = new HashMap<>();
+
+                // Parse quantity as a number so Thymeleaf can multiply it
+                itemMap.put("quantity", Integer.parseInt(request.getQuantity()[i]));
+
+                // Nest productOffer map to satisfy ${orderItem.productOffer.label}
+                Map<String, String> productOffer = new HashMap<>();
+                productOffer.put("label", labels[i]);
+                itemMap.put("productOffer", productOffer);
+
+                // Parse unitPrice as a number so ${orderItem.quantity * orderItem.unitPrice} works correctly
+                itemMap.put("unitPrice", Double.parseDouble(request.getUnitPrice()[i]));
+
+                itemsList.add(itemMap);
+            }
+        }
+
+        orderMap.put("orderItems", itemsList);
+        context.setVariable("order", orderMap);
+
+        return templateEngine.process("mail/orderPayed", context);
+    }
+
 }
