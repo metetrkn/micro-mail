@@ -294,6 +294,26 @@ public class MailSenderService {
 		}
 	}
 
+	public void sendNewContactInfoMail(MailRequestDTO request) {
+		try {
+			request.setFromMail("info@hitract.se");
+			String content = mailContentBuilderService.sendContactInfo(request.getContactInfoMailDTO());
+			request.setContent(content);
+			String[] cc =  {"info@hitract.se", "robel@hitract.se", "robert@hitract.se", "philip@hitract.com", "benti.zekarias@gmail.com"};
+			String replyTo = request.getContactInfoMailDTO().getEmail();
+
+			for (String email: request.getEmails()) {
+				System.out.println("!!!!!!!");
+				System.out.println(email);
+			}
+
+			mailgunHttpService.send(request,"", cc, replyTo);
+		}catch (Exception e) {
+			log.error("FAILED to process mail for {}: {}", request.getEmail(), e.getMessage());
+			throw new RuntimeException("Email delivery failed", e);
+		}
+	}
+
 	@Async
 	public void sendOrderPayed(MailRequestDTO request) {
 		try{

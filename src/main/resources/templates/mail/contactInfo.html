@@ -1,0 +1,19 @@
+<html>
+<body>
+
+<br>
+<b>Namn:</b> <span th:text="${contactInfo.name}">contactInfo</span><br>
+<b>Email:</b> <span th:text="${contactInfo.email}">contactInfo</span><br>
+<b>Telefon:</b> <span th:text="${contactInfo.phone}">contactInfo</span><br><br>
+<b>Ämne:</b> <span th:text="${contactInfo.subject}">contactInfo</span><br>
+<b>Meddelande:</b> <span th:text="${contactInfo.content}">contactInfo</span><br>
+
+<span th:if="${contactInfo.attachments != null and contactInfo.attachments.size() > 0}">
+    <br>
+    <span th:each="attachment : ${contactInfo.attachments}">
+        <b>Bilaga:</b> <a th:href="${attachment.url}" th:text="${attachment.filename}">attachment</a><br>
+    </span>
+<br>
+
+</body>
+</html>

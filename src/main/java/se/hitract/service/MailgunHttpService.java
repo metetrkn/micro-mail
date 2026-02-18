@@ -129,4 +129,71 @@ public class MailgunHttpService {
 
         sentMailRepository.save(mail);
     }
+
+    public void send(MailRequestDTO request, String personal, String[] cc, String replyTo) {
+        MultiValueMap<String, Object> body = new LinkedMultiValueMap<>();
+        body.add("from", personal + " <" + request.getFromMail() + ">");
+
+        // Recipient handling
+        for (String recipient : request.getEmails()) {
+                body.add("to", recipient);
+            }
+
+        // CC handling
+        if (cc != null) {
+            for (String ccRecipient : cc) {
+                if (ccRecipient != null) {
+                    body.add("cc", ccRecipient);
+                }
+            }
+        }
+
+        // Reply-To handling
+        if (replyTo != null) {
+            body.add("h:Reply-To", replyTo);
+        }
+
+        body.add("subject", request.getSubject());
+        body.add("html", request.getContent());
+
+        // Attachment handling
+        if (request.getMailAttachments() != null && !request.getMailAttachments().isEmpty()) {
+            for (MailAttachment attachment : request.getMailAttachments()) {
+                body.add("attachment", new ByteArrayResource(attachment.getData()) {
+                    @Override
+                    public String getFilename() {
+                        return attachment.getFilename();
+                    }
+                });
+            }
+        }
+
+        try {
+            MailgunResponse response = restClient.post()
+                    .uri("{domain}/messages", domain)
+                    .headers(headers -> headers.setBasicAuth("api", apiKey))
+                    .contentType(MediaType.MULTIPART_FORM_DATA)
+                    .body(body)
+                    .retrieve()
+                    .body(MailgunResponse.class);
+
+            if (response != null) {
+                System.out.printf("WireMock/Mailgun Success: ID=%s Message=%s%n", response.id(), response.message());
+                try {
+                    logSentMail(request, SENT_MAIL_STATUS.SUCCESS, "");
+                } catch (Exception dbEx) {
+                    log.error("Mail sent successfully, but DB recording failed: {}", dbEx.getMessage());
+                }
+            }
+
+        } catch (Exception e) {
+            log.error("Failed to send mail: {}", e.getMessage());
+            try {
+                logSentMail(request, SENT_MAIL_STATUS.ERROR, e.toString());
+            } catch (Exception dbException) {
+                log.error("Could not record failure to DB: " + dbException.getMessage());
+            }
+            throw new RuntimeException("Mailgun delivery failure: " + e.getMessage(), e);
+        }
+    }
 }

@@ -24,13 +24,16 @@ public class EmailConsumer {
             numRetries = "3",
             concurrency = "20-50"
     )
+
     public void processEmail(MailRequestDTO emailDto) {
 
         boolean isJonkoping = emailDto.getMailType() == MAIL_TYPE.JONKOPING_PAY_MEMBERSHIP_MAIL;
-        boolean hasNoEmail = emailDto.getEmail() == null || emailDto.getEmail().trim().isEmpty();
 
-        if (hasNoEmail && !isJonkoping) {
-            log.warn("SWALLOWED: No email address for ID {}. Skipping processing.", emailDto.getStudentId());
+        boolean hasSingleRecipient = emailDto.getEmail() != null && !emailDto.getEmail().trim().isEmpty();
+        boolean hasMultipleRecipient = emailDto.getEmails() != null && emailDto.getEmails().length > 0;
+
+        if (!isJonkoping && !hasSingleRecipient && !hasMultipleRecipient) {
+            log.warn("SWALLOWED: No recipient address for MailType {}. Skipping to prevent API/DB errors.", emailDto.getMailType());
             return;
         }
 

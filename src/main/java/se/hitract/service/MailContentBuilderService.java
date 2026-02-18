@@ -6,9 +6,7 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
-import se.hitract.model.HitEventMailDTO;
-import se.hitract.model.HitMemberDTO;
-import se.hitract.model.OrderMailDTO;
+import se.hitract.model.*;
 import se.hitract.model.enums.LANGUAGE;
 import se.hitract.model.enums.PRODUCT_TYPE;
 import se.hitract.service.mail.dto.MailRequestDTO;
@@ -230,4 +228,10 @@ public class MailContentBuilderService {
         return templateEngine.process("mail/orderPayed", context);
     }
 
+    public String sendContactInfo(ContactInfoMailDTO contactInfo) {
+        Context context = new Context();
+        context.setVariable("contactInfo", contactInfo);
+
+        return templateEngine.process("mail/contactInfo", context);
+    }
 }

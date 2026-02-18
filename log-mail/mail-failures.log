@@ -1,144 +1,630 @@
-2026-02-13 09:44:24.698 - FAILED to process mail for bita.sehat@gmail.com: Exception evaluating SpringEL expression: "hitClub.hitClubName" (template: "mail/webOrderPayed" - line 451, col 74)
-2026-02-13 09:44:24.700 - SYSTEM ERROR: Attempt failed for WEB_ORDER_PAYED. Rqueue will retry.
+2026-02-19 16:27:17.597 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 16:27:17.654 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 16:27:17.654 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 16:27:17.654 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
 java.lang.RuntimeException: Email delivery failed
-Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "hitClub.hitClubName" (template: "mail/webOrderPayed" - line 451, col 74)
-Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'hitClubName' cannot be found on object of type 'java.lang.String' - maybe not public or not valid?
-2026-02-13 09:44:24.705 - Unhandled exception from message handler method
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 16:27:17.654 - Unhandled exception from message handler method
 java.lang.RuntimeException: Email delivery failed
-Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "hitClub.hitClubName" (template: "mail/webOrderPayed" - line 451, col 74)
-Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'hitClubName' cannot be found on object of type 'java.lang.String' - maybe not public or not valid?
-2026-02-13 09:44:30.099 - FAILED to process mail for bita.sehat@gmail.com: Exception evaluating SpringEL expression: "hitClub.hitClubName" (template: "mail/webOrderPayed" - line 451, col 74)
-2026-02-13 09:44:30.099 - SYSTEM ERROR: Attempt failed for WEB_ORDER_PAYED. Rqueue will retry.
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 16:27:25.681 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 16:27:25.684 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 16:27:25.684 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 16:27:25.684 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
 java.lang.RuntimeException: Email delivery failed
-Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "hitClub.hitClubName" (template: "mail/webOrderPayed" - line 451, col 74)
-Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'hitClubName' cannot be found on object of type 'java.lang.String' - maybe not public or not valid?
-2026-02-13 09:44:30.099 - Unhandled exception from message handler method
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 16:27:25.684 - Unhandled exception from message handler method
 java.lang.RuntimeException: Email delivery failed
-Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "hitClub.hitClubName" (template: "mail/webOrderPayed" - line 451, col 74)
-Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'hitClubName' cannot be found on object of type 'java.lang.String' - maybe not public or not valid?
-2026-02-13 09:44:38.208 - FAILED to process mail for bita.sehat@gmail.com: Exception evaluating SpringEL expression: "hitClub.hitClubName" (template: "mail/webOrderPayed" - line 451, col 74)
-2026-02-13 09:44:38.208 - SYSTEM ERROR: Attempt failed for WEB_ORDER_PAYED. Rqueue will retry.
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 16:27:31.553 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 16:27:31.559 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 16:27:31.559 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 16:27:31.559 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
 java.lang.RuntimeException: Email delivery failed
-Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "hitClub.hitClubName" (template: "mail/webOrderPayed" - line 451, col 74)
-Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'hitClubName' cannot be found on object of type 'java.lang.String' - maybe not public or not valid?
-2026-02-13 09:44:38.209 - Unhandled exception from message handler method
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 16:27:31.559 - Unhandled exception from message handler method
 java.lang.RuntimeException: Email delivery failed
-Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "hitClub.hitClubName" (template: "mail/webOrderPayed" - line 451, col 74)
-Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'hitClubName' cannot be found on object of type 'java.lang.String' - maybe not public or not valid?
-2026-02-13 09:55:53.896 - FAILED to process mail for bita.sehat@gmail.com: Exception evaluating SpringEL expression: "hitClub.hitClubName" (template: "mail/webOrderPayed" - line 451, col 74)
-2026-02-13 09:55:53.897 - SYSTEM ERROR: Attempt failed for WEB_ORDER_PAYED. Rqueue will retry.
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:26:09.406 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:26:09.480 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 19:26:09.481 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:26:09.481 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
 java.lang.RuntimeException: Email delivery failed
-Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "hitClub.hitClubName" (template: "mail/webOrderPayed" - line 451, col 74)
-Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'hitClubName' cannot be found on object of type 'java.lang.String' - maybe not public or not valid?
-2026-02-13 09:55:53.898 - Unhandled exception from message handler method
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:26:09.486 - Unhandled exception from message handler method
 java.lang.RuntimeException: Email delivery failed
-Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "hitClub.hitClubName" (template: "mail/webOrderPayed" - line 451, col 74)
-Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'hitClubName' cannot be found on object of type 'java.lang.String' - maybe not public or not valid?
-2026-02-13 09:56:00.225 - FAILED to process mail for bita.sehat@gmail.com: Exception evaluating SpringEL expression: "hitClub.hitClubName" (template: "mail/webOrderPayed" - line 451, col 74)
-2026-02-13 09:56:00.226 - SYSTEM ERROR: Attempt failed for WEB_ORDER_PAYED. Rqueue will retry.
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:26:15.776 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:26:15.779 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 19:26:15.780 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:26:15.780 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
 java.lang.RuntimeException: Email delivery failed
-Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "hitClub.hitClubName" (template: "mail/webOrderPayed" - line 451, col 74)
-Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'hitClubName' cannot be found on object of type 'java.lang.String' - maybe not public or not valid?
-2026-02-13 09:56:00.226 - Unhandled exception from message handler method
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:26:15.780 - Unhandled exception from message handler method
 java.lang.RuntimeException: Email delivery failed
-Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "hitClub.hitClubName" (template: "mail/webOrderPayed" - line 451, col 74)
-Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'hitClubName' cannot be found on object of type 'java.lang.String' - maybe not public or not valid?
-2026-02-13 09:56:08.084 - FAILED to process mail for bita.sehat@gmail.com: Exception evaluating SpringEL expression: "hitClub.hitClubName" (template: "mail/webOrderPayed" - line 451, col 74)
-2026-02-13 09:56:08.084 - SYSTEM ERROR: Attempt failed for WEB_ORDER_PAYED. Rqueue will retry.
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:26:21.677 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:26:21.680 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 19:26:21.680 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:26:21.680 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
 java.lang.RuntimeException: Email delivery failed
-Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "hitClub.hitClubName" (template: "mail/webOrderPayed" - line 451, col 74)
-Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'hitClubName' cannot be found on object of type 'java.lang.String' - maybe not public or not valid?
-2026-02-13 09:56:08.084 - Unhandled exception from message handler method
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:26:21.680 - Unhandled exception from message handler method
 java.lang.RuntimeException: Email delivery failed
-Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "hitClub.hitClubName" (template: "mail/webOrderPayed" - line 451, col 74)
-Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'hitClubName' cannot be found on object of type 'java.lang.String' - maybe not public or not valid?
-2026-02-13 10:04:21.346 - FAILED to process mail for bita.sehat@gmail.com: Exception evaluating SpringEL expression: "hitClub.hitClubName" (template: "mail/webOrderPayed" - line 451, col 74)
-2026-02-13 10:04:21.347 - SYSTEM ERROR: Attempt failed for WEB_ORDER_PAYED. Rqueue will retry.
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:28:09.515 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:28:09.581 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 19:28:09.581 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:28:09.581 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
 java.lang.RuntimeException: Email delivery failed
-Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "hitClub.hitClubName" (template: "mail/webOrderPayed" - line 451, col 74)
-Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'hitClubName' cannot be found on object of type 'java.lang.String' - maybe not public or not valid?
-2026-02-13 10:04:21.347 - Unhandled exception from message handler method
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:28:09.583 - Unhandled exception from message handler method
 java.lang.RuntimeException: Email delivery failed
-Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "hitClub.hitClubName" (template: "mail/webOrderPayed" - line 451, col 74)
-Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'hitClubName' cannot be found on object of type 'java.lang.String' - maybe not public or not valid?
-2026-02-13 10:04:28.137 - FAILED to process mail for bita.sehat@gmail.com: Exception evaluating SpringEL expression: "hitClub.hitClubName" (template: "mail/webOrderPayed" - line 451, col 74)
-2026-02-13 10:04:28.138 - SYSTEM ERROR: Attempt failed for WEB_ORDER_PAYED. Rqueue will retry.
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:28:15.906 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:28:15.909 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 19:28:15.909 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:28:15.909 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
 java.lang.RuntimeException: Email delivery failed
-Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "hitClub.hitClubName" (template: "mail/webOrderPayed" - line 451, col 74)
-Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'hitClubName' cannot be found on object of type 'java.lang.String' - maybe not public or not valid?
-2026-02-13 10:04:28.138 - Unhandled exception from message handler method
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:28:15.910 - Unhandled exception from message handler method
 java.lang.RuntimeException: Email delivery failed
-Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "hitClub.hitClubName" (template: "mail/webOrderPayed" - line 451, col 74)
-Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'hitClubName' cannot be found on object of type 'java.lang.String' - maybe not public or not valid?
-2026-02-13 10:04:36.216 - FAILED to process mail for bita.sehat@gmail.com: Exception evaluating SpringEL expression: "hitClub.hitClubName" (template: "mail/webOrderPayed" - line 451, col 74)
-2026-02-13 10:04:36.216 - SYSTEM ERROR: Attempt failed for WEB_ORDER_PAYED. Rqueue will retry.
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:28:21.991 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:28:21.995 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 19:28:21.995 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:28:21.995 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
 java.lang.RuntimeException: Email delivery failed
-Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "hitClub.hitClubName" (template: "mail/webOrderPayed" - line 451, col 74)
-Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'hitClubName' cannot be found on object of type 'java.lang.String' - maybe not public or not valid?
-2026-02-13 10:04:36.216 - Unhandled exception from message handler method
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:28:21.996 - Unhandled exception from message handler method
 java.lang.RuntimeException: Email delivery failed
-Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "hitClub.hitClubName" (template: "mail/webOrderPayed" - line 451, col 74)
-Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'hitClubName' cannot be found on object of type 'java.lang.String' - maybe not public or not valid?
-2026-02-13 10:23:43.261 - FAILED to process mail for bita.sehat@gmail.com: unknown protocol: nullhttps
-2026-02-13 10:23:43.261 - SYSTEM ERROR: Attempt failed for WEB_ORDER_PAYED. Rqueue will retry.
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:29:16.793 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:29:16.831 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 19:29:16.832 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:29:16.832 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
 java.lang.RuntimeException: Email delivery failed
-Caused by: java.net.MalformedURLException: unknown protocol: nullhttps
-2026-02-13 10:23:43.264 - Unhandled exception from message handler method
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:29:16.833 - Unhandled exception from message handler method
 java.lang.RuntimeException: Email delivery failed
-Caused by: java.net.MalformedURLException: unknown protocol: nullhttps
-2026-02-13 10:23:50.837 - FAILED to process mail for bita.sehat@gmail.com: unknown protocol: nullhttps
-2026-02-13 10:23:50.838 - SYSTEM ERROR: Attempt failed for WEB_ORDER_PAYED. Rqueue will retry.
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:29:22.702 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:29:22.708 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 19:29:22.708 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:29:22.708 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
 java.lang.RuntimeException: Email delivery failed
-Caused by: java.net.MalformedURLException: unknown protocol: nullhttps
-2026-02-13 10:23:50.838 - Unhandled exception from message handler method
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:29:22.709 - Unhandled exception from message handler method
 java.lang.RuntimeException: Email delivery failed
-Caused by: java.net.MalformedURLException: unknown protocol: nullhttps
-2026-02-13 10:23:58.741 - FAILED to process mail for bita.sehat@gmail.com: unknown protocol: nullhttps
-2026-02-13 10:23:58.741 - SYSTEM ERROR: Attempt failed for WEB_ORDER_PAYED. Rqueue will retry.
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:29:28.486 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:29:28.488 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 19:29:28.488 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:29:28.488 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
 java.lang.RuntimeException: Email delivery failed
-Caused by: java.net.MalformedURLException: unknown protocol: nullhttps
-2026-02-13 10:23:58.742 - Unhandled exception from message handler method
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:29:28.488 - Unhandled exception from message handler method
 java.lang.RuntimeException: Email delivery failed
-Caused by: java.net.MalformedURLException: unknown protocol: nullhttps
-2026-02-13 10:24:00.228 - FAILED to process mail for bita.sehat@gmail.com: unknown protocol: nullhttps
-2026-02-13 10:24:00.229 - SYSTEM ERROR: Attempt failed for WEB_ORDER_PAYED. Rqueue will retry.
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:33:57.592 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:33:57.639 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 19:33:57.639 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:33:57.639 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
 java.lang.RuntimeException: Email delivery failed
-Caused by: java.net.MalformedURLException: unknown protocol: nullhttps
-2026-02-13 10:24:00.229 - Unhandled exception from message handler method
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:33:57.639 - Unhandled exception from message handler method
 java.lang.RuntimeException: Email delivery failed
-Caused by: java.net.MalformedURLException: unknown protocol: nullhttps
-2026-02-13 10:25:11.884 - FAILED to process mail for bita.sehat@gmail.com: unknown protocol: nullhttps
-2026-02-13 10:25:11.885 - SYSTEM ERROR: Attempt failed for WEB_ORDER_PAYED. Rqueue will retry.
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:34:06.026 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:34:06.029 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 19:34:06.029 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:34:06.029 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
 java.lang.RuntimeException: Email delivery failed
-Caused by: java.net.MalformedURLException: unknown protocol: nullhttps
-2026-02-13 10:25:11.888 - Unhandled exception from message handler method
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:34:06.029 - Unhandled exception from message handler method
 java.lang.RuntimeException: Email delivery failed
-Caused by: java.net.MalformedURLException: unknown protocol: nullhttps
-2026-02-13 10:25:12.892 - FAILED to process mail for bita.sehat@gmail.com: unknown protocol: nullhttps
-2026-02-13 10:25:12.892 - SYSTEM ERROR: Attempt failed for WEB_ORDER_PAYED. Rqueue will retry.
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:34:12.130 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:34:12.134 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 19:34:12.134 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:34:12.134 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
 java.lang.RuntimeException: Email delivery failed
-Caused by: java.net.MalformedURLException: unknown protocol: nullhttps
-2026-02-13 10:25:12.893 - Unhandled exception from message handler method
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:34:12.134 - Unhandled exception from message handler method
 java.lang.RuntimeException: Email delivery failed
-Caused by: java.net.MalformedURLException: unknown protocol: nullhttps
-2026-02-13 10:25:17.074 - FAILED to process mail for bita.sehat@gmail.com: unknown protocol: nullhttps
-2026-02-13 10:25:17.075 - SYSTEM ERROR: Attempt failed for WEB_ORDER_PAYED. Rqueue will retry.
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:35:29.497 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:35:29.500 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 19:35:29.500 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:35:29.500 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
 java.lang.RuntimeException: Email delivery failed
-Caused by: java.net.MalformedURLException: unknown protocol: nullhttps
-2026-02-13 10:25:17.076 - Unhandled exception from message handler method
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:35:29.582 - Unhandled exception from message handler method
 java.lang.RuntimeException: Email delivery failed
-Caused by: java.net.MalformedURLException: unknown protocol: nullhttps
-2026-02-13 10:25:21.122 - FAILED to process mail for bita.sehat@gmail.com: unknown protocol: nullhttps
-2026-02-13 10:25:21.122 - SYSTEM ERROR: Attempt failed for WEB_ORDER_PAYED. Rqueue will retry.
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:35:36.077 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:35:36.079 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 19:35:36.079 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:35:36.079 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
 java.lang.RuntimeException: Email delivery failed
-Caused by: java.net.MalformedURLException: unknown protocol: nullhttps
-2026-02-13 10:25:21.123 - Unhandled exception from message handler method
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:35:36.080 - Unhandled exception from message handler method
 java.lang.RuntimeException: Email delivery failed
-Caused by: java.net.MalformedURLException: unknown protocol: nullhttps
-2026-02-13 10:25:27.122 - FAILED to process mail for bita.sehat@gmail.com: unknown protocol: nullhttps
-2026-02-13 10:25:27.122 - SYSTEM ERROR: Attempt failed for WEB_ORDER_PAYED. Rqueue will retry.
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:35:42.135 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:35:42.140 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 19:35:42.140 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:35:42.140 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
 java.lang.RuntimeException: Email delivery failed
-Caused by: java.net.MalformedURLException: unknown protocol: nullhttps
-2026-02-13 10:25:27.122 - Unhandled exception from message handler method
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 19:35:42.140 - Unhandled exception from message handler method
 java.lang.RuntimeException: Email delivery failed
-Caused by: java.net.MalformedURLException: unknown protocol: nullhttps
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:00:13.775 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:00:13.813 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 20:00:13.813 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:00:13.813 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:00:13.815 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:00:20.144 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:00:20.148 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 20:00:20.149 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:00:20.149 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:00:20.149 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:00:26.222 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:00:26.235 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 20:00:26.235 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:00:26.236 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:00:26.236 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:09:46.471 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:09:46.512 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 20:09:46.513 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:09:46.513 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:09:46.515 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:09:54.043 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:09:54.045 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 20:09:54.045 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:09:54.045 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:09:54.046 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:10:02.066 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:10:02.070 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 20:10:02.070 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:10:02.070 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:10:02.070 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:15:37.778 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:15:37.820 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 20:15:37.820 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:15:37.820 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:15:37.822 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:15:44.355 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:15:44.357 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 20:15:44.357 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:15:44.357 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:15:44.358 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:15:50.563 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:15:50.567 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 20:15:50.567 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:15:50.567 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:15:50.568 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:18:23.697 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:18:23.738 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 20:18:23.738 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:18:23.738 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:18:23.739 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:18:29.575 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:18:29.581 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 20:18:29.582 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:18:29.582 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:18:29.582 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:18:35.647 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:18:35.658 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 20:18:35.658 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:18:35.658 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:18:35.659 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:19:35.762 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:19:35.803 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 20:19:35.804 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:19:35.804 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:19:35.806 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:19:41.628 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:19:41.630 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 20:19:41.630 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:19:41.630 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:19:41.631 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:19:49.631 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:19:49.633 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 20:19:49.633 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:19:49.633 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:19:49.633 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:21:06.573 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:21:06.586 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 20:21:06.587 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:21:06.587 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:21:06.588 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:21:06.985 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:21:06.988 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 20:21:06.988 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:21:06.988 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:21:06.989 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:21:15.735 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:21:15.735 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:21:15.740 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 20:21:15.740 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:21:15.740 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 20:21:15.740 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:21:15.740 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:21:15.741 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:21:15.740 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:21:15.742 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:21:21.784 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:21:21.784 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:21:21.788 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 20:21:21.788 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 20:21:21.788 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:21:21.788 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:21:21.788 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:21:21.788 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:21:21.788 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:21:21.788 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:28:27.165 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:28:27.236 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 20:28:27.236 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:28:27.237 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:28:27.238 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:28:33.615 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:28:33.619 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 20:28:33.620 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:28:33.620 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:28:33.621 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:28:41.553 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:28:41.559 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 20:28:41.560 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:28:41.560 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:28:41.560 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:29:40.428 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:29:40.653 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 20:29:40.656 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:29:40.658 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:29:40.682 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:29:46.327 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:29:46.335 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 20:29:46.337 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:29:46.338 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:29:46.343 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:29:52.214 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:29:52.219 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-19 20:29:52.219 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:29:52.219 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-19 20:29:52.219 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR

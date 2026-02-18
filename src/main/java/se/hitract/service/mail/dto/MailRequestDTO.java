@@ -9,6 +9,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -25,6 +26,9 @@ public class MailRequestDTO {
     private Long studentId;
     private String fromMail;
     private String subject;
+    private String contractSubject;
+    private String[] contactUrl;
+    private String[] fileName;
     private String content;
     private boolean internalUser;
     private String firstName;
@@ -60,6 +64,7 @@ public class MailRequestDTO {
     private String[] unitPrice;
     private String[] total;
     private String  totalOrderAmount;
+    private ContactInfoMailDTO contactInfoMailDTO;
 
     // --- Validation Fields (Added) ---
     private String phoneNumber;
