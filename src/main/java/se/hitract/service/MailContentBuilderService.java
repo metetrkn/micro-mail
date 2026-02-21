@@ -1,20 +1,25 @@
 package se.hitract.service;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
+import se.hitract.model.*;
+import se.hitract.model.enums.LANGUAGE;
+import se.hitract.model.enums.PRODUCT_TYPE;
 import se.hitract.service.mail.dto.MailRequestDTO;
 import se.hitract.service.util.HashIdUtil;
 
-import java.util.Date;
-import java.util.Map;
+import java.util.*;
 
 @Service
 public class MailContentBuilderService {
 
     @Autowired private TemplateEngine templateEngine;
     @Autowired private PropertiesService propertiesService;
+    @Autowired private QrCodeService qrCodeService;
 
     public String build() {
         Context context = new Context();
@@ -139,190 +144,94 @@ public class MailContentBuilderService {
         return templateEngine.process("mail/webMemberStatusChanged", context);
     }
 
-//    public String hitClubInviteMail(HitMemberDTO hitMember) {
-//        Context context = new Context();
-//
-//        // 1. Generate HashID (Safe now, because hitMember.getId() comes from DB)
-//        String data = HashIdUtil.encode(hitMember.getHitMemberId());
-//
-//        // 2. Populate Context
-//        context.setVariable("data", data);
-//        context.setVariable("hitClub", hitMember.getHitClub()); // Uses HitClubSmallPushDTO from mapping
-//        context.setVariable("hitMember", hitMember);
-//        context.setVariable("isProd", propertiesService.isProd());
-//
-//        // 3. Process
-//        return templateEngine.process("mail/hitClubInviteMail", context);
-//    }
-//}
+    public String hitClubInviteMail(HitMemberDTO hitMember) {
+        Context context = new Context();
 
+        String data = HashIdUtil.encode(hitMember.getHitMemberId());
 
+        context.setVariable("data", data);
+        context.setVariable("hitClub", hitMember.getHitClub());
+        context.setVariable("hitMember", hitMember);
+        context.setVariable("isProd", propertiesService.isProd());
 
-//    public String yourBuddy() {
-//        Context context = new Context();
-//        //context.setVariable("message", message);
-//        return templateEngine.process("mail/invite", context);
-//    }
-//
-//    public String companySignInContent(LANGUAGE language, String email, String token, boolean newSite) {
-//    	Context context = new Context();
-//    	context.setVariable("token", token);
-//    	context.setVariable("email", email);
-//		context.setVariable("newSite", newSite);
-//		context.setVariable("language", language == null ? LANGUAGE.sv : language);
-//    	context.setVariable("environment", propertiesService.getEnvironment());
-//        return templateEngine.process("mail/companySignInMail", context);
-//    }
-//
-//    public String hitClubSignInContent(String email, String token) {
-//    	Context context = new Context();
-//    	context.setVariable("token", token);
-//    	context.setVariable("email", email);
-//    	context.setVariable("environment", propertiesService.getEnvironment());
-//        return templateEngine.process("mail/hitClubSignInMail", context);
-//    }
-//
-//    public String companySignUpContent(String email) {
-//    	Context context = new Context();
-//    	context.setVariable("email", email);
-//    	context.setVariable("environment", propertiesService.getEnvironment());
-//        return templateEngine.process("mail/companySignUpMail", context);
-//    }
-//
-//    public String studentSignUpContent(String email, String token, @NotNull LANGUAGE language) {
-//    	Context context = new Context();
-//    	context.setVariable("email", email);
-//    	context.setVariable("token", token);
-//		context.setVariable("language", language);
-//    	context.setVariable("environment", propertiesService.getEnvironment());
-//        return templateEngine.process("mail/studentSignUpMail", context);
-//    }
-//
-//    public String studentSignInContent(String email, String token, @NotNull LANGUAGE language) {
-//    	Context context = new Context();
-//    	context.setVariable("email", email);
-//    	context.setVariable("token", token);
-//		context.setVariable("language", language);
-//		context.setVariable("environment", propertiesService.getEnvironment());
-//        return templateEngine.process("mail/studentSignInMail", context);
-//    }
-//
-//    public String chatGroupNotSeenContent(ChatGroupParticipant chatGroupParticipant) {
-//    	Context context = new Context();
-//
-//		/*
-//    	int numberOfUnread = chatGroupRepository.countNumberOfMessagesInChatGroupSinceMessage(chatGroupParticipant.getOldestChatMessageNotClicked().getChatGroup(), chatGroupParticipant.getOldestChatMessageNotClicked());
-//
-//    	context.setVariable("chatGroupParticipant", chatGroupParticipant);
-//    	context.setVariable("chatMessage", chatGroupParticipant.getOldestChatMessageNotClicked());
-//    	context.setVariable("numberOfUnread", numberOfUnread+1);
-//
-//		 */
-//        return templateEngine.process("mail/chatGroupNotReadMail", context);
-//    }
-//
-//    public String statusMailContent(Student student) {
-//    	Context context = new Context();
-//
-//    	Page<BuddySuggestion> buddySuggestions = buddySuggestionRepository.findByStudentOrderByTotalScoreDesc(student, PageRequest.of(0, 3));
-//
-//    	context.setVariable("buddySuggestions", buddySuggestions.getContent());
-//    	context.setVariable("student", student);
-//        return templateEngine.process("mail/statusMail", context);
-//    }
+        return templateEngine.process("mail/hitClubInviteMail", context);
+    }
 
-//	public String sendHitClubMemberPayMail(HitMemberDTO hitMember) {
-//		Context context = new Context();
-//
-//		String data = HashIdUtil.encode(hitMember.getId());
-//
-//		context.setVariable("data", data);
-//		context.setVariable("hitClub", hitMember.getHitClub());
-//
-//		context.setVariable("hitMember", hitMember);
-//		context.setVariable("hitMemberIdHash", HashIdUtil.encodeLong(hitMember.getHitMemberId()));
-//		context.setVariable("paymentOptionId", hitMember.getPaymentOption().getPaymentOptionId());
-//
-//		context.setVariable("isProd", propertiesService.isProd());
-//
-//		return templateEngine.process("mail/hitClubMemberPayMail", context);
-//	}
-//
-//
-//
+    public String sendWebOrderPayed(OrderMailDTO order, HitEventMailDTO hitEvent) {
+        Context context = new Context();
 
+        order.getOrderItems().stream().forEach(oi -> oi.getUserProducts().stream().forEach(up -> {
+            String qrCode = qrCodeService.createQrCode(up.getIdentifier());
+            up.setQrCode(qrCode);
+        }));
 
+        boolean orderIncludesNonTickets = order.getOrderItems().stream().anyMatch(oi -> !oi.getProductOffer().getProductBase().getProductType().equals(PRODUCT_TYPE.TICKET));
 
+        context.setVariable("orderIncludesNonTickets", true);
+        context.setVariable("order", order);
+        context.setVariable("hitEvent", hitEvent);
+        context.setVariable("hitClub", hitEvent.getHitClubName());
 
-//	public String sendWebOrderPayed(Orderr order, HitEvent hitEvent) {
-//		Context context = new Context();
-//
-//		order.getOrderItems().stream().forEach(oi -> oi.getUserProducts().stream().forEach(up -> {
-//			String qrCode = qrCodeService.createQrCode(up.getIdentifier());
-//			up.setQrCode(qrCode);
-//		}));
-//
-//		boolean orderIncludesNonTickets = order.getOrderItems().stream().anyMatch(oi -> !oi.getProductOffer().getProductBase().getProductType().equals(PRODUCT_TYPE.TICKET));
-//
-//		context.setVariable("orderIncludesNonTickets", true);
-//		context.setVariable("order", order);
-//		context.setVariable("hitEvent", hitEvent);
-//		context.setVariable("hitClub", hitEvent.getHitClub());
-//
-//        return templateEngine.process("mail/webOrderPayed", context);
-//	}
-//
-//	public String sendReceipt(LANGUAGE language) {
-//		Context context = new Context();
-//		context.setVariable("language", language);
-//		return templateEngine.process("mail/sendReceipt", context);
-//	}
-//
-//	public String sendOrderPayed(Orderr order) {
-//		Context context = new Context();
-//
-//		OrderDTO orderDTO = (BeanUtil.getBean(ModelMapper.class)).map(order, OrderDTO.class);
-//
-//		context.setVariable("order", orderDTO);
-//
-//        return templateEngine.process("mail/orderPayed", context);
-//	}
+        return templateEngine.process("mail/webOrderPayed", context);
+    }
 
+    public String sendPayoutReportNotMatch(String merchantCode, Double totalTransfer, Double totalTransferFee, Double totalPayout) {
+        Context context = new Context();
+        context.setVariable("merchantCode", merchantCode);
+        context.setVariable("totalTransfer", totalTransfer);
+        context.setVariable("totalTransferFee", totalTransferFee);
+        context.setVariable("totalPayout", totalPayout);
 
+        return templateEngine.process("mail/payoutReportNotMatch", context);
+    }
 
+    public String sendReceipt(LANGUAGE language) {
+        Context context = new Context();
+        context.setVariable("language", language);
+        return templateEngine.process("mail/sendReceipt", context);
+    }
 
+    @Async
+    public String sendOrderPayed(MailRequestDTO request) {
+        Context context = new Context();
 
-//	public String sendContactInfo(ContactInfo contactInfo) {
-//		Context context = new Context();
-//		context.setVariable("contactInfo", contactInfo);
-//
-//        return templateEngine.process("mail/contactInfo", context);
-//	}
-//
-//	public String sendWebBecomeMember(HitMemberDTO hitMember) {
-//		Context context = new Context();
-//		context.setVariable("hitMember", hitMember);
-//		context.setVariable("hitMemberIdHash", HashIdUtil.encodeLong(hitMember.getHitMemberId()));
-//
-//        return templateEngine.process("mail/webBecomeMember", context);
-//	}
-//
+        Map<String, Object> orderMap = new HashMap<>();
+        orderMap.put("orderPaidDate", request.getOrderPaidDate());
+        orderMap.put("orderId", request.getOrderId());
+        orderMap.put("orderAmount", request.getTotalOrderAmount());
 
-//
-//	public String sendError(String msg) {
-//		Context context = new Context();
-//		context.setVariable("msg", msg);
-//
-//        return templateEngine.process("mail/error", context);
-//	}
+        List<Map<String, Object>> itemsList = new ArrayList<>();
+        String[] labels = request.getLabel();
 
-//	public String sendPayoutReportNotMatch(String merchantCode, Double totalTransfer, Double totalTransferFee, Double totalPayout) {
-//		Context context = new Context();
-//		context.setVariable("merchantCode", merchantCode);
-//		context.setVariable("totalTransfer", totalTransfer);
-//		context.setVariable("totalTransferFee", totalTransferFee);
-//		context.setVariable("totalPayout", totalPayout);
-//
-//		return templateEngine.process("mail/payoutReportNotMatch", context);
-//	}
+        if (labels != null) {
+            for (int i = 0; i < labels.length; i++) {
+                Map<String, Object> itemMap = new HashMap<>();
+
+                // Parse quantity as a number so Thymeleaf can multiply it
+                itemMap.put("quantity", Integer.parseInt(request.getQuantity()[i]));
+
+                // Nest productOffer map to satisfy ${orderItem.productOffer.label}
+                Map<String, String> productOffer = new HashMap<>();
+                productOffer.put("label", labels[i]);
+                itemMap.put("productOffer", productOffer);
+
+                // Parse unitPrice as a number so ${orderItem.quantity * orderItem.unitPrice} works correctly
+                itemMap.put("unitPrice", Double.parseDouble(request.getUnitPrice()[i]));
+
+                itemsList.add(itemMap);
+            }
+        }
+
+        orderMap.put("orderItems", itemsList);
+        context.setVariable("order", orderMap);
+
+        return templateEngine.process("mail/orderPayed", context);
+    }
+
+    public String sendContactInfo(ContactInfoMailDTO contactInfo) {
+        Context context = new Context();
+        context.setVariable("contactInfo", contactInfo);
+
+        return templateEngine.process("mail/contactInfo", context);
+    }
 }

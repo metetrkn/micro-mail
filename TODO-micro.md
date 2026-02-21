@@ -69,3 +69,6 @@ Here is a breakdown of where they are active and how you can explicitly use them
    Based on your application.properties, you have credentials for TikTok, LinkedIn, Instagram, and Google. This suggests your application likely fetches data from these services.
    This is the perfect use case for virtual threads: Scatter-Gather. You can fire off requests to all these social platforms in parallel. Because virtual threads are cheap, you can spin up a new thread for every single API call without worrying about resource exhaustion.
    Here is a new service example demonstrating how to fetch data from multiple sources in parallel using Executors.newVirtualThreadPerTaskExecutor().
+
+sendWebOrderPayed
+I HAVE SET DTO 'S ' HITEVENTMAILDTO AND ORDERMAILDTO SET RELATED FIELDS FROM PRODUCER SIDE AND USE THEM IN CONSUMER SIDE

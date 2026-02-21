@@ -1,43 +1,1071 @@
-2026-01-31 20:14:12.340 - Template rendering failed for jesperstenbergs@gmail.com: Exception evaluating SpringEL expression: "language.name() == 'sv' ? 'Logga in' : 'Login'" (template: "mail/studentSignInMail" - line 2, col 11)
-2026-02-03 04:52:44.708 - FAILED to process mail for romeo@hitract.se: Error resolving template [mail/webExternalMemberFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/webMemberStatusChanged" - line 423, col 16)
-2026-02-03 04:52:44.709 - SYSTEM ERROR: Attempt failed for WEB_MEMBER_STATUS_CHANGED. Rqueue will retry.
+2026-02-20 11:56:14.798 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 11:56:14.912 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-20 11:56:14.913 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 11:56:14.913 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
 java.lang.RuntimeException: Email delivery failed
-Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [mail/webExternalMemberFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/webMemberStatusChanged" - line 423, col 16)
-2026-02-03 04:52:44.710 - Unhandled exception from message handler method
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 11:56:14.916 - Unhandled exception from message handler method
 java.lang.RuntimeException: Email delivery failed
-Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [mail/webExternalMemberFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/webMemberStatusChanged" - line 423, col 16)
-2026-02-03 04:52:51.289 - FAILED to process mail for romeo@hitract.se: Error resolving template [mail/webExternalMemberFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/webMemberStatusChanged" - line 423, col 16)
-2026-02-03 04:52:51.289 - SYSTEM ERROR: Attempt failed for WEB_MEMBER_STATUS_CHANGED. Rqueue will retry.
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 11:56:23.448 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 11:56:23.452 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-20 11:56:23.453 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 11:56:23.453 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
 java.lang.RuntimeException: Email delivery failed
-Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [mail/webExternalMemberFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/webMemberStatusChanged" - line 423, col 16)
-2026-02-03 04:52:51.289 - Unhandled exception from message handler method
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 11:56:23.455 - Unhandled exception from message handler method
 java.lang.RuntimeException: Email delivery failed
-Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [mail/webExternalMemberFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/webMemberStatusChanged" - line 423, col 16)
-2026-02-03 04:52:59.308 - FAILED to process mail for romeo@hitract.se: Error resolving template [mail/webExternalMemberFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/webMemberStatusChanged" - line 423, col 16)
-2026-02-03 04:52:59.308 - SYSTEM ERROR: Attempt failed for WEB_MEMBER_STATUS_CHANGED. Rqueue will retry.
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 11:56:31.455 - Failed to send mail: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 11:56:31.458 - Could not record failure to DB: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-20 11:56:31.458 - FAILED to process mail for null: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 11:56:31.458 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
 java.lang.RuntimeException: Email delivery failed
-Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [mail/webExternalMemberFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/webMemberStatusChanged" - line 423, col 16)
-2026-02-03 04:52:59.308 - Unhandled exception from message handler method
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 11:56:31.459 - Unhandled exception from message handler method
 java.lang.RuntimeException: Email delivery failed
-Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [mail/webExternalMemberFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/webMemberStatusChanged" - line 423, col 16)
-2026-02-03 04:56:33.528 - FAILED to process mail for romeo@hitract.se: Error resolving template [mail/webExternalMemberFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/webMemberStatusChanged" - line 423, col 16)
-2026-02-03 04:56:33.528 - SYSTEM ERROR: Attempt failed for WEB_MEMBER_STATUS_CHANGED. Rqueue will retry.
+Caused by: java.lang.RuntimeException: Mailgun delivery failure: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 12:13:19.572 - Failed to send mail via Mailgun HTTP API
+java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 12:13:19.621 - FAILED to process mail for null: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-20 12:13:19.622 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
 java.lang.RuntimeException: Email delivery failed
-Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [mail/webExternalMemberFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/webMemberStatusChanged" - line 423, col 16)
-2026-02-03 04:56:33.528 - Unhandled exception from message handler method
+Caused by: jakarta.validation.ConstraintViolationException: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-20 12:13:19.623 - Unhandled exception from message handler method
 java.lang.RuntimeException: Email delivery failed
-Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [mail/webExternalMemberFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/webMemberStatusChanged" - line 423, col 16)
-2026-02-03 04:56:39.218 - FAILED to process mail for romeo@hitract.se: Error resolving template [mail/webExternalMemberFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/webMemberStatusChanged" - line 423, col 16)
-2026-02-03 04:56:39.219 - SYSTEM ERROR: Attempt failed for WEB_MEMBER_STATUS_CHANGED. Rqueue will retry.
+Caused by: jakarta.validation.ConstraintViolationException: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-20 12:13:27.378 - Failed to send mail via Mailgun HTTP API
+java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 12:13:27.382 - FAILED to process mail for null: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-20 12:13:27.382 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
 java.lang.RuntimeException: Email delivery failed
-Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [mail/webExternalMemberFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/webMemberStatusChanged" - line 423, col 16)
-2026-02-03 04:56:39.219 - Unhandled exception from message handler method
+Caused by: jakarta.validation.ConstraintViolationException: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-20 12:13:27.382 - Unhandled exception from message handler method
 java.lang.RuntimeException: Email delivery failed
-Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [mail/webExternalMemberFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/webMemberStatusChanged" - line 423, col 16)
-2026-02-03 04:56:47.250 - FAILED to process mail for romeo@hitract.se: Error resolving template [mail/webExternalMemberFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/webMemberStatusChanged" - line 423, col 16)
-2026-02-03 04:56:47.250 - SYSTEM ERROR: Attempt failed for WEB_MEMBER_STATUS_CHANGED. Rqueue will retry.
+Caused by: jakarta.validation.ConstraintViolationException: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-20 12:13:33.326 - Failed to send mail via Mailgun HTTP API
+java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 12:13:33.329 - FAILED to process mail for null: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-20 12:13:33.329 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
 java.lang.RuntimeException: Email delivery failed
-Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [mail/webExternalMemberFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/webMemberStatusChanged" - line 423, col 16)
-2026-02-03 04:56:47.250 - Unhandled exception from message handler method
+Caused by: jakarta.validation.ConstraintViolationException: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-20 12:13:33.329 - Unhandled exception from message handler method
 java.lang.RuntimeException: Email delivery failed
-Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [mail/webExternalMemberFragments], template might not exist or might not be accessible by any of the configured Template Resolvers (template: "mail/webMemberStatusChanged" - line 423, col 16)
+Caused by: jakarta.validation.ConstraintViolationException: Validation failed for classes [se.hitract.model.SentMail] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=email, rootBeanClass=class se.hitract.model.SentMail, messageTemplate='{jakarta.validation.constraints.NotNull.message}'}
+]
+2026-02-20 12:18:00.199 - Failed to send mail to info@hitract.se via Mailgun HTTP API
+java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 12:18:00.282 - FAILED to process mail for info@hitract.se: Mail sending failed for: info@hitract.se
+2026-02-20 12:18:00.282 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mail sending failed for: info@hitract.se
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 12:18:00.283 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mail sending failed for: info@hitract.se
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 12:45:07.300 - Failed to send mail to info@hitract.se via Mailgun HTTP API
+java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 12:45:07.369 - FAILED to process mail for info@hitract.se: Mail sending failed for: info@hitract.se
+2026-02-20 12:45:07.369 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mail sending failed for: info@hitract.se
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 12:45:07.370 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mail sending failed for: info@hitract.se
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 12:45:12.928 - Failed to send mail to info@hitract.se via Mailgun HTTP API
+java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 12:45:12.935 - FAILED to process mail for info@hitract.se: Mail sending failed for: info@hitract.se
+2026-02-20 12:45:12.936 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mail sending failed for: info@hitract.se
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 12:45:12.936 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mail sending failed for: info@hitract.se
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 12:47:13.398 - Failed to send mail to info@hitract.se via Mailgun HTTP API
+java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 12:47:13.468 - FAILED to process mail for info@hitract.se: Mail sending failed for: info@hitract.se
+2026-02-20 12:47:13.468 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mail sending failed for: info@hitract.se
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 12:47:13.469 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mail sending failed for: info@hitract.se
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 12:47:20.703 - Failed to send mail to info@hitract.se via Mailgun HTTP API
+java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 12:47:20.722 - FAILED to process mail for info@hitract.se: Mail sending failed for: info@hitract.se
+2026-02-20 12:47:20.722 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mail sending failed for: info@hitract.se
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 12:47:20.724 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mail sending failed for: info@hitract.se
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 12:47:26.547 - Failed to send mail to info@hitract.se via Mailgun HTTP API
+java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 12:47:26.553 - FAILED to process mail for info@hitract.se: Mail sending failed for: info@hitract.se
+2026-02-20 12:47:26.553 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mail sending failed for: info@hitract.se
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 12:47:26.553 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mail sending failed for: info@hitract.se
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 12:51:56.881 - Failed to send mail to info@hitract.se via Mailgun HTTP API
+java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 12:51:56.946 - FAILED to process mail for info@hitract.se: Mail sending failed for: info@hitract.se
+2026-02-20 12:51:56.946 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mail sending failed for: info@hitract.se
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 12:51:56.946 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mail sending failed for: info@hitract.se
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 12:52:02.246 - Failed to send mail to info@hitract.se via Mailgun HTTP API
+java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 12:52:02.251 - FAILED to process mail for info@hitract.se: Mail sending failed for: info@hitract.se
+2026-02-20 12:52:02.251 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mail sending failed for: info@hitract.se
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 12:52:02.252 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mail sending failed for: info@hitract.se
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 12:52:08.071 - Failed to send mail to info@hitract.se via Mailgun HTTP API
+java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 12:52:08.079 - FAILED to process mail for info@hitract.se: Mail sending failed for: info@hitract.se
+2026-02-20 12:52:08.079 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mail sending failed for: info@hitract.se
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 12:52:08.079 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mail sending failed for: info@hitract.se
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR
+2026-02-20 12:55:32.919 - Mailgun API Error: 500 INTERNAL_SERVER_ERROR - Body: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"/>
+<title>Error 500 java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</title>
+</head>
+<body><h2>HTTP ERROR 500 java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</h2>
+<table>
+<tr><th>URI:</th><td>/sandbox.hitract.se/messages</td></tr>
+<tr><th>STATUS:</th><td>500</td></tr>
+<tr><th>MESSAGE:</th><td>java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</td></tr>
+<tr><th>SERVLET:</th><td>com.github.tomakehurst.wiremock.servlet.WireMockHandlerDispatchingServlet-773cbf4f</td></tr>
+<tr><th>CAUSED BY:</th><td>java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</td></tr>
+</table>
+<h3>Caused by:</h3><pre>java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])
+	at java.base/java.util.stream.Collectors.duplicateKeyException(Unknown Source)
+	at java.base/java.util.stream.Collectors.lambda$uniqKeysMapAccumulator$1(Unknown Source)
+	at java.base/java.util.stream.ReduceOps$3ReducingSink.accept(Unknown Source)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.TemplateEngine.buildRequestPartModel(TemplateEngine.java:201)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.TemplateEngine.buildRequestModel(TemplateEngine.java:173)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.TemplateEngine.buildModelForRequest(TemplateEngine.java:146)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.LazyTemplateEngine.buildModelForRequest(LazyTemplateEngine.java:42)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.ResponseTemplateTransformer.transform(ResponseTemplateTransformer.java:77)
+	at com.github.tomakehurst.wiremock.stubbing.AbstractStubMappings.applyV2Transformations(AbstractStubMappings.java:152)
+	at com.github.tomakehurst.wiremock.stubbing.AbstractStubMappings.serveFor(AbstractStubMappings.java:110)
+	at com.github.tomakehurst.wiremock.core.WireMockApp.serveStubFor(WireMockApp.java:293)
+	at com.github.tomakehurst.wiremock.http.StubRequestHandler.handleRequest(StubRequestHandler.java:73)
+	at com.github.tomakehurst.wiremock.http.AbstractRequestHandler.handle(AbstractRequestHandler.java:73)
+	at com.github.tomakehurst.wiremock.servlet.WireMockHandlerDispatchingServlet.service(WireMockHandlerDispatchingServlet.java:165)
+	at wiremock.jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at wiremock.org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at wiremock.org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at wiremock.org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at wiremock.org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:822)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:141)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at wiremock.org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at wiremock.org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598)
+	at wiremock.org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753)
+	at wiremock.org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501)
+	at wiremock.org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287)
+	at wiremock.org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at wiremock.org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at wiremock.org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:199)
+	at wiremock.org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre>
+
+</body>
+</html>
+
+2026-02-20 12:55:32.921 - Failed to send mail to info@hitract.se via Mailgun HTTP API
+java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR - <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"/>
+<title>Error 500 java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</title>
+</head>
+<body><h2>HTTP ERROR 500 java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</h2>
+<table>
+<tr><th>URI:</th><td>/sandbox.hitract.se/messages</td></tr>
+<tr><th>STATUS:</th><td>500</td></tr>
+<tr><th>MESSAGE:</th><td>java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</td></tr>
+<tr><th>SERVLET:</th><td>com.github.tomakehurst.wiremock.servlet.WireMockHandlerDispatchingServlet-773cbf4f</td></tr>
+<tr><th>CAUSED BY:</th><td>java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</td></tr>
+</table>
+<h3>Caused by:</h3><pre>java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])
+	at java.base/java.util.stream.Collectors.duplicateKeyException(Unknown Source)
+	at java.base/java.util.stream.Collectors.lambda$uniqKeysMapAccumulator$1(Unknown Source)
+	at java.base/java.util.stream.ReduceOps$3ReducingSink.accept(Unknown Source)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.TemplateEngine.buildRequestPartModel(TemplateEngine.java:201)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.TemplateEngine.buildRequestModel(TemplateEngine.java:173)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.TemplateEngine.buildModelForRequest(TemplateEngine.java:146)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.LazyTemplateEngine.buildModelForRequest(LazyTemplateEngine.java:42)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.ResponseTemplateTransformer.transform(ResponseTemplateTransformer.java:77)
+	at com.github.tomakehurst.wiremock.stubbing.AbstractStubMappings.applyV2Transformations(AbstractStubMappings.java:152)
+	at com.github.tomakehurst.wiremock.stubbing.AbstractStubMappings.serveFor(AbstractStubMappings.java:110)
+	at com.github.tomakehurst.wiremock.core.WireMockApp.serveStubFor(WireMockApp.java:293)
+	at com.github.tomakehurst.wiremock.http.StubRequestHandler.handleRequest(StubRequestHandler.java:73)
+	at com.github.tomakehurst.wiremock.http.AbstractRequestHandler.handle(AbstractRequestHandler.java:73)
+	at com.github.tomakehurst.wiremock.servlet.WireMockHandlerDispatchingServlet.service(WireMockHandlerDispatchingServlet.java:165)
+	at wiremock.jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at wiremock.org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at wiremock.org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at wiremock.org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at wiremock.org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:822)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:141)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at wiremock.org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at wiremock.org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598)
+	at wiremock.org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753)
+	at wiremock.org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501)
+	at wiremock.org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287)
+	at wiremock.org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at wiremock.org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at wiremock.org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:199)
+	at wiremock.org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre>
+
+</body>
+</html>
+
+2026-02-20 12:55:32.991 - FAILED to process mail for info@hitract.se: Mail sending failed for: info@hitract.se
+2026-02-20 12:55:32.991 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mail sending failed for: info@hitract.se
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR - <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"/>
+<title>Error 500 java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</title>
+</head>
+<body><h2>HTTP ERROR 500 java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</h2>
+<table>
+<tr><th>URI:</th><td>/sandbox.hitract.se/messages</td></tr>
+<tr><th>STATUS:</th><td>500</td></tr>
+<tr><th>MESSAGE:</th><td>java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</td></tr>
+<tr><th>SERVLET:</th><td>com.github.tomakehurst.wiremock.servlet.WireMockHandlerDispatchingServlet-773cbf4f</td></tr>
+<tr><th>CAUSED BY:</th><td>java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</td></tr>
+</table>
+<h3>Caused by:</h3><pre>java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])
+	at java.base/java.util.stream.Collectors.duplicateKeyException(Unknown Source)
+	at java.base/java.util.stream.Collectors.lambda$uniqKeysMapAccumulator$1(Unknown Source)
+	at java.base/java.util.stream.ReduceOps$3ReducingSink.accept(Unknown Source)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.TemplateEngine.buildRequestPartModel(TemplateEngine.java:201)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.TemplateEngine.buildRequestModel(TemplateEngine.java:173)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.TemplateEngine.buildModelForRequest(TemplateEngine.java:146)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.LazyTemplateEngine.buildModelForRequest(LazyTemplateEngine.java:42)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.ResponseTemplateTransformer.transform(ResponseTemplateTransformer.java:77)
+	at com.github.tomakehurst.wiremock.stubbing.AbstractStubMappings.applyV2Transformations(AbstractStubMappings.java:152)
+	at com.github.tomakehurst.wiremock.stubbing.AbstractStubMappings.serveFor(AbstractStubMappings.java:110)
+	at com.github.tomakehurst.wiremock.core.WireMockApp.serveStubFor(WireMockApp.java:293)
+	at com.github.tomakehurst.wiremock.http.StubRequestHandler.handleRequest(StubRequestHandler.java:73)
+	at com.github.tomakehurst.wiremock.http.AbstractRequestHandler.handle(AbstractRequestHandler.java:73)
+	at com.github.tomakehurst.wiremock.servlet.WireMockHandlerDispatchingServlet.service(WireMockHandlerDispatchingServlet.java:165)
+	at wiremock.jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at wiremock.org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at wiremock.org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at wiremock.org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at wiremock.org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:822)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:141)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at wiremock.org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at wiremock.org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598)
+	at wiremock.org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753)
+	at wiremock.org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501)
+	at wiremock.org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287)
+	at wiremock.org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at wiremock.org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at wiremock.org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:199)
+	at wiremock.org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre>
+
+</body>
+</html>
+
+2026-02-20 12:55:32.992 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mail sending failed for: info@hitract.se
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR - <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"/>
+<title>Error 500 java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</title>
+</head>
+<body><h2>HTTP ERROR 500 java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</h2>
+<table>
+<tr><th>URI:</th><td>/sandbox.hitract.se/messages</td></tr>
+<tr><th>STATUS:</th><td>500</td></tr>
+<tr><th>MESSAGE:</th><td>java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</td></tr>
+<tr><th>SERVLET:</th><td>com.github.tomakehurst.wiremock.servlet.WireMockHandlerDispatchingServlet-773cbf4f</td></tr>
+<tr><th>CAUSED BY:</th><td>java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</td></tr>
+</table>
+<h3>Caused by:</h3><pre>java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])
+	at java.base/java.util.stream.Collectors.duplicateKeyException(Unknown Source)
+	at java.base/java.util.stream.Collectors.lambda$uniqKeysMapAccumulator$1(Unknown Source)
+	at java.base/java.util.stream.ReduceOps$3ReducingSink.accept(Unknown Source)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.TemplateEngine.buildRequestPartModel(TemplateEngine.java:201)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.TemplateEngine.buildRequestModel(TemplateEngine.java:173)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.TemplateEngine.buildModelForRequest(TemplateEngine.java:146)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.LazyTemplateEngine.buildModelForRequest(LazyTemplateEngine.java:42)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.ResponseTemplateTransformer.transform(ResponseTemplateTransformer.java:77)
+	at com.github.tomakehurst.wiremock.stubbing.AbstractStubMappings.applyV2Transformations(AbstractStubMappings.java:152)
+	at com.github.tomakehurst.wiremock.stubbing.AbstractStubMappings.serveFor(AbstractStubMappings.java:110)
+	at com.github.tomakehurst.wiremock.core.WireMockApp.serveStubFor(WireMockApp.java:293)
+	at com.github.tomakehurst.wiremock.http.StubRequestHandler.handleRequest(StubRequestHandler.java:73)
+	at com.github.tomakehurst.wiremock.http.AbstractRequestHandler.handle(AbstractRequestHandler.java:73)
+	at com.github.tomakehurst.wiremock.servlet.WireMockHandlerDispatchingServlet.service(WireMockHandlerDispatchingServlet.java:165)
+	at wiremock.jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at wiremock.org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at wiremock.org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at wiremock.org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at wiremock.org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:822)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:141)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at wiremock.org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at wiremock.org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598)
+	at wiremock.org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753)
+	at wiremock.org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501)
+	at wiremock.org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287)
+	at wiremock.org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at wiremock.org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at wiremock.org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:199)
+	at wiremock.org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre>
+
+</body>
+</html>
+
+2026-02-20 12:55:41.361 - Mailgun API Error: 500 INTERNAL_SERVER_ERROR - Body: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"/>
+<title>Error 500 java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</title>
+</head>
+<body><h2>HTTP ERROR 500 java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</h2>
+<table>
+<tr><th>URI:</th><td>/sandbox.hitract.se/messages</td></tr>
+<tr><th>STATUS:</th><td>500</td></tr>
+<tr><th>MESSAGE:</th><td>java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</td></tr>
+<tr><th>SERVLET:</th><td>com.github.tomakehurst.wiremock.servlet.WireMockHandlerDispatchingServlet-773cbf4f</td></tr>
+<tr><th>CAUSED BY:</th><td>java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</td></tr>
+</table>
+<h3>Caused by:</h3><pre>java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])
+	at java.base/java.util.stream.Collectors.duplicateKeyException(Unknown Source)
+	at java.base/java.util.stream.Collectors.lambda$uniqKeysMapAccumulator$1(Unknown Source)
+	at java.base/java.util.stream.ReduceOps$3ReducingSink.accept(Unknown Source)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.TemplateEngine.buildRequestPartModel(TemplateEngine.java:201)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.TemplateEngine.buildRequestModel(TemplateEngine.java:173)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.TemplateEngine.buildModelForRequest(TemplateEngine.java:146)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.LazyTemplateEngine.buildModelForRequest(LazyTemplateEngine.java:42)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.ResponseTemplateTransformer.transform(ResponseTemplateTransformer.java:77)
+	at com.github.tomakehurst.wiremock.stubbing.AbstractStubMappings.applyV2Transformations(AbstractStubMappings.java:152)
+	at com.github.tomakehurst.wiremock.stubbing.AbstractStubMappings.serveFor(AbstractStubMappings.java:110)
+	at com.github.tomakehurst.wiremock.core.WireMockApp.serveStubFor(WireMockApp.java:293)
+	at com.github.tomakehurst.wiremock.http.StubRequestHandler.handleRequest(StubRequestHandler.java:73)
+	at com.github.tomakehurst.wiremock.http.AbstractRequestHandler.handle(AbstractRequestHandler.java:73)
+	at com.github.tomakehurst.wiremock.servlet.WireMockHandlerDispatchingServlet.service(WireMockHandlerDispatchingServlet.java:165)
+	at wiremock.jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at wiremock.org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at wiremock.org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at wiremock.org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at wiremock.org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:822)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:141)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at wiremock.org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at wiremock.org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598)
+	at wiremock.org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753)
+	at wiremock.org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501)
+	at wiremock.org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287)
+	at wiremock.org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at wiremock.org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at wiremock.org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:199)
+	at wiremock.org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre>
+
+</body>
+</html>
+
+2026-02-20 12:55:41.361 - Failed to send mail to info@hitract.se via Mailgun HTTP API
+java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR - <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"/>
+<title>Error 500 java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</title>
+</head>
+<body><h2>HTTP ERROR 500 java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</h2>
+<table>
+<tr><th>URI:</th><td>/sandbox.hitract.se/messages</td></tr>
+<tr><th>STATUS:</th><td>500</td></tr>
+<tr><th>MESSAGE:</th><td>java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</td></tr>
+<tr><th>SERVLET:</th><td>com.github.tomakehurst.wiremock.servlet.WireMockHandlerDispatchingServlet-773cbf4f</td></tr>
+<tr><th>CAUSED BY:</th><td>java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</td></tr>
+</table>
+<h3>Caused by:</h3><pre>java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])
+	at java.base/java.util.stream.Collectors.duplicateKeyException(Unknown Source)
+	at java.base/java.util.stream.Collectors.lambda$uniqKeysMapAccumulator$1(Unknown Source)
+	at java.base/java.util.stream.ReduceOps$3ReducingSink.accept(Unknown Source)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.TemplateEngine.buildRequestPartModel(TemplateEngine.java:201)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.TemplateEngine.buildRequestModel(TemplateEngine.java:173)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.TemplateEngine.buildModelForRequest(TemplateEngine.java:146)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.LazyTemplateEngine.buildModelForRequest(LazyTemplateEngine.java:42)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.ResponseTemplateTransformer.transform(ResponseTemplateTransformer.java:77)
+	at com.github.tomakehurst.wiremock.stubbing.AbstractStubMappings.applyV2Transformations(AbstractStubMappings.java:152)
+	at com.github.tomakehurst.wiremock.stubbing.AbstractStubMappings.serveFor(AbstractStubMappings.java:110)
+	at com.github.tomakehurst.wiremock.core.WireMockApp.serveStubFor(WireMockApp.java:293)
+	at com.github.tomakehurst.wiremock.http.StubRequestHandler.handleRequest(StubRequestHandler.java:73)
+	at com.github.tomakehurst.wiremock.http.AbstractRequestHandler.handle(AbstractRequestHandler.java:73)
+	at com.github.tomakehurst.wiremock.servlet.WireMockHandlerDispatchingServlet.service(WireMockHandlerDispatchingServlet.java:165)
+	at wiremock.jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at wiremock.org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at wiremock.org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at wiremock.org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at wiremock.org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:822)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:141)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at wiremock.org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at wiremock.org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598)
+	at wiremock.org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753)
+	at wiremock.org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501)
+	at wiremock.org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287)
+	at wiremock.org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at wiremock.org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at wiremock.org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:199)
+	at wiremock.org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre>
+
+</body>
+</html>
+
+2026-02-20 12:55:41.377 - FAILED to process mail for info@hitract.se: Mail sending failed for: info@hitract.se
+2026-02-20 12:55:41.377 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mail sending failed for: info@hitract.se
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR - <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"/>
+<title>Error 500 java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</title>
+</head>
+<body><h2>HTTP ERROR 500 java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</h2>
+<table>
+<tr><th>URI:</th><td>/sandbox.hitract.se/messages</td></tr>
+<tr><th>STATUS:</th><td>500</td></tr>
+<tr><th>MESSAGE:</th><td>java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</td></tr>
+<tr><th>SERVLET:</th><td>com.github.tomakehurst.wiremock.servlet.WireMockHandlerDispatchingServlet-773cbf4f</td></tr>
+<tr><th>CAUSED BY:</th><td>java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</td></tr>
+</table>
+<h3>Caused by:</h3><pre>java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])
+	at java.base/java.util.stream.Collectors.duplicateKeyException(Unknown Source)
+	at java.base/java.util.stream.Collectors.lambda$uniqKeysMapAccumulator$1(Unknown Source)
+	at java.base/java.util.stream.ReduceOps$3ReducingSink.accept(Unknown Source)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.TemplateEngine.buildRequestPartModel(TemplateEngine.java:201)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.TemplateEngine.buildRequestModel(TemplateEngine.java:173)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.TemplateEngine.buildModelForRequest(TemplateEngine.java:146)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.LazyTemplateEngine.buildModelForRequest(LazyTemplateEngine.java:42)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.ResponseTemplateTransformer.transform(ResponseTemplateTransformer.java:77)
+	at com.github.tomakehurst.wiremock.stubbing.AbstractStubMappings.applyV2Transformations(AbstractStubMappings.java:152)
+	at com.github.tomakehurst.wiremock.stubbing.AbstractStubMappings.serveFor(AbstractStubMappings.java:110)
+	at com.github.tomakehurst.wiremock.core.WireMockApp.serveStubFor(WireMockApp.java:293)
+	at com.github.tomakehurst.wiremock.http.StubRequestHandler.handleRequest(StubRequestHandler.java:73)
+	at com.github.tomakehurst.wiremock.http.AbstractRequestHandler.handle(AbstractRequestHandler.java:73)
+	at com.github.tomakehurst.wiremock.servlet.WireMockHandlerDispatchingServlet.service(WireMockHandlerDispatchingServlet.java:165)
+	at wiremock.jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at wiremock.org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at wiremock.org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at wiremock.org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at wiremock.org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:822)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:141)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at wiremock.org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at wiremock.org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598)
+	at wiremock.org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753)
+	at wiremock.org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501)
+	at wiremock.org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287)
+	at wiremock.org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at wiremock.org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at wiremock.org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:199)
+	at wiremock.org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre>
+
+</body>
+</html>
+
+2026-02-20 12:55:41.377 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mail sending failed for: info@hitract.se
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR - <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"/>
+<title>Error 500 java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</title>
+</head>
+<body><h2>HTTP ERROR 500 java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</h2>
+<table>
+<tr><th>URI:</th><td>/sandbox.hitract.se/messages</td></tr>
+<tr><th>STATUS:</th><td>500</td></tr>
+<tr><th>MESSAGE:</th><td>java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</td></tr>
+<tr><th>SERVLET:</th><td>com.github.tomakehurst.wiremock.servlet.WireMockHandlerDispatchingServlet-773cbf4f</td></tr>
+<tr><th>CAUSED BY:</th><td>java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</td></tr>
+</table>
+<h3>Caused by:</h3><pre>java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])
+	at java.base/java.util.stream.Collectors.duplicateKeyException(Unknown Source)
+	at java.base/java.util.stream.Collectors.lambda$uniqKeysMapAccumulator$1(Unknown Source)
+	at java.base/java.util.stream.ReduceOps$3ReducingSink.accept(Unknown Source)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.TemplateEngine.buildRequestPartModel(TemplateEngine.java:201)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.TemplateEngine.buildRequestModel(TemplateEngine.java:173)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.TemplateEngine.buildModelForRequest(TemplateEngine.java:146)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.LazyTemplateEngine.buildModelForRequest(LazyTemplateEngine.java:42)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.ResponseTemplateTransformer.transform(ResponseTemplateTransformer.java:77)
+	at com.github.tomakehurst.wiremock.stubbing.AbstractStubMappings.applyV2Transformations(AbstractStubMappings.java:152)
+	at com.github.tomakehurst.wiremock.stubbing.AbstractStubMappings.serveFor(AbstractStubMappings.java:110)
+	at com.github.tomakehurst.wiremock.core.WireMockApp.serveStubFor(WireMockApp.java:293)
+	at com.github.tomakehurst.wiremock.http.StubRequestHandler.handleRequest(StubRequestHandler.java:73)
+	at com.github.tomakehurst.wiremock.http.AbstractRequestHandler.handle(AbstractRequestHandler.java:73)
+	at com.github.tomakehurst.wiremock.servlet.WireMockHandlerDispatchingServlet.service(WireMockHandlerDispatchingServlet.java:165)
+	at wiremock.jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at wiremock.org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at wiremock.org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at wiremock.org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at wiremock.org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:822)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:141)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at wiremock.org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at wiremock.org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598)
+	at wiremock.org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753)
+	at wiremock.org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501)
+	at wiremock.org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287)
+	at wiremock.org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at wiremock.org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at wiremock.org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:199)
+	at wiremock.org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre>
+
+</body>
+</html>
+
+2026-02-20 12:55:47.030 - Mailgun API Error: 500 INTERNAL_SERVER_ERROR - Body: <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"/>
+<title>Error 500 java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</title>
+</head>
+<body><h2>HTTP ERROR 500 java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</h2>
+<table>
+<tr><th>URI:</th><td>/sandbox.hitract.se/messages</td></tr>
+<tr><th>STATUS:</th><td>500</td></tr>
+<tr><th>MESSAGE:</th><td>java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</td></tr>
+<tr><th>SERVLET:</th><td>com.github.tomakehurst.wiremock.servlet.WireMockHandlerDispatchingServlet-773cbf4f</td></tr>
+<tr><th>CAUSED BY:</th><td>java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</td></tr>
+</table>
+<h3>Caused by:</h3><pre>java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])
+	at java.base/java.util.stream.Collectors.duplicateKeyException(Unknown Source)
+	at java.base/java.util.stream.Collectors.lambda$uniqKeysMapAccumulator$1(Unknown Source)
+	at java.base/java.util.stream.ReduceOps$3ReducingSink.accept(Unknown Source)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.TemplateEngine.buildRequestPartModel(TemplateEngine.java:201)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.TemplateEngine.buildRequestModel(TemplateEngine.java:173)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.TemplateEngine.buildModelForRequest(TemplateEngine.java:146)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.LazyTemplateEngine.buildModelForRequest(LazyTemplateEngine.java:42)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.ResponseTemplateTransformer.transform(ResponseTemplateTransformer.java:77)
+	at com.github.tomakehurst.wiremock.stubbing.AbstractStubMappings.applyV2Transformations(AbstractStubMappings.java:152)
+	at com.github.tomakehurst.wiremock.stubbing.AbstractStubMappings.serveFor(AbstractStubMappings.java:110)
+	at com.github.tomakehurst.wiremock.core.WireMockApp.serveStubFor(WireMockApp.java:293)
+	at com.github.tomakehurst.wiremock.http.StubRequestHandler.handleRequest(StubRequestHandler.java:73)
+	at com.github.tomakehurst.wiremock.http.AbstractRequestHandler.handle(AbstractRequestHandler.java:73)
+	at com.github.tomakehurst.wiremock.servlet.WireMockHandlerDispatchingServlet.service(WireMockHandlerDispatchingServlet.java:165)
+	at wiremock.jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at wiremock.org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at wiremock.org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at wiremock.org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at wiremock.org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:822)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:141)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at wiremock.org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at wiremock.org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598)
+	at wiremock.org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753)
+	at wiremock.org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501)
+	at wiremock.org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287)
+	at wiremock.org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at wiremock.org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at wiremock.org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:199)
+	at wiremock.org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre>
+
+</body>
+</html>
+
+2026-02-20 12:55:47.031 - Failed to send mail to info@hitract.se via Mailgun HTTP API
+java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR - <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"/>
+<title>Error 500 java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</title>
+</head>
+<body><h2>HTTP ERROR 500 java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</h2>
+<table>
+<tr><th>URI:</th><td>/sandbox.hitract.se/messages</td></tr>
+<tr><th>STATUS:</th><td>500</td></tr>
+<tr><th>MESSAGE:</th><td>java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</td></tr>
+<tr><th>SERVLET:</th><td>com.github.tomakehurst.wiremock.servlet.WireMockHandlerDispatchingServlet-773cbf4f</td></tr>
+<tr><th>CAUSED BY:</th><td>java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</td></tr>
+</table>
+<h3>Caused by:</h3><pre>java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])
+	at java.base/java.util.stream.Collectors.duplicateKeyException(Unknown Source)
+	at java.base/java.util.stream.Collectors.lambda$uniqKeysMapAccumulator$1(Unknown Source)
+	at java.base/java.util.stream.ReduceOps$3ReducingSink.accept(Unknown Source)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.TemplateEngine.buildRequestPartModel(TemplateEngine.java:201)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.TemplateEngine.buildRequestModel(TemplateEngine.java:173)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.TemplateEngine.buildModelForRequest(TemplateEngine.java:146)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.LazyTemplateEngine.buildModelForRequest(LazyTemplateEngine.java:42)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.ResponseTemplateTransformer.transform(ResponseTemplateTransformer.java:77)
+	at com.github.tomakehurst.wiremock.stubbing.AbstractStubMappings.applyV2Transformations(AbstractStubMappings.java:152)
+	at com.github.tomakehurst.wiremock.stubbing.AbstractStubMappings.serveFor(AbstractStubMappings.java:110)
+	at com.github.tomakehurst.wiremock.core.WireMockApp.serveStubFor(WireMockApp.java:293)
+	at com.github.tomakehurst.wiremock.http.StubRequestHandler.handleRequest(StubRequestHandler.java:73)
+	at com.github.tomakehurst.wiremock.http.AbstractRequestHandler.handle(AbstractRequestHandler.java:73)
+	at com.github.tomakehurst.wiremock.servlet.WireMockHandlerDispatchingServlet.service(WireMockHandlerDispatchingServlet.java:165)
+	at wiremock.jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at wiremock.org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at wiremock.org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at wiremock.org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at wiremock.org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:822)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:141)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at wiremock.org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at wiremock.org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598)
+	at wiremock.org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753)
+	at wiremock.org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501)
+	at wiremock.org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287)
+	at wiremock.org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at wiremock.org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at wiremock.org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:199)
+	at wiremock.org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre>
+
+</body>
+</html>
+
+2026-02-20 12:55:47.037 - FAILED to process mail for info@hitract.se: Mail sending failed for: info@hitract.se
+2026-02-20 12:55:47.037 - SYSTEM ERROR: Attempt failed for CONTACT_INFO. Rqueue will retry.
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mail sending failed for: info@hitract.se
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR - <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"/>
+<title>Error 500 java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</title>
+</head>
+<body><h2>HTTP ERROR 500 java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</h2>
+<table>
+<tr><th>URI:</th><td>/sandbox.hitract.se/messages</td></tr>
+<tr><th>STATUS:</th><td>500</td></tr>
+<tr><th>MESSAGE:</th><td>java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</td></tr>
+<tr><th>SERVLET:</th><td>com.github.tomakehurst.wiremock.servlet.WireMockHandlerDispatchingServlet-773cbf4f</td></tr>
+<tr><th>CAUSED BY:</th><td>java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</td></tr>
+</table>
+<h3>Caused by:</h3><pre>java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])
+	at java.base/java.util.stream.Collectors.duplicateKeyException(Unknown Source)
+	at java.base/java.util.stream.Collectors.lambda$uniqKeysMapAccumulator$1(Unknown Source)
+	at java.base/java.util.stream.ReduceOps$3ReducingSink.accept(Unknown Source)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.TemplateEngine.buildRequestPartModel(TemplateEngine.java:201)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.TemplateEngine.buildRequestModel(TemplateEngine.java:173)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.TemplateEngine.buildModelForRequest(TemplateEngine.java:146)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.LazyTemplateEngine.buildModelForRequest(LazyTemplateEngine.java:42)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.ResponseTemplateTransformer.transform(ResponseTemplateTransformer.java:77)
+	at com.github.tomakehurst.wiremock.stubbing.AbstractStubMappings.applyV2Transformations(AbstractStubMappings.java:152)
+	at com.github.tomakehurst.wiremock.stubbing.AbstractStubMappings.serveFor(AbstractStubMappings.java:110)
+	at com.github.tomakehurst.wiremock.core.WireMockApp.serveStubFor(WireMockApp.java:293)
+	at com.github.tomakehurst.wiremock.http.StubRequestHandler.handleRequest(StubRequestHandler.java:73)
+	at com.github.tomakehurst.wiremock.http.AbstractRequestHandler.handle(AbstractRequestHandler.java:73)
+	at com.github.tomakehurst.wiremock.servlet.WireMockHandlerDispatchingServlet.service(WireMockHandlerDispatchingServlet.java:165)
+	at wiremock.jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at wiremock.org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at wiremock.org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at wiremock.org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at wiremock.org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:822)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:141)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at wiremock.org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at wiremock.org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598)
+	at wiremock.org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753)
+	at wiremock.org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501)
+	at wiremock.org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287)
+	at wiremock.org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at wiremock.org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at wiremock.org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:199)
+	at wiremock.org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre>
+
+</body>
+</html>
+
+2026-02-20 12:55:47.037 - Unhandled exception from message handler method
+java.lang.RuntimeException: Email delivery failed
+Caused by: java.lang.RuntimeException: Mail sending failed for: info@hitract.se
+Caused by: java.lang.RuntimeException: Mailgun API Error: 500 INTERNAL_SERVER_ERROR - <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"/>
+<title>Error 500 java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</title>
+</head>
+<body><h2>HTTP ERROR 500 java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</h2>
+<table>
+<tr><th>URI:</th><td>/sandbox.hitract.se/messages</td></tr>
+<tr><th>STATUS:</th><td>500</td></tr>
+<tr><th>MESSAGE:</th><td>java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</td></tr>
+<tr><th>SERVLET:</th><td>com.github.tomakehurst.wiremock.servlet.WireMockHandlerDispatchingServlet-773cbf4f</td></tr>
+<tr><th>CAUSED BY:</th><td>java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])</td></tr>
+</table>
+<h3>Caused by:</h3><pre>java.lang.IllegalStateException: Duplicate key cc (attempted merging values [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=15, content-type=text/plain;charset=UTF-8}, body=info@hitract.se] and [name=&apos;cc&apos;, headers={content-disposition=form-data; name=&quot;cc&quot;, content-length=16, content-type=text/plain;charset=UTF-8}, body=robel@hitract.se])
+	at java.base/java.util.stream.Collectors.duplicateKeyException(Unknown Source)
+	at java.base/java.util.stream.Collectors.lambda$uniqKeysMapAccumulator$1(Unknown Source)
+	at java.base/java.util.stream.ReduceOps$3ReducingSink.accept(Unknown Source)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.TemplateEngine.buildRequestPartModel(TemplateEngine.java:201)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.TemplateEngine.buildRequestModel(TemplateEngine.java:173)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.TemplateEngine.buildModelForRequest(TemplateEngine.java:146)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.LazyTemplateEngine.buildModelForRequest(LazyTemplateEngine.java:42)
+	at com.github.tomakehurst.wiremock.extension.responsetemplating.ResponseTemplateTransformer.transform(ResponseTemplateTransformer.java:77)
+	at com.github.tomakehurst.wiremock.stubbing.AbstractStubMappings.applyV2Transformations(AbstractStubMappings.java:152)
+	at com.github.tomakehurst.wiremock.stubbing.AbstractStubMappings.serveFor(AbstractStubMappings.java:110)
+	at com.github.tomakehurst.wiremock.core.WireMockApp.serveStubFor(WireMockApp.java:293)
+	at com.github.tomakehurst.wiremock.http.StubRequestHandler.handleRequest(StubRequestHandler.java:73)
+	at com.github.tomakehurst.wiremock.http.AbstractRequestHandler.handle(AbstractRequestHandler.java:73)
+	at com.github.tomakehurst.wiremock.servlet.WireMockHandlerDispatchingServlet.service(WireMockHandlerDispatchingServlet.java:165)
+	at wiremock.jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at wiremock.org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at wiremock.org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at wiremock.org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at wiremock.org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at wiremock.org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at wiremock.org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:822)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:141)
+	at wiremock.org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at wiremock.org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at wiremock.org.eclipse.jetty.server.HttpChannel$RequestDispatchable.dispatch(HttpChannel.java:1598)
+	at wiremock.org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:753)
+	at wiremock.org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:501)
+	at wiremock.org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:287)
+	at wiremock.org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at wiremock.org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at wiremock.org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277)
+	at wiremock.org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.run(AdaptiveExecutionStrategy.java:199)
+	at wiremock.org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at wiremock.org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</pre>
+
+</body>
+</html>
+

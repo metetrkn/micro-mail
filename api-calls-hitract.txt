@@ -97,7 +97,7 @@ post http://localhost:8080/api/admin/sendMail
 aut bearer token:    user:29
 no body for this req
 
-DO IT ONLY ONCE!!! THERE IS NO DATA IN send_mail by default, to able to use senJonkoping data needed
+!!!!!!!!!!!!!!DO IT ONLY ONCE!!! THERE IS NO DATA IN send_mail by default, to able to use senJonkoping data needed
 -- Insert 5 fake records,
 INSERT INTO send_mail (mail_sent, email, mail_type, created, updated)
 VALUES
@@ -108,85 +108,30 @@ VALUES
 (0, 'admin.test@hitract.se', 'SPECIAL', NOW(), NOW());
 
 -----------------------------------------------------------------------------------------------
-PAID VERSION TEST
+
 POST http://localhost:8080/api/hitClub/manualBecomeMember
 bearer token : user:29
-
-INSERT IGNORE INTO payment_option (
-    payment_option_id,
-    membership_offer_id,
-    price,
-    description,
-    created,
-    updated
-)
-VALUES (
-           10,
-           1,
-           100,
-           'One Semester',
-           NOW(),
-           NOW()
-       );
-
--- 2. Update the Offer to be PAID
--- MySQL uses 0 for false, 1 for true
-UPDATE membership_offer
-SET membership_is_free = 0
-WHERE membership_offer_id = 1;
-
-
-
------------------------------------------------------------------------------------------------
-FREE VERSION TEST
-POST http://localhost:8080/api/hitClub/manualBecomeMember
-bearer token : user:29
-
--- 1. Create the Club (if not exists)
-INSERT INTO hit_club (hit_club_id, name, is_ladok_verification, created, updated)
-VALUES (100, 'Free Test Club', false, NOW(), NOW())
-ON CONFLICT (hit_club_id) DO NOTHING;
-
--- 2. Configure Offer #1 as FREE (CRITICAL STEP)
--- This Insert/Update ensures 'membership_is_free' is set to TRUE.
-INSERT INTO membership_offer (
-    membership_offer_id,
-    hit_club_id,
-    name,
-    membership_is_free,
-    start_date,
-    end_date,
-    created,
-    updated
-)
-VALUES (
-    1,
-    100,
-    'End-to-End Free Offer',
-    true,   -- <--- Sets offer to Free
-    NOW(),
-    '2030-12-31',
-    NOW(),
-    NOW()
-)
-ON CONFLICT (membership_offer_id)
-DO UPDATE SET
-    membership_is_free = true; -- <--- Overwrites it if it was previously Paid
-
--- 3. Ensure the Admin User (Principal) exists
-INSERT INTO student (student_id, email, first_name, last_name, created, updated)
-VALUES (29, 'admin@test.se', 'Admin', 'User', NOW(), NOW())
-ON CONFLICT (student_id) DO NOTHING;
 
 {
+  "firstName": "Betul",
+  "lastName": "Pektas",
+  "email": "Betul7@hotmail.se",
+  "phoneNumber": "0701234567",
+  "personOfficialId": "200209258649",
   "membershipOffer": {
-    "membershipOfferId": 1
+    "membershipOfferId": 501
   },
-  "firstName": "Free",
-  "lastName": "Version",
-  "email": "free.version.test@example.com",
+  "inputPaymentOption": {
+    "paymentOptionId": 10
+  },
   "forceManualApproval": true,
-  "personOfficialId": "19990101-0000",
-  "sex": "FEMALE"
+  "studyPlace": "Örebro universitet",
+  "program": "Personalvetarprogrammet, inriktning sociologi",
+  "studyPacePercentage": 100,
+  "sex": "FEMALE",
+  "addressStreet": "Studentgatan 1",
+  "addressCity": "Örebro",
+  "addressPostCode": "70281",
+  "associatedHitClub": "Uppsala Student Union"
 }
 -----------------------------------------------------------------------------------------------

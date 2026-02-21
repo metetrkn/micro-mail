@@ -11,6 +11,9 @@ import java.util.List;
 @Repository
 public interface SendMailRepository extends JpaRepository<SentMail, Long> {
 
+    @Query("SELECT s.email FROM SendMail s")
+    List<String> findAllEmails();
+
     @Query("SELECT s.email FROM SendMail s WHERE s.mailSent = false")
-    List<String> findUnsentEmails();
+    List<String> findPendingEmails();
 }

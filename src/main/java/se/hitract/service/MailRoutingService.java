@@ -8,9 +8,11 @@ import se.hitract.service.mail.dto.MailRequestDTO;
 @Slf4j
 public class MailRoutingService {
 
+    private final MailContentBuilderService mailContentBuilderService;
     private MailSenderService mailSenderService;
-    public MailRoutingService(MailSenderService mailSenderService) {
+    public MailRoutingService(MailSenderService mailSenderService, MailContentBuilderService mailContentBuilderService) {
         this.mailSenderService = mailSenderService;
+        this.mailContentBuilderService = mailContentBuilderService;
     }
 
     public void routeEmail(@org.checkerframework.checker.nullness.qual.MonotonicNonNull MailRequestDTO emailDto) {
@@ -29,32 +31,14 @@ public class MailRoutingService {
             case HITCLUB_SIGNIN -> mailSenderService.sendHitClubSignupInMail(emailDto);
             case JONKOPING_PAY_MEMBERSHIP_MAIL -> mailSenderService.sendJonkopingMail();
             case HIT_CLUB_INVITE -> mailSenderService.sendHitClubInviteMail(emailDto);
-            case ERROR -> mailSenderService.sendErrorMail(emailDto);
             case WEB_MEMBER_STATUS_CHANGED -> mailSenderService.sendWebMemberStatusChanged(emailDto);
+            case WEB_ORDER_PAYED -> mailSenderService.sendWebOrderPayed(emailDto);
+            case ORDER_PAYED -> mailSenderService.sendOrderPayed(emailDto);
+            case PAYPOUT_REPORT_NOT_MATCH -> mailSenderService.sendPayoutReportNotMatch(emailDto);
+            case RECEIPT -> mailSenderService.sendReceipt(emailDto);
+            case CONTACT_INFO -> mailSenderService.sendNewContactInfoMail(emailDto);
+            case ERROR -> mailSenderService.sendErrorMail(emailDto);
             default -> log.error("No logic implemented for MAIL_TYPE: {}", emailDto.toString());
-
-//            case COMPANY_SIGNIN -> handleCompanySignIn(email);
-//            case COMPANY_SIGNUP -> handleCompanySignUp(email);
-//            case STATUS_MAIL -> handleStatusMail(email);
-//            case HITCLUB_SIGNIN -> handleHitClubSignIn(email);
-//            case MAIL_SIGNIN -> handleMailSignIn(email);
-//            case HIT_CLUB_INVITE -> handleHitClubInvite(email);
-//            case HIT_MEMBER_MANUAL_CREATED -> handleManualMemberCreated(email);
-//            case PAYMENT_REPORT -> handlePaymentReport(email);
-//            case SPECIAL -> handleSpecialMail(email);
-//            case ORDER_PAYED -> handleOrderPayed(email);
-//            case WEB_ORDER_PAYED -> handleWebOrderPayed(email);
-//            case USER_PRODUCT_USED -> handleProductUsed(email);
-//            case USER_PRODUCT_UN_USED -> handleProductUnused(email);
-//            case CONTACT_INFO -> handleContactInfo(email);
-//            case WEB_BECOME_MEMBER -> handleWebBecomeMember(email);
-//            case WEB_MEMBER_STATUS_CHANGED -> handleWebMemberStatusChanged(email);
-//            case ERROR -> handleErrorMessage(email);
-//            case HIT_CLUB_MEMBER_PAY -> handleHitClubMemberPay(email);
-//            case CONFIRM_EMAIL -> handleConfirmEmail(email);
-//            case JONKOPING_PAY_MEMBERSHIP_MAIL -> handleJonkopingMembership(email);
-//            case RECEIPT -> handleReceipt(email);
-//            case PAYPOUT_REPORT_NOT_MATCH -> handlePayoutReportMismatch(email);
         }
     }
 }
