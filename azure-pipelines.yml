@@ -42,24 +42,18 @@ steps:
         latest
 
 
+  - task: CopyFiles@2
+    displayName: 'Stage Deployment Manifest'
+    inputs:
+      SourceFolder: '$(Build.SourcesDirectory)'
+      Contents: 'hitract-mailsender-app-microservice-deployment.yml'
+      TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish Artifact: drop'
+    inputs:
+      PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+      ArtifactName: 'drop'
+      publishLocation: 'Container'
 
-#  - task: CopyFiles@2
-#    displayName: Copy artifacts
-#    inputs:
-#      Contents: 'hitractBackendDeployment.yml'
-#      TargetFolder: '$(Build.ArtifactStagingDirectory)'
-#
-#
-#  - task: PublishBuildArtifacts@1
-#    inputs:
-#      PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-#      ArtifactName: 'drop'
-#      publishLocation: 'Container'
-#
-#
-#  - script: |
-#      echo "--- LISTING DOCKER IMAGES CREATED ON THE AGENT ---"
-#      docker images
-#    displayName: Verify Build Result
 
