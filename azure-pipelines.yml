@@ -10,8 +10,9 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
+
 variables:
-  imageName: 'hitract-mail-sender-microservice'
+  imageRepo: 'registry.digitalocean.com/hitract/hitract-mail-sender-microservice'
 
 steps:
 
@@ -19,38 +20,26 @@ steps:
     displayName: Build Docker Image
     inputs:
       mavenPomFile: 'pom.xml'
-      goals: 'spring-boot:build-image'
+      goals: 'spring-boot:build-image -Dspring-boot.build-image.imageName=$(imageRepo):$(Build.BuildId)'
       jdkVersionOption: '1.21'
       options: '-DskipTests'
       publishJUnitResults: false
 
 
-  #  - task: Docker@2
-  #    displayName: Tag Image for DigitalOcean
-  #    inputs:
-  #      containerRegistry: 'xxxxxxxxxxxx'
-  #      repository: 'hitract/$(imageName)'
-  #      command: 'tag'
-  #      arguments: 'registry.digitalocean.com/hitract/$(imageName):latest registry.digitalocean.com/hitract/$(imageName):$(Build.BuildId)'
-
-
-
   - script: |
-      echo "--- LISTING DOCKER IMAGES CREATED ON THE AGENT ---"
-      docker images
-    displayName: Verify Build Result
+      docker tag $(imageRepo):$(Build.BuildId) $(imageRepo):latest
+    displayName: Create Latest Tag
 
 
-
-#  - task: Docker@2
-#    displayName: Push to DigitalOcean
-#    inputs:
-#      containerRegistry: 'DigitalOceanRegistryConn' # This is just a pointer!
-#      repository: 'hitract/$(imageName)'
-#      command: 'push'
-#      tags: |
-#           latest
-#           $(Build.BuildId)
+  - task: Docker@2
+    displayName: Push to DigitalOcean
+    inputs:
+      containerRegistry: '05436aeb-d601-4847-be85-77429b3fac63'
+      repository: 'hitract/hitract-mail-sender-microservice'
+      command: 'push'
+      tags: |
+        $(Build.BuildId)
+        latest
 
 
 
@@ -67,3 +56,10 @@ steps:
 #      PathtoPublish: '$(Build.ArtifactStagingDirectory)'
 #      ArtifactName: 'drop'
 #      publishLocation: 'Container'
+#
+#
+#  - script: |
+#      echo "--- LISTING DOCKER IMAGES CREATED ON THE AGENT ---"
+#      docker images
+#    displayName: Verify Build Result
+

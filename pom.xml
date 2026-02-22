@@ -130,16 +130,13 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <executable>true</executable>
                     <image>
-                        <name>registry.digitalocean.com/hitract/${project.artifactId}</name>
                         <env>
                             <BP_JVM_VERSION>${java.version}</BP_JVM_VERSION>
                         </env>
                     </image>
                     <layers>
-                        <enabled>true</enabled>
-                    </layers>
+                        <enabled>true</enabled> </layers>
                     <excludes>
                         <exclude>
                             <groupId>org.projectlombok</groupId>
