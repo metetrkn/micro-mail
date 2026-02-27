@@ -8,7 +8,7 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 8080
+      targetPort: 8081
   type: ClusterIP
 ---
 apiVersion: apps/v1
@@ -16,7 +16,7 @@ kind: Deployment
 metadata:
   name: mail-sender
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: mail-sender
@@ -45,9 +45,9 @@ spec:
               value: "#{HITRACT_MYSQL_DB_PASSWORD}#"
             - name: HITRACT_MYSQL_DB_PORT
               value: "#{HITRACT_MYSQL_DB_PORT}#"
-            - name: HITRACT_REDIS_URL
+            - name: REDIS_HOST
               value: "#{HITRACT_REDIS_URL}#"
-            - name: HITRACT_REDIS_PORT
+            - name: REDIS_PORT
               value: "#{HITRACT_REDIS_PORT}#"
             - name: HITRACT_REDIS_PASSWORD
               value: "#{HITRACT_REDIS_PASSWORD}#"
