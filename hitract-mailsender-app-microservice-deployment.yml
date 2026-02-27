@@ -53,3 +53,9 @@ spec:
               value: "#{HITRACT_REDIS_PASSWORD}#"
             - name: HITRACT_REDIS_USE_SSL
               value: "false"
+
+        - name: wiremock
+          image: wiremock/wiremock:latest
+          ports:
+          - containerPort: 9090
+          args: ["--port", "9090"]
