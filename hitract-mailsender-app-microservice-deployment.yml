@@ -54,7 +54,7 @@ spec:
             - name: HITRACT_REDIS_PASSWORD
               value: "#{HITRACT_REDIS_PASSWORD}#"
             - name: HITRACT_REDIS_USE_SSL
-              value: "false"
+              value: "#{HITRACT_REDIS_USE_SSL}#"
             - name: HITRACT_MAILGUN_API_KEY
               value: "#{HITRACT_MAILGUN_API_KEY}#"
             - name: HITRACT_MAILGUN_DOMAIN
