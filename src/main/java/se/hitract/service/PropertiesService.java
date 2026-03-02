@@ -14,7 +14,7 @@ public class PropertiesService {
     @Value("${app.version}")
     private String version;
 
-    @Value("${app.environment:DEV}") // Added a default here just in case
+    @Value("${app.environment:DEV}")
     private String environment;
 
     @Value("${runRedisImports:true}")
@@ -22,10 +22,6 @@ public class PropertiesService {
 
     @Value("${queue.enable:true}")
     private boolean queueEnable;
-
-    @Getter
-    @Value("${main.node:true}") // NEW: Added this
-    private boolean mainNode;
 
     @Value("${rqueue.scheduler.polling.interval:5000}") // NEW: Added this
     private long rqueuePollingInterval;

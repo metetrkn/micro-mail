@@ -1,61 +1,71 @@
-apiVersion: v1
-kind: Service
-metadata:
-  name: mail-sender-service
-spec:
-  selector:
-    app: mail-sender
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 8081
-  type: ClusterIP
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: mail-sender
-spec:
-  replicas: 2
-  selector:
-    matchLabels:
-      app: mail-sender
-  template:
-    metadata:
-      labels:
-        app: mail-sender
-    spec:
-      containers:
-        - name: mail-sender
-          # Match the variable style of your main app for consistency
-          image: registry.digitalocean.com/hitract/hitract-mail-sender-microservice:#{Build.BuildId}#
-          ports:
-            - containerPort: 8080
+#apiVersion: v1
+#kind: Service
+#metadata:
+#  name: mail-sender-service
+#spec:
+#  selector:
+#    app: mail-sender
+#  ports:
+#    - protocol: TCP
+#      port: 80
+#      targetPort: 8081
+#  type: ClusterIP
+#---
+#apiVersion: apps/v1
+#kind: Deployment
+#metadata:
+#  name: mail-sender
+#spec:
+#  replicas: 2
+#  selector:
+#    matchLabels:
+#      app: mail-sender
+#  template:
+#    metadata:
+#      labels:
+#        app: mail-sender
+#    spec:
+#      containers:
+#        - name: mail-sender
+#          image: registry.digitalocean.com/hitract/hitract-mail-sender-microservice:#{Build.BuildId}#
+#          ports:
+#            - containerPort: 8081
+#
+#          env:
+#            - name: ENVIRONMENT
+#              value: "#{ENVIRONMENT}#"
+#            - name: HITRACT_MYSQL_DB_HOST
+#              value: "#{HITRACT_MYSQL_DB_HOST}#"
+#            - name: HITRACT_MYSQL_DB_PORT
+#              value: "#{HITRACT_MYSQL_DB_PORT}#"
+#            - name: HITRACT_MYSQL_DB_NAME
+#              value: "#{HITRACT_MYSQL_DB_NAME}#"
+#            - name: HITRACT_MYSQL_DB_USERNAME
+#              value: "#{HITRACT_MYSQL_DB_USERNAME}#"
+#            - name: HITRACT_MYSQL_DB_PASSWORD
+#              value: "#{HITRACT_MYSQL_DB_PASSWORD}#"
+#
+#            - name: HITRACT_REDIS_URL
+#              value: "#{HITRACT_REDIS_URL}#"
+#            - name: HITRACT_REDIS_PORT
+#              value: "#{HITRACT_REDIS_PORT}#"
+#            - name: HITRACT_REDIS_USERNAME
+#              value: "#{HITRACT_REDIS_USERNAME}#"
+#            - name: HITRACT_REDIS_PASSWORD
+#              value: "#{HITRACT_REDIS_PASSWORD}#"
+#            - name: HITRACT_REDIS_USE_SSL
+#              value: "false"
+#            - name: HITRACT_MAILGUN_API_KEY
+#              value: "#{HITRACT_MAILGUN_API_KEY}#"
+#            - name: HITRACT_MAILGUN_DOMAIN
+#              value: "#{HITRACT_MAILGUN_DOMAIN}#"
+#            - name: HITRACT_MAILGUN_URL
+#              value: "#{HITRACT_MAILGUN_URL}#"
+#
+#
+#        - name: wiremock
+#          image: wiremock/wiremock:latest
+#          ports:
+#          - containerPort: 9090
+#          args: ["--port", "9090"]
 
-          env:
-            - name: ENVIRONMENT
-              value: "#{ENVIRONMENT}#"
-            - name: HITRACT_MYSQL_DB_HOST
-              value: "#{HITRACT_MYSQL_DB_HOST}#"
-            - name: HITRACT_MYSQL_DB_NAME
-              value: "#{HITRACT_MYSQL_DB_NAME}#"
-            - name: HITRACT_MYSQL_DB_USERNAME
-              value: "#{HITRACT_MYSQL_DB_USERNAME}#"
-            - name: HITRACT_MYSQL_DB_PASSWORD
-              value: "#{HITRACT_MYSQL_DB_PASSWORD}#"
-            - name: HITRACT_MYSQL_DB_PORT
-              value: "#{HITRACT_MYSQL_DB_PORT}#"
-            - name: REDIS_HOST
-              value: "#{HITRACT_REDIS_URL}#"
-            - name: REDIS_PORT
-              value: "#{HITRACT_REDIS_PORT}#"
-            - name: HITRACT_REDIS_PASSWORD
-              value: "#{HITRACT_REDIS_PASSWORD}#"
-            - name: HITRACT_REDIS_USE_SSL
-              value: "false"
-
-        - name: wiremock
-          image: wiremock/wiremock:latest
-          ports:
-          - containerPort: 9090
-          args: ["--port", "9090"]
