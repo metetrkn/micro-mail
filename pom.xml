@@ -13,7 +13,7 @@
     <artifactId>hitract-mail-sender-microservice</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>micro-mail</name>
-    <description>micro-mail application with Rqueue and Hibernate Search</description>
+    <description>MicroService application with Rqueue</description>
 
     <properties>
         <java.version>21</java.version>
@@ -49,13 +49,6 @@
             <artifactId>spring-boot-starter-web-services</artifactId>
         </dependency>
 
-        <!-- Message Queue -->
-        <dependency>
-            <groupId>com.github.sonus21</groupId>
-            <artifactId>rqueue-spring-boot-starter</artifactId>
-            <version>3.4.0-RELEASE</version>
-        </dependency>
-
         <!-- Hibernate Search - Latest stable for Spring Boot 3.4.2 -->
         <dependency>
             <groupId>org.hibernate.search</groupId>
@@ -66,6 +59,13 @@
             <groupId>org.hibernate.search</groupId>
             <artifactId>hibernate-search-backend-elasticsearch</artifactId>
             <version>7.1.1.Final</version>
+        </dependency>
+
+        <!-- Message Queue -->
+        <dependency>
+            <groupId>com.github.sonus21</groupId>
+            <artifactId>rqueue-spring-boot-starter</artifactId>
+            <version>3.4.0-RELEASE</version>
         </dependency>
 
         <!-- Database -->

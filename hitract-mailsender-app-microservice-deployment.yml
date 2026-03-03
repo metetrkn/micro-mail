@@ -15,8 +15,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mail-sender
+  namespace: default
 spec:
   replicas: 2
+  minReadySeconds: 120
+  progressDeadlineSeconds: 300
   selector:
     matchLabels:
       app: mail-sender
@@ -27,29 +30,61 @@ spec:
     spec:
       containers:
         - name: mail-sender
-          # Match the variable style of your main app for consistency
           image: registry.digitalocean.com/hitract/hitract-mail-sender-microservice:#{Build.BuildId}#
+          imagePullPolicy: Always
+          resources:
+            requests:
+              cpu: 100m
+              memory: 512Mi
+            limits:
+              cpu: 500m
+              memory: 1Gi
           ports:
-            - containerPort: 8080
+            - containerPort: 8081
+              name: http
 
           env:
             - name: ENVIRONMENT
               value: "#{ENVIRONMENT}#"
             - name: HITRACT_MYSQL_DB_HOST
               value: "#{HITRACT_MYSQL_DB_HOST}#"
+            - name: HITRACT_MYSQL_DB_PORT
+              value: "#{HITRACT_MYSQL_DB_PORT}#"
             - name: HITRACT_MYSQL_DB_NAME
               value: "#{HITRACT_MYSQL_DB_NAME}#"
             - name: HITRACT_MYSQL_DB_USERNAME
               value: "#{HITRACT_MYSQL_DB_USERNAME}#"
             - name: HITRACT_MYSQL_DB_PASSWORD
               value: "#{HITRACT_MYSQL_DB_PASSWORD}#"
-            - name: HITRACT_MYSQL_DB_PORT
-              value: "#{HITRACT_MYSQL_DB_PORT}#"
-            - name: REDIS_HOST
+
+            - name: HITRACT_REDIS_URL
               value: "#{HITRACT_REDIS_URL}#"
-            - name: REDIS_PORT
+            - name: HITRACT_REDIS_PORT
               value: "#{HITRACT_REDIS_PORT}#"
+            - name: HITRACT_REDIS_USERNAME
+              value: "#{HITRACT_REDIS_USERNAME}#"
             - name: HITRACT_REDIS_PASSWORD
               value: "#{HITRACT_REDIS_PASSWORD}#"
             - name: HITRACT_REDIS_USE_SSL
-              value: "false"
+              value: "#{HITRACT_REDIS_USE_SSL}#"
+            - name: HITRACT_MAILGUN_API_KEY
+              value: "#{HITRACT_MAILGUN_API_KEY}#"
+            - name: HITRACT_MAILGUN_DOMAIN
+              value: "#{HITRACT_MAILGUN_DOMAIN}#"
+            - name: HITRACT_MAILGUN_URL
+              value: "#{HITRACT_MAILGUN_URL}#"
+
+
+        - name: wiremock
+          image: wiremock/wiremock:latest
+          resources:
+            requests:
+              cpu: 50m
+              memory: 128Mi
+            limits:
+              cpu: 200m
+              memory: 256Mi
+          ports:
+          - containerPort: 9090
+          args: ["--port", "9090"]
+
