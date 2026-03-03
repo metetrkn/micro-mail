@@ -15,8 +15,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mail-sender
+  namespace: default
 spec:
   replicas: 2
+  minReadySeconds: 120
+  progressDeadlineSeconds: 300
   selector:
     matchLabels:
       app: mail-sender
@@ -28,8 +31,17 @@ spec:
       containers:
         - name: mail-sender
           image: registry.digitalocean.com/hitract/hitract-mail-sender-microservice:#{Build.BuildId}#
+          imagePullPolicy: Always
+          resources:
+            requests:
+              cpu: 100m
+              memory: 512Mi
+              limits:
+                cpu: 500m
+                memory: 1Gi
           ports:
             - containerPort: 8081
+              name: http
 
           env:
             - name: ENVIRONMENT
@@ -65,6 +77,13 @@ spec:
 
         - name: wiremock
           image: wiremock/wiremock:latest
+          resources:
+            requests:
+              cpu: 50m
+              memory: 128Mi
+            limits:
+              cpu: 200m
+              memory: 256Mi
           ports:
           - containerPort: 9090
           args: ["--port", "9090"]
